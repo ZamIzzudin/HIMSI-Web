@@ -10,6 +10,7 @@ export default function Navbar() {
             </div>
             <ul className="navbar-items">
                 <Link to="/">Home</Link>
+                <Link to="/Profile">Profile</Link>
                 {/* Tambahin di bawah */}
 
             </ul>

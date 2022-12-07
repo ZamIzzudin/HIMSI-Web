@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 // Pages
 import Home from './pages/Home'
 import Page404 from "./pages/Page404";
+import Profile from "./pages/Profile";
 
 export default function Router() {
     return (
@@ -12,6 +13,7 @@ export default function Router() {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/profile" component={Profile} />
                 {/* Tambah disini */}
 
 
