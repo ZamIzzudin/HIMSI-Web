@@ -1,0 +1,58 @@
+.container {
+    background-color: #f49c45;
+    padding-top: 20px;
+}
+
+/* HEADING HIMPUNAN */
+
+.container .heading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* VISI DAN MISI */
+
+.visimisi {
+    background-color: aqua;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.row {
+    display: flex;
+    text-align: left;
+    letter-spacing:normal;
+    margin-left: 200px;
+    margin-right: 200px;
+    column-gap: 40px;
+}
+
+.column {
+    float: left;
+    width: 80%;
+    padding-top: 25px;
+}
+
+/* BIDANG DAN DIVISI */
+
+.container .bidang {
+    text-align: center;
+    margin-top: 100px;
+    background-color: aquamarine;
+    padding-top: 25px;
+    padding-bottom: 85px;
+}
+
+
+/* STRUKTUR ORGANISASI */
+
+.container .struktur {
+    text-align: center;
+    background-color: blue;
+    padding-top: 25px;
+    padding-bottom: 85px;
+    margin-top: 100px;
+}

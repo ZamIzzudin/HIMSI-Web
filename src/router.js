@@ -9,6 +9,7 @@ import Event from "./pages/Event";
 import EventDetail from "./pages/EventDetail";
 import Article from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
+import Profile from "./pages/Profile";
 
 export default function Router() {
     return (
@@ -16,6 +17,7 @@ export default function Router() {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/profile" component={Profile} />
                 {/* Tambah disini */}
 
                 {/* Page Event */}
