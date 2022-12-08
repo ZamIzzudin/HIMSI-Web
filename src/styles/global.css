@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin-bottom: 0 !important;
+}
+
 main {
     background-color: tomato;
     display: flex;

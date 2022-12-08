@@ -1,30 +1,31 @@
 export default function Category() {
   return (
-    <div>
+    <div className="container">
+      <h1>Memek</h1>
       <h1>Kategori Kegiatan HIMSI</h1>
       <ul className="Category">
         <li>
-          <link to="/">Semua</link>
+          <a href="/">Semua</a>
         </li>
         <li>
-          <link to="/">BPH</link>
+          <a href="/">BPH</a>
         </li>
         <li>
-          <link to="/">Bidang PSDM</link>
+          <a href="/">Bidang PSDM</a>
         </li>
         <li>
-          <link to="/">Bidang Kominfo</link>
+          <a href="/">Bidang Kominfo</a>
         </li>
         <li>
-          <link to="/">Bidang Dikti</link>
+          <a href="/">Bidang Dikti</a>
         </li>
         <li>
-          <link to="/">Bidang URT</link>
+          <a href="/">Bidang URT</a>
         </li>
         <li>
-          <link to="/">Bidang Adkesma</link>
+          <a href="/">Bidang Adkesma</a>
         </li>
       </ul>
     </div>
-  );
+  )
 }

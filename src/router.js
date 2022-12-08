@@ -10,6 +10,7 @@ import EventDetail from "./pages/EventDetail";
 import Article from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
+import Category from "./pages/Category";
 
 export default function Router() {
     return (
@@ -17,8 +18,12 @@ export default function Router() {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
+
+                {/* Page Profile */}
                 <Route path="/profile" component={Profile} />
-                {/* Tambah disini */}
+
+                {/* Page Proker */}
+                <Route path="/program-kerja" component={Category} />
 
                 {/* Page Event */}
                 <Route path="/event" component={Event} />
