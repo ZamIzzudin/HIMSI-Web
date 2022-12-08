@@ -11,7 +11,8 @@ export default function Navbar() {
             <ul className="navbar-items">
                 <Link to="/">Home</Link>
                 {/* Tambahin di bawah */}
-
+                <Link to="/event">Event</Link>
+                <Link to="/article">Article</Link>
             </ul>
         </nav >
     )
