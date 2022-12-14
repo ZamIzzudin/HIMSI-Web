@@ -1,58 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Mulish:wght@500&family=Poppins:wght@600&family=Roboto:wght@500&display=swap');
+
+
 .container {
-    background-color: #f49c45;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
-/* HEADING HIMPUNAN */
+.dot {
+    height: 8px;
+    width: 8px;
+    margin-bottom: 10px;
+    margin-left: 40px ;
+    margin-right: 40px;
+    background-color: #082240;
+    border-radius: 50%;
+    display: inline-block;
+}
 
-.container .heading {
+/* ---------------------- HEADING HIMPUNAN ------------------------------------ */
+
+.heading {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 30px;
+}
+
+
+.himsi {
+    font-family: 'Poppins', sans-serif;
+    color: #000267;
+}
+
+.univ {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile-logo {
+    justify-content: center;
+    width: 500px;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------- VISI ----------------------- */
+
+.visi {
+    font-size: 48px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #082240;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.visi-p {
+    font-size: 24px;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+
+/* ------------------- MISI ----------------------------- */
+
+.misi {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    color: #082240;
+    font-family: 'Montserrat', sans-serif;
+}       
+
+.misi-paragraf {
+    text-align: left;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+} 
+
+.misi-number {
+    background: linear-gradient(136.63deg, #F49C45 15.49%, #FFBC7B 83.85%);
+    color: #FFFFFF;
+    display: flex;
+    font-size: 31px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+/* ----------------------------- BIDANG DAN DIVISI --------------------------*/
+
+.bidang {
+    font-size: 30px;
     text-align: center;
     margin-top: 100px;
-}
-
-
-/* VISI DAN MISI */
-
-.visimisi {
-    background-color: aqua;
     padding-top: 25px;
     padding-bottom: 25px;
-    text-align: center;
-    margin-top: 100px;
+    color: #082240;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.row {
+/*-------------------------------- STRUKTUR ORGANISASI ------------------------- */
+
+.struktur {
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 100px;
+    color: #082240;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.struktur-logo {
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 80px;
+    width: 600px;
+    height: auto;
     display: flex;
-    text-align: left;
-    letter-spacing:normal;
-    margin-left: 200px;
-    margin-right: 200px;
-    column-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
-
-.column {
-    float: left;
-    width: 80%;
-    padding-top: 25px;
-}
-
-/* BIDANG DAN DIVISI */
-
-.container .bidang {
-    text-align: center;
-    margin-top: 100px;
-    background-color: aquamarine;
-    padding-top: 25px;
-    padding-bottom: 85px;
-}
-
-
-/* STRUKTUR ORGANISASI */
-
-.container .struktur {
-    text-align: center;
-    background-color: blue;
-    padding-top: 25px;
-    padding-bottom: 85px;
-    margin-top: 100px;
-}
+/*-------------------------------- PENGURUS HARIAN ------------------------- */
