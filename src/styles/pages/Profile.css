@@ -2,19 +2,15 @@
 
 
 .container {
-<<<<<<< HEAD
-    padding-top: 5px;
-=======
     /* background-color: #f49c45; */
     padding-top: 20px;
->>>>>>> ae36cf03c791d8cd31b30c7c37039a55d252d402
 }
 
 .dot {
     height: 8px;
     width: 8px;
     margin-bottom: 10px;
-    margin-left: 40px ;
+    margin-left: 40px;
     margin-right: 40px;
     background-color: #082240;
     border-radius: 50%;
@@ -74,21 +70,18 @@
     font-size: 30px;
     color: #082240;
     font-family: 'Montserrat', sans-serif;
-}       
+}
 
 .misi-paragraf {
     text-align: left;
-<<<<<<< HEAD
     font-size: 17px;
     padding-left: 10px;
     padding-top: 10px;
     font-family: 'Mulish', sans-serif;
-=======
     letter-spacing: normal;
     margin-left: 200px;
     margin-right: 200px;
     column-gap: 40px;
->>>>>>> ae36cf03c791d8cd31b30c7c37039a55d252d402
 }
 
 .flex-container {
@@ -98,7 +91,7 @@
     padding: 10px;
     border-radius: 100px;
     box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
-} 
+}
 
 .misi-number {
     background: linear-gradient(136.63deg, #F49C45 15.49%, #FFBC7B 83.85%);
@@ -148,4 +141,5 @@
     margin-right: auto;
 
 }
+
 /*-------------------------------- PENGURUS HARIAN ------------------------- */
