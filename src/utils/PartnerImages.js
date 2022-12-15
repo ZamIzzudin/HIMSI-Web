@@ -14,6 +14,6 @@ import image13 from '../assets/img/partner/image13.png'
 import image14 from '../assets/img/partner/image14.png'
 import image15 from '../assets/img/partner/image15.png'
 
+const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15]
 
-
-export default [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15];
+export default images;
