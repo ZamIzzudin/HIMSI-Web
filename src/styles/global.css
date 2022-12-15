@@ -12,9 +12,39 @@ ul {
 }
 
 main {
-    background-color: tomato;
+    /* background-color: tomato; */
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+.btn {
+    font-family: 'Inter', sans-serif !important;
+    height: 55px;
+    width: 154px;
+    background: #F49C45 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    -ms-border-radius: 12px !important;
+    -o-border-radius: 12px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+h3,
+.h5 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h3 {
+    color: rgba(8, 34, 64, 1);
+    font-weight: 600 !important;
+}
+
+p {
+    font-family: 'Mulish', sans-serif;
+
 }

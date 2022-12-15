@@ -2,7 +2,12 @@
 
 
 .container {
+<<<<<<< HEAD
     padding-top: 5px;
+=======
+    /* background-color: #f49c45; */
+    padding-top: 20px;
+>>>>>>> ae36cf03c791d8cd31b30c7c37039a55d252d402
 }
 
 .dot {
@@ -73,10 +78,17 @@
 
 .misi-paragraf {
     text-align: left;
+<<<<<<< HEAD
     font-size: 17px;
     padding-left: 10px;
     padding-top: 10px;
     font-family: 'Mulish', sans-serif;
+=======
+    letter-spacing: normal;
+    margin-left: 200px;
+    margin-right: 200px;
+    column-gap: 40px;
+>>>>>>> ae36cf03c791d8cd31b30c7c37039a55d252d402
 }
 
 .flex-container {
