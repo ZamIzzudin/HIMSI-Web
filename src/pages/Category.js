@@ -6,8 +6,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../styles/pages/Category.css";
 
-import Sonnet from "../components/Sonnet";
-
 function Category() {
   return (
     // Bagian List Kegiatan
