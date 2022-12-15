@@ -1,5 +1,5 @@
 .container {
-    background-color: #f49c45;
+    /* background-color: #f49c45; */
     padding-top: 20px;
 }
 
@@ -24,7 +24,7 @@
 .row {
     display: flex;
     text-align: left;
-    letter-spacing:normal;
+    letter-spacing: normal;
     margin-left: 200px;
     margin-right: 200px;
     column-gap: 40px;

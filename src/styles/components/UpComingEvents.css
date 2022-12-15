@@ -1,0 +1,136 @@
+/* .comingEvent {
+    height: 100px;
+} */
+.UpComingEvent {
+    height: 100%;
+    /* background-color: blueviolet; */
+    /* overflow-x: hidden; */
+}
+
+.header h3 {
+    font-size: 61px;
+}
+
+
+/* .UpComingEvent .header btn {} */
+
+.UpComingEvent .slick-slider {
+    margin: 0 20px;
+    /* background-color: blueviolet; */
+
+}
+
+.slick-slide {
+    display: flex;
+    padding: 10px;
+    /* background-color: red; */
+    text-align: center !important;
+    /* margin-right: 1px; */
+    /* margin-left: 2px; */
+    max-width: 700px;
+    /* align-items: center; */
+
+}
+
+/* .UpComingEvent {} */
+
+.UpComingEvent .card {
+    border: none !important;
+    height: 600px;
+    max-width: 400px;
+    /* background-color: aqua; */
+    overflow: hidden;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    text-align: left;
+    /* position: relative !important; */
+
+}
+
+.UpComingEvent .gradient {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.UpComingEvent .gradient-overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(to top, rgba(0, 2, 103, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
+}
+
+/* 
+.UpComingEvent button .slick-arrow {
+    color: rgba(255, 255, 255, 0.655) !important;
+} */
+
+.UpComingEvent .card-img {
+    height: 100%;
+    /* width: 100%; */
+    object-fit: cover;
+    object-position: left;
+}
+
+.UpComingEvent .card-body {
+    position: absolute;
+    color: white;
+    top: 400px !important;
+    z-index: 10;
+    padding: 0 34px;
+    padding-bottom: 30px;
+}
+
+.UpComingEvent .card-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.UpComingEvent .btn-card {
+    width: 100% !important;
+    height: 64.1px !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .header h3 {
+        font-size: 45px;
+    }
+
+    .UpComingEvent .card-body {
+        top: 380px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header h3 {
+        font-size: 35px;
+    }
+
+    .UpComingEvent .btn {
+        height: 45px;
+        width: 130px;
+        font-size: 14px !important;
+    }
+
+    .UpComingEvent .card-title {
+        font-size: 18px;
+    }
+
+    .UpComingEvent .card-text {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {}
