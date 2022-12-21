@@ -10,7 +10,7 @@ const Profile = () => {
             <div class='heading'>
                 <h1 className='himsi'>Himpunan Mahasiswa Sistem Informasi</h1>
                 <br></br>   
-                <h2 className='Univ'>UIN Syarif Hidayatulah Jakarta</h2>
+                <h2 className='namauniv'>UIN Syarif Hidayatulah Jakarta</h2>
             </div>
 
             <div class='logo'>
@@ -23,7 +23,7 @@ const Profile = () => {
                 <h1> <span class="dot"></span> Visi <span class="dot"></span> </h1>
                 <br></br>                     
                 <p className='visi-p'> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan 
-                    adaptif <br></br> guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian 
+                    adaptif guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian 
                     mahasiswa SI.</p>
             </div>
 
@@ -82,7 +82,7 @@ const Profile = () => {
         {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 
         <div class='struktur'>
-            <h1> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h1>
+            <h1 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h1>
         </div>
         
         
