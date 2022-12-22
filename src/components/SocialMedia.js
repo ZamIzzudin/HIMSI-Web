@@ -10,7 +10,7 @@ const SocialMedia = () => {
             <div className='social-media mt-5'>
                 <Row className='header mb-5'>
                     <Col>
-                        <h3 className='judul text-center'>Social Media</h3>
+                        <h4 className='judul text-center'>Social Media</h4>
                     </Col>
                 </Row>
                 <Row className='mb-5'>

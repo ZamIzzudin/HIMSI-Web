@@ -5,6 +5,32 @@
     /* align-items: center; */
 }
 
+.lastestEvents .btn:hover {
+    background-color: rgb(214, 130, 45) !important;
+}
+
+/* gradinet Color Blue */
+.lastestEvents .gradient {
+    position: relative;
+    /* height: 100% !important;
+    width: 100% !important; */
+}
+
+.lastestEvents .gradient-overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(to top, rgba(0, 2, 103, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
+/*card */
 .lastestEvents .card {
     border: none !important;
     display: flex;
@@ -18,34 +44,29 @@
     -o-border-radius: 16px !important;
     margin-bottom: 64px;
     align-items: center;
+    max-height: 307px !important;
+    overflow: hidden;
+    width: auto !important;
 }
 
-.lastestEvents .gradient {
-    position: relative;
-}
-
-.lastestEvents .gradient-overlay {
-    position: absolute !important;
-    top: 0;
-    left: 0;
+.lastestEvents .img-layout {
     width: 100% !important;
     height: 100% !important;
-    background: linear-gradient(to top, rgba(0, 2, 103, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
 }
 
 .lastestEvents .card-img {
-    width: 525px !important;
-    height: 307px !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 .lastestEvents .card-body {
     margin: 0 105px 0px 84px;
     padding: 0 !important;
+    width: 100% !important;
+}
+
+.lastestEvents .h5 {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .lastestEvents .card-title {
@@ -57,4 +78,153 @@
     font-size: 24px;
     font-weight: 400;
     color: rgba(244, 156, 69, 1);
+}
+
+.lastestEvents .deskripsi {
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    max-height: 42px !important;
+    font-weight: 400;
+    overflow: hidden !important;
+}
+
+/* responsive */
+@media screen and (max-width: 1400px) {
+    .lastestEvents .card-title {
+        font-size: 28px;
+    }
+
+    .lastestEvents .date {
+        font-size: 20px;
+    }
+
+    .lastestEvents .deskripsi {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .lastestEvents .card {
+        margin-bottom: 54px;
+    }
+
+    .lastestEvents .card-title {
+        font-size: 24px;
+    }
+
+    .lastestEvents .date {
+        font-size: 18px;
+    }
+
+    .lastestEvents .deskripsi {
+        font-size: 12px;
+    }
+
+    .lastestEvents .btn-card {
+        height: 45px;
+        width: 130px;
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .lastestEvents .card {
+        margin-bottom: 44px;
+    }
+
+    .lastestEvents .card-body {
+        margin: 0 50px 0px 54px;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .lastestEvents .date {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .lastestEvents .card-title {
+        font-size: 20px;
+    }
+
+    .lastestEvents .deskripsi {
+        font-size: 10px;
+        margin-bottom: 10px !important;
+    }
+
+    .lastestEvents .btn-card {
+        height: 35px;
+        width: 100px;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lastestEvents .card {
+        margin-bottom: 34px;
+    }
+
+    .lastestEvents .card-body {
+        margin: 0 50px 0px 44px;
+    }
+
+    .lastestEvents .card-title {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .lastestEvents .date {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .lastestEvents .deskripsi {
+        font-size: 8px;
+        max-height: 24px !important;
+    }
+
+    .lastestEvents .btn-card {
+        height: 30px;
+        width: 80px;
+        font-size: 8px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .lastestEvents .card-img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .lastestEvents .list-event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lastestEvents .card {
+        flex-direction: column;
+        text-align: center;
+        max-width: 480px !important;
+        max-height: 500px !important;
+        /* margin */
+    }
+
+    .lastestEvents .card-body {
+        margin: 20px 0px !important;
+        padding: 0px 40px !important;
+    }
+
+    .lastestEvents .card-title {
+        margin-bottom: 5px;
+    }
+
+    .lastestEvents .date {
+        margin-bottom: 5px;
+    }
+
+    .lastestEvents .deskripsi {
+        margin-bottom: 10px;
+
+    }
 }

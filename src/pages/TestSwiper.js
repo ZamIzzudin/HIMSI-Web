@@ -1,13 +1,10 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-// import { useState, useEffect, useRef } from 'react'
-
-// import Slider from 'react-slick'
-import '../styles/components/Partner.css'
-import PartnerImages from '../utils/PartnerImages'
+import '../styles/components/TestSwiper.css'
 import Image from '../assets/img/partner/image9.png'
 import Image1 from '../assets/img/partner/image6.png'
-// import image1 from '../assets/img/'
+import Image2 from '../assets/img/partner/image10.png'
+import PartnerImages from '../utils/PartnerImages'
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -16,18 +13,16 @@ import "swiper/css/free-mode";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import { FreeMode, Grid, Pagination } from "swiper";
+import { Container } from 'react-bootstrap';
 
-
-const Partner = () => {
+const TestSwiper = () => {
 
     return (
         <Container>
-            <div className='partner'>
-                <Row className='header mb-5'>
-                    <Col>
-                        <h4 className='judul text-center'>Partner</h4>
-                    </Col>
-                </Row>
+            <div className='test'>
+                <div className='header'>
+                    <h1>TestSwiper</h1>
+                </div>
                 <div className='slider'>
                     <Swiper
                         slidesPerView='auto'
@@ -36,7 +31,6 @@ const Partner = () => {
                             fill: 'row'
                         }}
                         spaceBetween={70}
-                        grabCursor={true}
                         freeMode={true}
                         pagination={{
                             clickable: true,
@@ -58,16 +52,7 @@ const Partner = () => {
                 </div>
             </div>
         </Container>
-    );
+    )
 }
-{/* <div className='test'>
-                        {PartnerImages.map((image, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <img src={image} />
-                                </SwiperSlide>
-                            )
-                        })}
-                    </div> */}
 
-export default Partner
+export default TestSwiper
