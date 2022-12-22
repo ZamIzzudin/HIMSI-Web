@@ -6,7 +6,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import '../styles/components/Partner.css'
 import PartnerImages from '../utils/PartnerImages'
 import Image from '../assets/img/partner/image9.png'
-import Image1 from '../assets/img/partner/image6.png'
 // import image1 from '../assets/img/'
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -47,12 +46,12 @@ const Partner = () => {
                         {PartnerImages.map((image, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <img src={image}></img>
+                                    <img src={image} alt={`patner ${index}`}></img>
                                 </SwiperSlide>
                             );
                         })}
                         <SwiperSlide>
-                            <img src={Image}></img>
+                            <img src={Image} alt='patner'></img>
                         </SwiperSlide>
                     </Swiper>
                 </div>
@@ -60,14 +59,5 @@ const Partner = () => {
         </Container>
     );
 }
-{/* <div className='test'>
-                        {PartnerImages.map((image, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <img src={image} />
-                                </SwiperSlide>
-                            )
-                        })}
-                    </div> */}
 
 export default Partner

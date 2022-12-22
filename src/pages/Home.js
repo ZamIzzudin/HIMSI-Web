@@ -9,7 +9,6 @@ import Partner from "../components/Partner";
 import SocialMedia from "../components/SocialMedia";
 
 import '../styles/pages/Home.css'
-import TestSwiper from "./TestSwiper";
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
       <LatestEvents />
       <Partner />
       <SocialMedia />
-      {/* <TestSwiper /> */}
     </div>
 
 
