@@ -1,0 +1,97 @@
+/* General */
+.struktur-anggota .content {
+  padding-top: 50px;
+}
+.heading-1 {
+  font-weight: 700;
+}
+
+.heading-2 {
+  font-size: 32px;
+  border-bottom: 2px solid #f49c45;
+  color: #082240;
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.description-1 {
+  color: #1d1d1d;
+  margin-bottom: 10px;
+  font-family: "Mulish";
+  margin-bottom: 8px;
+  margin-top: 5px;
+}
+
+.description-2 {
+  color: #1d1d1d;
+  font-size: 12px;
+  font-family: "Mulish";
+  margin-bottom: 8px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.BPH,
+.PSDM,
+.DIKTI,
+.MEDKOM,
+.PERHUB,
+.ADKESMA,
+.URT {
+  padding-bottom: 50px;
+}
+
+/* Divisi */
+.divisi {
+  color: #f49c45;
+  margin-bottom: 8px;
+}
+
+.PSDM .container,
+.DIKTI .container,
+.URT .container {
+  display: flex;
+  justify-content: row;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+.container .box-1,
+.box-2,
+.box-3 {
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px;
+  margin-right: 10px;
+  font-family: "Mulish";
+}
+
+.container .box-1 {
+  background-color: #0a3f45;
+}
+
+.container .box-2 {
+  background-color: #f49c45;
+}
+
+.container .box-3 {
+  background-color: #fce58d;
+  /* color: #000; */
+}
+
+/* Judul */
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 100px;
+  color: #082240;
+  font-family: "Montserrat";
+}
