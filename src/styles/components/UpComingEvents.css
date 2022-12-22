@@ -1,44 +1,43 @@
-/* .comingEvent {
-    height: 100px;
-} */
 .UpComingEvent {
     height: 100%;
-    /* background-color: blueviolet; */
-    /* overflow-x: hidden; */
+    font-family: 'Inter', sans-serif !important;
 }
 
-.header h3 {
+.UpComingEvent .btn:hover {
+    background-color: rgb(214, 130, 45) !important;
+}
+
+.header .title-header {
     font-size: 61px;
 }
 
-
-/* .UpComingEvent .header btn {} */
-
-.UpComingEvent .slick-slider {
-    margin: 0 20px;
-    /* background-color: blueviolet; */
-
+.UpComingEvent .listEvent {
+    display: flex !important;
+    flex-direction: row !important;
+    scroll-behavior: auto !important;
+    gap: 1.2rem;
+    overflow-y: auto !important;
+    overscroll-behavior-x: contain !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    cursor: pointer;
+    /* overflow-x: scroll;
+    width: 100% !important; */
 }
 
-.slick-slide {
-    display: flex;
-    padding: 10px;
-    /* background-color: red; */
-    text-align: center !important;
-    /* margin-right: 1px; */
-    /* margin-left: 2px; */
-    max-width: 700px;
-    /* align-items: center; */
-
+.listEvent::-webkit-scrollbar {
+    display: none !important;
 }
 
-/* .UpComingEvent {} */
+.UpComingEvent .layout {
+    height: 636.35px;
+    min-width: 461px;
+}
 
 .UpComingEvent .card {
     border: none !important;
-    height: 600px;
-    max-width: 400px;
-    /* background-color: aqua; */
+    width: 100% !important;
+    height: 100% !important;
     overflow: hidden;
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -46,8 +45,8 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
     text-align: left;
-    /* position: relative !important; */
-
+    position: relative !important;
+    user-select: none;
 }
 
 .UpComingEvent .gradient {
@@ -65,11 +64,6 @@
     background: linear-gradient(to top, rgba(0, 2, 103, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
 }
 
-/* 
-.UpComingEvent button .slick-arrow {
-    color: rgba(255, 255, 255, 0.655) !important;
-} */
-
 .UpComingEvent .card-img {
     height: 100%;
     /* width: 100%; */
@@ -80,9 +74,11 @@
 .UpComingEvent .card-body {
     position: absolute;
     color: white;
-    top: 400px !important;
-    z-index: 10;
+    top: 420px !important;
+    z-index: 2 !important;
     padding: 0 34px;
+    width: 100% !important;
+    /* height: auto !important; */
     padding-bottom: 30px;
 }
 
@@ -91,46 +87,105 @@
     font-weight: 700;
 }
 
-.UpComingEvent .btn-card {
-    width: 100% !important;
-    height: 64.1px !important;
+.UpComingEvent .card-text {
+    width: 100%;
+    max-height: 72px;
+    font-weight: 400;
+    overflow: hidden !important;
 }
 
+.UpComingEvent .btn-card {
+    width: 100% !important;
+    max-height: 64.1px !important;
+    /* z-index: 2 !important; */
+}
+
+/* Responsive */
+
 @media screen and (max-width: 1400px) {
-    .header h3 {
+    .header .title-header {
         font-size: 45px;
     }
 
+    .UpComingEvent .layout {
+        min-width: max-content;
+        height: auto;
+    }
+
+    .UpComingEvent .card {
+        height: 600px !important;
+        width: 400px !important;
+    }
+
     .UpComingEvent .card-body {
-        top: 380px !important;
+        top: 390px !important;
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .UpComingEvent .card {
+        height: 550px !important;
+        width: 350px !important;
+    }
+
+    .UpComingEvent .card-body {
+        top: 350px !important;
+    }
+
+    .UpComingEvent .card-title {
+        font-size: 20px;
+    }
+
+    .UpComingEvent .card-text {
+        font-size: 14px !important;
+        max-height: 65px;
+    }
+
+}
+
 @media screen and (max-width: 992px) {
-    .header h3 {
+    .header .title-header {
         font-size: 40px;
+    }
+
+    .UpComingEvent .card {
+        height: 500px !important;
+        width: 350px !important;
+    }
+
+    .UpComingEvent .card-body {
+        top: 300px !important;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .header h3 {
+    .header .title-header {
         font-size: 35px;
     }
 
-    .UpComingEvent .btn {
+    .header .btn-header {
         height: 45px;
         width: 130px;
         font-size: 14px !important;
     }
 
-    .UpComingEvent .card-title {
+    /* .UpComingEvent .card {
+        height: 450px !important;
+        width: 300px !important;
+    } */
+
+    /* .UpComingEvent .card-body {
+        top: 260px !important;
+    } */
+}
+
+@media screen and (max-width: 576px) {
+    /* .UpComingEvent .card-title {
         font-size: 18px;
     }
 
     .UpComingEvent .card-text {
-        font-size: 12px;
-    }
-
+        font-size: 12px !important;
+        max-height: 55px;
+    } */
 }
-
-@media screen and (max-width: 576px) {}

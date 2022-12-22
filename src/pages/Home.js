@@ -1,12 +1,4 @@
 
-// export default function Home() {
-//   return (
-//     <main>
-//       <h1>Home</h1>
-//     </main>
-//   );
-// }
-
 import React from "react";
 // import { Container, Row, Col } from "react-bootstrap";
 
@@ -16,9 +8,12 @@ import LatestEvents from "../components/LatestEvents";
 import Partner from "../components/Partner";
 import SocialMedia from "../components/SocialMedia";
 
+import '../styles/pages/Home.css'
+import TestSwiper from "./TestSwiper";
+
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <div className="blank-space">
       </div>
       <Hero />
@@ -26,6 +21,7 @@ const Home = () => {
       <LatestEvents />
       <Partner />
       <SocialMedia />
+      {/* <TestSwiper /> */}
     </div>
 
 

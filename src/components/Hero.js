@@ -18,8 +18,8 @@ const Hero = () => {
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3 >Meet Up 13.0</h3>
-                        <Button variant="primary" className='mb-4'>View More</Button>
+                        <h3 className='judul'>Meet Up 13.0</h3>
+                        <Button variant="primary" className=' btn-hero'>View More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
@@ -32,8 +32,8 @@ const Hero = () => {
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Meet Up 13.1</h3>
-                        <Button variant="primary" className='mb-4'>View More</Button>
+                        <h3 className='judul'>Lomba Milad HIMSI</h3>
+                        <Button variant="primary" className='btn-hero'>View More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
@@ -46,8 +46,8 @@ const Hero = () => {
                         />
                     </div>
                     <Carousel.Caption>
-                        <h3>Meet Up 13.2</h3>
-                        <Button variant="primary" className='mb-4'>View More</Button>
+                        <h3 className='judul'>PBAK</h3>
+                        <Button variant="primary" className='btn-hero'>View More</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
