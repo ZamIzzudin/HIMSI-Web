@@ -1,17 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 nav {
     position: fixed;
     z-index: 8 !important;
     background-color: white;
+    height: 90px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5%;
+    padding: 15px 5%;
+    padding-top: 20px;
     box-sizing: border-box;
+    font-size: 15px;
+}
+
+.nav-logo {
+    width: 90px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+
+.nav-HIMSI {
+    font-size: 35px;
+    font-family: "Poppins";
+    font-weight: 800;
+    color: #082240 ;
+    padding-top: 50px;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+.nav-univ {
+    font-size: 15px;
+    font-family: "Montserrat" ;
+    font-weight: 500;
+    margin-left: 15px;
 }
 
 .navbar-items {
     align-items: center;
     display: flex;
     gap: 30px;
+    font-size: 16px;
+    font-family: "Montserrat" ;
+    font-weight: 500;
 }
+
+/*-------------------------------- RESPONSIVE ------------------------- */

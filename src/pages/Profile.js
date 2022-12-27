@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../assets/img/logohimsi.png";
-import Struktur from "../assets/img/struktur.png";
+import Struktur from "../assets/img/struktur-organisasi.png";
 import StrukturAnggota from "../components/StrukturAnggota";
+import Footer from "../components/Footer";
 import "../styles/pages/Profile.css";
 
 const Profile = () => {
@@ -9,7 +10,6 @@ const Profile = () => {
     <div class='container'>
       <div class='heading'>
         <h1 className='himsi'>Himpunan Mahasiswa Sistem Informasi</h1>
-        <br></br>
         <h2 className='namauniv'>UIN Syarif Hidayatulah Jakarta</h2>
       </div>
 
@@ -20,8 +20,7 @@ const Profile = () => {
 
       {/* -------------------------- Bagian Visi ------------------------- */}
       <div class='visi'>
-        <h1> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-        <br></br>
+        <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
         <p className='visi-p'> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan
           adaptif guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian
           mahasiswa SI.</p>
@@ -30,7 +29,7 @@ const Profile = () => {
 
       {/*---------------------------- Bagian Misi-------------------- */}
       <div class='misi'>
-        <h1> <span class="dot"></span> Misi <span class="dot"></span> </h1>
+        <h1 className="misi-judul"> <span class="dot"></span> Misi <span class="dot"></span> </h1>
         <br></br>
 
         {/*--------------- Bagian Misi 1 ---------------------- */}
@@ -75,7 +74,7 @@ const Profile = () => {
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
 
       <div class='bidang'>
-        <h1> Bidang & Divisi </h1>
+        <h1 className="bidang-judul"> Bidang & Divisi </h1>
         <br></br>
       </div>
 
@@ -85,30 +84,17 @@ const Profile = () => {
         <h1 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h1>
       </div>
 
-      {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
-
-      <div class="bidang">
-        <h1> Bidang & Divisi </h1>
-        <br></br>
-      </div>
-
-      {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
-
-      <div class="struktur">
-        <h1>
-          {" "}
-          <span class="dot"></span> Struktur Organisasi{" "}
-          <span class="dot"></span>{" "}
-        </h1>
-      </div>
-
       <div class="logo">
         <img src={Struktur} className="struktur-logo" alt="Logo" />
       </div>
 
-      {/* Bagian Struktur Anggota */}
-      <StrukturAnggota />
-    </div >
+
+      {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
+      <div>
+        <StrukturAnggota />
+      </div>
+
+</div>
   );
 };
 
