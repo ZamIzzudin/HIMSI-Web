@@ -1,7 +1,7 @@
 .social-media .logo-sosmed i {
     font-size: 60px;
     color: rgba(8, 34, 64, 1);
-
+    margin-bottom: 20px !important;
 }
 
 @media screen and (max-width: 1400px) {
@@ -15,4 +15,22 @@
         font-size: 40px;
     }
 
+}
+
+@media screen and (max-width: 992px) {
+    .social-media .logo-sosmed i {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-media .logo-sosmed i {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .social-media .logo-sosmed {
+        width: 50% !important;
+    }
 }

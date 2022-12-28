@@ -11,6 +11,7 @@ import Article from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
 import Category from "./pages/Category";
+import DetailProker from "./pages/DetailProker";
 
 export default function Router() {
     return (
@@ -24,6 +25,7 @@ export default function Router() {
 
                 {/* Page Proker */}
                 <Route path="/program-kerja" component={Category} />
+                <Route path="/detail-program-kerja" component={DetailProker} />
 
                 {/* Page Event */}
                 <Route path="/event" component={Event} />
@@ -36,7 +38,6 @@ export default function Router() {
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
-            {/* <EventDetail /> */}
         </BrowserRouter>
     )
 }

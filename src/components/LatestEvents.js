@@ -9,12 +9,6 @@ const LatestEvents = () => {
     return (
         <Container>
             <div className='lastestEvents'>
-                <Row className='header mb-4'>
-                    <Col className='d-flex justify-content-between align-items-center'>
-                        <h3 className='title-header'>Lastest Events</h3>
-                        <Button className='btn-header' variant="primary">View More</Button>
-                    </Col>
-                </Row>
                 <div className='list-event'>
                     {dataEvents.map((event, index) => {
                         return (

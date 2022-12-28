@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "../styles/pages/Category.css";
 
+import { Link } from "react-router-dom";
+
 function Category() {
   return (
     // Bagian List Kegiatan
@@ -107,6 +109,12 @@ function Category() {
         <div className="search-bar">
           <form></form>
         </div>
+      </div>
+
+      <div className="link-detailProker">
+        <Button>
+          <Link to={`/detail-program-kerja`}>Detail Proker</Link>
+        </Button>
       </div>
     </div>
   );

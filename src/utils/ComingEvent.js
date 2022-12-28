@@ -1,4 +1,4 @@
-import image from '../assets/img/hero1.jpg'
+import image from '../assets/img/mcmeetup.png'
 
 
 export const ComingEvent = [
@@ -6,7 +6,7 @@ export const ComingEvent = [
         "id": 1,
         "category": "Dikti",
         "title": "Programming Class",
-        "content": "Some quick example text to build on the card title and make up the bulk of the card's content.  make up the bulk of the card's content.",
+        "content": "Some quick example text to build on the card title and make up the bulk of the card's content.  make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.  make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.  make up the bulk of the card's content.",
         "createdBy": "Amir",
         "date": "01/12/21",
         "img": { image }

@@ -5,3 +5,8 @@
 .search-bar {
   padding-bottom: 30px;
 }
+
+.link-detailProker .btn {
+  margin: auto !important;
+  color: white;
+}

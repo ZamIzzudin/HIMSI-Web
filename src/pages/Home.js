@@ -1,25 +1,33 @@
 
 import React from "react";
-// import { Container, Row, Col } from "react-bootstrap";
 
 import Hero from "../components/Hero";
-import UpComingEvent from "../components/UpComingEvent";
 import LatestEvents from "../components/LatestEvents";
 import Partner from "../components/Partner";
 import SocialMedia from "../components/SocialMedia";
-
 import '../styles/pages/Home.css'
+import EventSlider from "../components/EventSlider";
+import { Container, Button } from "react-bootstrap";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="blank-space">
-      </div>
+      <div className="blank-space" />
       <Hero />
-      <UpComingEvent />
-      <LatestEvents />
-      <Partner />
-      <SocialMedia />
+      <Container>
+        <div className="header">
+          <h3 className="title">Up Coming Events</h3>
+          <Button className='btn-header' variant="primary">View More</Button>
+        </div>
+        <EventSlider />
+        <div className="header">
+          <h3 className="title">Lastest Event</h3>
+          <Button className='btn-header' variant="primary">View More</Button>
+        </div>
+        <LatestEvents />
+        <Partner />
+        <SocialMedia />
+      </Container>
     </div>
 
 

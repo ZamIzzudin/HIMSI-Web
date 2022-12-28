@@ -1,4 +1,4 @@
-import image from '../assets/img/hero1.jpg'
+import image from '../assets/img/mcmeetup.png'
 
 
 export const dataEvents = [
