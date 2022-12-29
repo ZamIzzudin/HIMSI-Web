@@ -1,16 +1,16 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 // Navbar
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 
 // Pages
-import Home from './pages/Home'
+import Home from "./pages/Home";
 import Page404 from "./pages/Page404";
 import Event from "./pages/Event";
 import EventDetail from "./pages/EventDetail";
 import Article from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
-import Category from "./pages/Category";
+import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
 
 export default function Router() {
@@ -24,7 +24,7 @@ export default function Router() {
                 <Route path="/profile" component={Profile} />
 
                 {/* Page Proker */}
-                <Route path="/program-kerja" component={Category} />
+                <Route path="/program-kerja" component={ProgramKerja} />
                 <Route path="/detail-program-kerja" component={DetailProker} />
 
                 {/* Page Event */}
@@ -38,6 +38,7 @@ export default function Router() {
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
+            {/* <EventDetail /> */}
         </BrowserRouter>
-    )
+    );
 }
