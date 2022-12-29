@@ -1,3 +1,4 @@
+/* ---------------------- FONT ------------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Mulish:wght@500&family=Poppins:wght@600&family=Roboto:wght@500&display=swap');
 
 
@@ -32,12 +33,14 @@
 }
 
 .namauniv {
-    font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
 
 .profile-logo {
     justify-content: center;
-    width: 50%;
+    width: 40%;
     height: auto;
     display: flex;
     margin-left: auto;
@@ -47,17 +50,22 @@
 /* ---------------------- VISI ----------------------- */
 
 .visi {
-    font-size: 48px;
     padding-top: 50px;
     padding-bottom: 10px;
     text-align: center;
-    color: #082240;
-    font-family: 'Montserrat', sans-serif;
 }
-
+.visi-judul {
+    color: #082240;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+}
 .visi-p {
+    padding-top: 35px;
+    padding-bottom: 40px;
     font-size: 24px;
-    font-family: 'Mulish', sans-serif;
+    font-family: "Mulish";
+    font-weight: 400;
     text-align: center;
 }
 
@@ -67,9 +75,13 @@
     padding-top: 50px;
     padding-bottom: 15px;
     text-align: center;
-    font-size: 30px;
+}
+
+.misi-judul {
     color: #082240;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
 }
 
 .misi-paragraf {
@@ -112,10 +124,13 @@
     margin-top: 100px;
     padding-top: 25px;
     padding-bottom: 25px;
-    color: #082240;
-    font-family: 'Montserrat', sans-serif;
 }
-
+.bidang-judul {
+    color: #082240;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+}
 /*-------------------------------- STRUKTUR ORGANISASI ------------------------- */
 
 .struktur {
@@ -127,17 +142,17 @@
 }
 
 .struktur-judul {
-    font-size: 35px;
-    text-align: center;
+    font-size: 40px;
     color: #082240;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat";
+    font-weight: 600;
 }
 
 .struktur-logo {
     justify-content: center;
     padding-top: 25px;
     padding-bottom: 80px;
-    width: 50%;
+    width: 100%;
     min-width: 100px;
     height: auto;
     display: flex;
@@ -145,6 +160,7 @@
     margin-right: auto;
 
 }
+
 
 /*-------------------------------- RESPONSIVE ------------------------- */
 @media screen and (max-width: 600px) {
@@ -160,10 +176,21 @@
         width: 60%;
         height: auto;
     }
+<<<<<<< HEAD
+=======
+    
+    .visi-judul {
+        font-size: 30px;
+    }
+>>>>>>> 1856e871851ed0c014e1b6fbf6ad8bc2992017d4
 
     .visi-p {
         display: flex;
         font-size: 15px;
+    }
+
+    .misi-judul {
+        font-size: 30px;
     }
 
     .misi-paragraf {
@@ -181,5 +208,10 @@
 
     .struktur-judul {
         font-size: 20px;
+    }
+
+    .struktur-logo {
+        width: 90%;
+        height: auto;
     }
 }

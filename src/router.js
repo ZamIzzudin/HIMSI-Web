@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 // Navbar
-import Navbar from "./components/Navbar";
+import Navbar from './components/Navbar'
+import Footer from "./components/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -38,6 +39,8 @@ export default function Router() {
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
+            <Footer />
+
             {/* <EventDetail /> */}
         </BrowserRouter>
     );

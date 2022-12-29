@@ -1,0 +1,128 @@
+.footer-bs {
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    background-color: #082240;
+    background-size: 0px;
+	color: #fff;
+}
+
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { 
+    padding-left: 25px;
+}
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { 
+    border-color: #082240 ; 
+}
+
+.footer-bs .footer-brand h2 { 
+    margin: 0px 0px 20px; 
+}
+
+.footer-bs .footer-brand p { 
+    font-size: 12px;
+    color: #fff; 
+    font-family: "Mulish";
+    font-weight: 400;
+}
+
+
+.footer-bs .footer-social ul { 
+    list-style:none;  
+    padding: 0px;
+}
+
+.footer-bs .footer-social li { 
+    font-size: 15px;
+    padding: 8px 0px;
+    font-family: "Mulish";
+    font-weight: 400;
+}
+
+.footer-bs .footer-social a { 
+    color:rgba(255,255,255,1.00);
+}
+
+.footer-bs .footer-social a:hover { 
+    color:rgba(255,255,255,0.80); 
+}
+
+.footer-bs .footer-ns p { 
+    padding-top: 5px;
+    font-size: 14px;
+    color:#fff;
+    font-family: "Mulish";
+    font-weight: 400; 
+}
+
+
+.footer-judul {
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-family: "Montserrat" ;
+    font-weight: 700;
+}
+
+.footer-copyright {
+    padding-top: 80px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Montserrat" ;
+    font-weight: 400;
+}
+
+.footer-input {
+    padding: 15px 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.logo-sosmed i {
+    justify-content: left;
+    font-size: 26px;
+}
+
+.footer-btn {
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #F49C45;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+/*-------------------------------- RESPONSIVE ------------------------- */
+
+@media screen and (max-width: 600px) {
+
+    .footer-bs {
+        padding-left: 10px;
+    }
+
+    .footer-judul {
+        padding-top: 25px;
+    }
+
+    .footer-input {
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin-right: 15px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+    }
+
+    .footer-btn {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #F49C45;
+        color: #fff;
+        font-size: 15px;
+    }
+
+
+    .footer-copyright {
+        font-size: 10px;
+    }
+}
