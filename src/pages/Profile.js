@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 import Logo from "../assets/img/logohimsi.png";
 import Struktur from "../assets/img/struktur-organisasi.png";
-import StrukturAnggota from "../components/StrukturAnggota";
+
 import "../styles/pages/Profile.css";
 
 const Profile = () => {
@@ -89,10 +91,11 @@ const Profile = () => {
 
 
       {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
-      <div>
-        <StrukturAnggota />
+      <div className="cta-box">
+        <button className="btn">
+          <Link to={`/struktur-anggota`}>Read More ➜</Link>
+        </button>
       </div>
-
     </div>
   );
 };

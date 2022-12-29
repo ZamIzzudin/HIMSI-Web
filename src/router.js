@@ -13,6 +13,7 @@ import ArticleDetail from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
 import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
+import StrukturAnggota from "./pages/StrukturAnggota";
 
 export default function Router() {
     return (
@@ -23,6 +24,8 @@ export default function Router() {
 
                 {/* Page Profile */}
                 <Route path="/profile" component={Profile} />
+                {/* Struktur Anggota */}
+                <Route path="/struktur-anggota" component={StrukturAnggota} />
 
                 {/* Page Proker */}
                 <Route path="/program-kerja" component={ProgramKerja} />

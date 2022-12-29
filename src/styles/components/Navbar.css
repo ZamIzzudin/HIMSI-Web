@@ -26,7 +26,7 @@ nav {
     font-size: 35px;
     font-family: "Poppins";
     font-weight: 800;
-    color: #082240 ;
+    color: #082240;
     padding-top: 50px;
     margin-bottom: auto;
     margin-left: 15px;
@@ -34,7 +34,7 @@ nav {
 
 .nav-univ {
     font-size: 15px;
-    font-family: "Montserrat" ;
+    font-family: "Montserrat";
     font-weight: 500;
     margin-left: 15px;
 }
@@ -44,8 +44,12 @@ nav {
     display: flex;
     gap: 30px;
     font-size: 16px;
-    font-family: "Montserrat" ;
+    font-family: "Montserrat";
     font-weight: 500;
+}
+
+.navbar-items a {
+    color: black !important;
 }
 
 /*-------------------------------- RESPONSIVE ------------------------- */

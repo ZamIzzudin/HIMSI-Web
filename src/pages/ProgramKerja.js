@@ -37,30 +37,29 @@ const ProgramKerja = () => {
   ];
 
   return (
-    <div className="program-kerja">
-      <Container>
-        <div className="search-bar">
-          <form>
-            <input type="text" name="" placeholder="Search Proker" />
-            <input type="submit" name="" value="Search" />
-            <div className="clear"></div>
-          </form>
-        </div>
-        <div className="eventList">
+
+    <Container>
+      <div className="search-bar">
+        <form>
+          <input type="text" name="" placeholder="Search Proker" />
+          <input type="submit" name="" value="Search" />
           <div className="clear"></div>
+        </form>
+      </div>
+      <div className="eventList">
+        <div className="clear"></div>
+        <Row className="blank-space"></Row>
+        <Row className="judul text-center">
+          <Col>
+            <h1>Program Kerja</h1>
+          </Col>
           <Row className="blank-space"></Row>
-          <Row className="judul text-center">
-            <Col>
-              <h1>Program Kerja</h1>
-            </Col>
-            <Row className="blank-space"></Row>
-          </Row>
-          {detailEvents.map((detailEvent, index) => {
-            return <EventItem detailEvent={detailEvent} index={index} />;
-          })}
-        </div>
-      </Container>
-    </div>
+        </Row>
+        {detailEvents.map((detailEvent, index) => {
+          return <EventItem detailEvent={detailEvent} index={index} />;
+        })}
+      </div>
+    </Container>
   );
 };
 

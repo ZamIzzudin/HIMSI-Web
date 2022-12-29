@@ -54,12 +54,14 @@
     padding-bottom: 10px;
     text-align: center;
 }
+
 .visi-judul {
     color: #082240;
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 40px;
 }
+
 .visi-p {
     padding-top: 35px;
     padding-bottom: 40px;
@@ -125,12 +127,14 @@
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
 .bidang-judul {
     color: #082240;
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 40px;
 }
+
 /*-------------------------------- STRUKTUR ORGANISASI ------------------------- */
 
 .struktur {
@@ -158,9 +162,13 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-
 }
 
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*-------------------------------- RESPONSIVE ------------------------- */
 @media screen and (max-width: 600px) {
@@ -176,13 +184,10 @@
         width: 60%;
         height: auto;
     }
-<<<<<<< HEAD
-=======
-    
+
     .visi-judul {
         font-size: 30px;
     }
->>>>>>> 1856e871851ed0c014e1b6fbf6ad8bc2992017d4
 
     .visi-p {
         display: flex;
