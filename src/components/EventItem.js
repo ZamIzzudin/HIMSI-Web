@@ -14,7 +14,8 @@ export default function EventItem({ detailEvent, index }) {
           <p className="deskripsi">{detailEvent.deskripsi}</p>
           {/* manggil detailEvent id */}
           <button>
-            <Link to={`/event-detail/${detailEvent.id}`}>Learn More ➜</Link>
+            <Link to={`/detail-program-kerja`}>Learn More ➜</Link>
+            {/* <Link to={`/event-detail/${detailEvent.id}`}>Learn More ➜</Link> */}
           </button>
         </div>
         <img src={imageEvent} alt="" className="imageEvent ms-auto" />
