@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import '../styles/components/EventSlider.css'
 import { ComingEvent } from '../utils/ComingEvent'
-import { Row, Col, Button, Card } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import hero1 from "../assets/img/mcmeetup.png"
 
 
@@ -36,7 +36,7 @@ const EventSlider = () => {
                             <SwiperSlide>
                                 <div className='gradient'>
                                     <div className="gradient-overlay"></div>
-                                    <img src={hero1}></img>
+                                    <img src={hero1} alt="hero" />
                                 </div>
                                 <div className="event-body">
                                     <h5 className='title'>{event.title}</h5>

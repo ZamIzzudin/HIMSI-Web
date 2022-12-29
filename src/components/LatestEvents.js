@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Button, Card } from 'react-bootstrap'
+import { Container, Button, Card } from 'react-bootstrap'
 import imageLastest from '../assets/img/mengajar.png'
 
 import { dataEvents } from '../utils/dataEvent'

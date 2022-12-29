@@ -14,15 +14,15 @@ const DetailProker = () => {
             <div className='blank-space'></div>
             {/* -------------------------- Bagian Img Header ------------------------- */}
             <div className='img-header'>
-                <img src={ImageHeader} />
+                <img src={ImageHeader} alt="header" />
             </div>
             <Container>
                 <div className='background'>
                     <div className="bg-1">
-                        <img src={bgProker} alt="" />
+                        <img src={bgProker} alt="h" />
                     </div>
                     <div className="bg-2">
-                        <img src={bgProker} alt="" />
+                        <img src={bgProker} alt="h" />
                     </div>
                 </div>
                 {/* -------------------------- Content ------------------------- */}
