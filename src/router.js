@@ -14,6 +14,7 @@ import Profile from "./pages/Profile";
 import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
 import StrukturAnggota from "./pages/StrukturAnggota";
+import DetailArtikel from "./pages/ArticleDetail";
 
 export default function Router() {
     return (
@@ -38,6 +39,7 @@ export default function Router() {
                 {/* Page Article */}
                 <Route path="/article" component={Article} />
                 <Route path="/article-detail/:id" component={ArticleDetail} />
+                <Route path="/detail-artikel" component={DetailArtikel} />
 
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
