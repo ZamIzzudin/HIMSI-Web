@@ -12,7 +12,13 @@
   font-family: "Inter", sans-serif;
 }
 
-.tag {
+.eventList .row {
+  width: 1240px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.tags {
   background: linear-gradient(180deg, #ebd63d 0%, rgba(235, 214, 61, 0.3) 100%);
   width: 160px;
   height: 48px;

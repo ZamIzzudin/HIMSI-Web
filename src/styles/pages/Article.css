@@ -1,0 +1,215 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+
+.program-kerja {
+    position: absolute;
+    width: 100%;
+    height: 595px;
+    left: 0px;
+    background: linear-gradient(
+      180deg,
+      #082240 17.63%,
+      rgba(8, 34, 64, 0.31) 83.66%,
+      rgba(8, 34, 64, 0) 98.51%
+    );
+  }
+  
+  .search-bar {
+    padding-top: 150px;
+    width: 1240px;
+    margin: auto;
+    max-width: 100%;
+  }
+  
+  /* input[type="text"] {
+    width: 1105px;
+    max-width: 89.1129032258%;
+    height: 56px;
+    padding: 8px 130px;
+    border-radius: 40px 0 0 40px;
+    font-family: "Montserrat", sans-serif;
+    border-width: 1px 0 1px 1px;
+    outline: none;
+    border-color: #f49c45;
+    border-style: solid;
+    background-image: url("../../assets/img/Magnifer.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: 95px;
+    background-position-y: center;
+  } */
+
+  .category-wrapper{
+    width: 1105px;
+    max-width: 89.1129032258%;
+    height: 56px;
+    padding: 8px 70px;
+    border-radius: 40px 0 0 40px;
+    font-family: "Montserrat", sans-serif;
+    border-width: 1px 0 1px 1px;
+    outline: none;
+    border-color: #f49c45;
+    border-style: solid;
+    background-image: url("../../assets/img/Magnifer.png");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: 30px;
+    background-position-y: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: auto;
+  }
+
+  .display-bubble {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 8px;
+  }
+
+  .checked {
+    padding: 7px;
+    background-color: #f49c45;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .clear {
+    clear: right;
+  }
+  
+  .judul h1 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 62px;
+  }
+  
+  input[type="submit"] {
+    width: 135px;
+    position: absolute;
+    top: 17.2%;
+    right: 22.5%;
+    max-width: 9.7870967742%;
+    height: 56px;
+    padding: 8px 25px;
+    border-width: 1px 1px 1px 0;
+    outline: none;
+    border-radius: 0 40px 40px 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    border-color: #f49c45;
+    border-style: solid;
+    cursor: pointer;
+    background-color: #f49c45;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .blank-space {
+    height: 70px;
+  }
+  
+  .pagination {
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
+  
+  .page-item:first-child .page-link {
+    background-color: #f49c45;
+    border: none;
+    color: #fff;
+    border-radius: 100%;
+  }
+
+  .menu-button {
+    background-color: #f49c45;
+    border-radius: 50px;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    border: #f49c45;
+  }
+
+  .menu-icon {
+    width: 17.5px;
+    height: 21.5px;
+    top: 1.25px;
+    left: 3.25px;
+    color: #fff;
+  }
+
+  .category-container {
+    background-color: #fff;
+    width: 320px;
+    height: 833px;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    right: 19%;
+    top: 24%;
+  }
+
+  .wrapper-list {
+    display: flex;
+    padding: 14px 32px
+    
+  }
+
+  
+  .wrapper-list input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #828282;
+      border-radius: 2px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      vertical-align: middle;
+      
+  }
+
+  .wrapper-list input[type="checkbox"]:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f00c';
+    font-weight: 900;
+    font-size: 15px;
+    color: #fff;
+    background-color: #f49c45;
+    display: none;
+  }
+
+  .wrapper-list input[type="checkbox"]:checked {
+    background-color: #f49c45;
+    border: none;
+  }
+
+  .wrapper-list input[type="checkbox"]:checked::after {
+    display: block;
+  }
+
+  .wrapper-list label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #4f4f4f;
+    font-style: normal;
+  }
+
+  
+
+  
+
+
+  
