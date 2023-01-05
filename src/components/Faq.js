@@ -3,28 +3,6 @@ import { Container, Accordion } from 'react-bootstrap'
 import '../styles/pages/LayananMahasiswa.css'
 
 const Faq = () => {
-    const databases = [
-        {
-            judul: 'Kurikulum 2020',
-            url: '/#'
-        },
-        {
-            judul: 'Kurikulum 2015',
-            url: '/#'
-        },
-        {
-            judul: 'Laporan PKL & KKN',
-            url: '/#'
-        },
-        {
-            judul: 'Skripsi',
-            url: '/#'
-        },
-        {
-            judul: 'E-letter FST',
-            url: '/#'
-        }
-    ]
     return (
         <div className="layanan-mahasiswa">
             <Container>

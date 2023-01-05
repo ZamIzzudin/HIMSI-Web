@@ -46,7 +46,7 @@ export default function Router() {
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
-            {/* <Footer /> */}
+            <Footer />
 
             {/* <EventDetail /> */}
         </BrowserRouter>

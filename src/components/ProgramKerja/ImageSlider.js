@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../../styles/components/ProgramKerja/ImageSlider.css";
-import img from '../../assets/img/meetup.png'
+import imgSlider from '../../assets/img/meetup.png'
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
@@ -28,7 +28,7 @@ const ImageSlider = () => {
                     className="mySwiper"
                 >
                     <SwiperSlide>
-                        <img src={img} alt="image-slider" />
+                        <img src={imgSlider} alt="image-slider" />
                     </SwiperSlide>
                 </Swiper>
             </div>

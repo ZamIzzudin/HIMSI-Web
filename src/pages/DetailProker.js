@@ -6,7 +6,6 @@ import EventSlider from '../components/EventSlider'
 import ImageHeader from '../assets/img/meetup.png'
 import bgProker from '../assets/img/bg-proker.png'
 import imgLink from '../assets/img/link.svg'
-import ProgramKerja from './ProgramKerja'
 import ImageSlider from '../components/ProgramKerja/ImageSlider'
 
 
