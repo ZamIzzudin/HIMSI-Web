@@ -132,7 +132,7 @@ const ProgramKerja = () => {
   // };
 
   const renderFilters = () => {
-    return checkboxs.map((item) => {
+    return checkboxs?.map((item) => {
       if (item.check) {
         return (
           <span className="option" key={item.id}>

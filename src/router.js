@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
 import Page404 from "./pages/Page404";
-import Event from "./pages/Event";
-import EventDetail from "./pages/EventDetail";
+// import Event from "./pages/Event";
+// import EventDetail from "./pages/EventDetail";
 import Article from "./pages/Article";
 import ArticleDetail from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
@@ -34,8 +34,8 @@ export default function Router() {
                 <Route path="/detail-program-kerja" component={DetailProker} />
 
                 {/* Page Event */}
-                <Route path="/event" component={Event} />
-                <Route path="/event-detail/:id" component={EventDetail} />
+                {/* <Route path="/event" component={Event} />
+                <Route path="/event-detail/:id" component={EventDetail} /> */}
 
                 {/* Page Article */}
                 <Route path="/article" component={Article} />
