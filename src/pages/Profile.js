@@ -21,10 +21,11 @@ const Profile = () => {
 
       {/* -------------------------- Bagian Visi ------------------------- */}
       <div class='visi'>
-        <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-        <p className='visi-p'> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan
-          adaptif guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian
-          mahasiswa SI.</p>
+          <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
+          <p className='visi-p'> 
+          Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif
+          guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian mahasiswa SI.
+          </p>
       </div>
 
 
@@ -76,7 +77,6 @@ const Profile = () => {
 
       <div class='bidang'>
         <h1 className="bidang-judul"> Bidang & Divisi </h1>
-        <br></br>
       </div>
 
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
@@ -92,11 +92,12 @@ const Profile = () => {
 
       {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
       <div className="cta-box">
-        <button className="btn">
-          <Link to={`/struktur-anggota`}>Read More ➜</Link>
+        <button className="btn-pengurus">
+          <Link to={`/struktur-anggota`}>Pengurus HISMI </Link>
         </button>
       </div>
-    </div>
+
+</div>
   );
 };
 

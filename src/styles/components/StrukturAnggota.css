@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 /* General */
 .struktur-anggota .content {
   padding-top: 50px;
@@ -7,26 +9,36 @@
   font-weight: 700;
 }
 
+.icon-pengurus {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  display: inline;
+}
+
 .heading-2 {
-  font-size: 32px;
-  border-bottom: 2px solid #f49c45;
+  font-size: 35px;
   color: #082240;
   font-family: "Montserrat";
   font-weight: 700;
   margin-bottom: 0;
+  display: inline;
 }
 
 .description-1 {
+  border-top: 2px solid #f49c45;
   color: #1d1d1d;
+  font-size: 24px;
   margin-bottom: 10px;
   font-family: "Mulish";
-  margin-bottom: 8px;
-  margin-top: 5px;
+  margin-top: 0;
+  padding-top: 3px;
 }
 
 .description-2 {
   color: #1d1d1d;
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Mulish";
   margin-bottom: 8px;
 }
@@ -95,4 +107,66 @@
   margin-top: 100px;
   color: #082240;
   font-family: "Montserrat";
+}
+
+/* Card*/
+.card-pengurus {
+  box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+  border-radius: 16px;
+  border: none;
+}
+
+.name-anggota {
+  color: #082240;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.name-bidang {
+  color: #f49c45;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.icon-instagram {
+  width: 30px;
+  height: auto;
+  float: right;
+}
+
+@media screen and (max-width: 1400px) {
+  .heading-1 {
+    font-size: 22px;
+  }
+
+  .icon-pengurus {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+  
+  }
+
+  .heading-2 {
+    font-size: 25px;
+  }
+
+  .description-1 {
+    font-size: 18px;
+  }
+  
+  .description-2 {
+    font-size: 15px; 
+  }
+
+  .name-anggota {
+    font-size: 20px;
+  }
+  
+  .name-bidang {
+    font-size: 15px;
+  }
+
 }

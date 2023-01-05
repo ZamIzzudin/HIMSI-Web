@@ -4,7 +4,7 @@
 
 .container {
     /* background-color: #f49c45; */
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
 .dot {
@@ -28,7 +28,9 @@
 
 
 .himsi {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 56px;
     color: #000267;
 }
 
@@ -36,11 +38,12 @@
     padding-top: 20px;
     font-family: "Montserrat";
     font-weight: 500;
+    font-size: 40px;
 }
 
 .profile-logo {
     justify-content: center;
-    width: 40%;
+    width: 45%;
     height: auto;
     display: flex;
     margin-left: auto;
@@ -65,7 +68,7 @@
 .visi-p {
     padding-top: 35px;
     padding-bottom: 40px;
-    font-size: 24px;
+    font-size: 25px;
     font-family: "Mulish";
     font-weight: 400;
     text-align: center;
@@ -75,7 +78,7 @@
 
 .misi {
     padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
     text-align: center;
 }
 
@@ -89,7 +92,7 @@
 .misi-paragraf {
     text-align: left;
     font-size: 17px;
-    padding-top: 10px;
+    padding-top: 20px;
     font-family: 'Mulish', sans-serif;
     letter-spacing: normal;
     margin-left: 10px;
@@ -121,10 +124,8 @@
 /* ----------------------------- BIDANG DAN DIVISI --------------------------*/
 
 .bidang {
-    font-size: 30px;
     text-align: center;
-    margin-top: 100px;
-    padding-top: 25px;
+    padding-top: 100px;
     padding-bottom: 25px;
 }
 
@@ -170,8 +171,19 @@
     justify-content: center;
 }
 
+.btn-pengurus {
+    background: #F49C45;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 12px; 
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+
 /*-------------------------------- RESPONSIVE ------------------------- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1400px) {
     .himsi {
         font-size: 27px;
     }
@@ -211,6 +223,10 @@
         border-radius: 50px;
     }
 
+    .bidang-judul {
+        font-size: 20px;
+    }
+
     .struktur-judul {
         font-size: 20px;
     }
@@ -219,4 +235,10 @@
         width: 90%;
         height: auto;
     }
+
+    .btn-pengurus {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
 }

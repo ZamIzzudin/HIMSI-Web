@@ -40,7 +40,7 @@ export default function SubscribeModal({ showSubscribeModal, setSubscribeModal }
                         <Form.Control value={name} onChange={(e) => setName(e.target.value)} required />
                     </Form.Group>
                     <Button variant="primary" type="submit">
-                        Subscribe
+                        Submit
                     </Button>
                 </Form>
             </Modal.Body>

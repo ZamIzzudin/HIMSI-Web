@@ -1,7 +1,7 @@
 import "../styles/components/StrukturAnggota.css";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import Icon from "../assets/img/iconpengurus.png";
+import Instagram from "../assets/img/instagram.png";
+import {Card, Col, Row} from "react-bootstrap";
 
 const StrukturAnggota = () => {
   const bph = [
@@ -205,6 +205,10 @@ const StrukturAnggota = () => {
       nama: "Rahel Saffana A",
       bidang: "Anggota",
     },
+    {
+      nama: "Mufadha Tiohandra",
+      bidang: "Anggota",
+    },
   ];
 
   const adkesma = [
@@ -232,6 +236,10 @@ const StrukturAnggota = () => {
       nama: "Nabila Nur A",
       bidang: "Anggota",
     },
+    {
+      nama: "Anida Frida M",
+      bidang: "Anggota",
+    },
   ];
 
   const urt = [
@@ -248,7 +256,7 @@ const StrukturAnggota = () => {
       bidang: "Ketua Divisi Kesekretariatan Umum",
     },
     {
-      nama: "Mar’atus Sholihah",
+      nama: "Maratus Sholihah",
       bidang: "Ketua Divisi Kerohanian",
     },
     {
@@ -295,6 +303,11 @@ const StrukturAnggota = () => {
       nama: "Nazla Khalisha",
       bidang: "Anggota",
     },
+    {
+      nama: "Nadhiroh Salsabillah",
+      bidang: "Anggota",
+    },
+
   ];
 
   return (
@@ -302,7 +315,7 @@ const StrukturAnggota = () => {
       <div className="struktur-anggota">
         {/* Bagian Judul */}
         <div className="title text-center">
-          <h1 className="heading-1">
+            <h1 className="heading-1">
             <span className="dot"></span>Pengurus HIMSI 2022
             <span className="dot"></span>
           </h1>
@@ -311,25 +324,28 @@ const StrukturAnggota = () => {
         <div className="content">
           {/* Bagian BPH */}
           <div className="BPH ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">BPH</h2>
             <p className="description-1">Badan Pengurus Harian</p>
             <Row xs={1} md={3} className="gallery g-4">
               {bph.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
               ))}
             </Row>
           </div>
-
+          
           {/* Bagian PSDM */}
           <div className="PSDM">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">PSDM</h2>
             <p className="description-1">Pengembangan Sumber Daya Mahasiswa</p>
             <p className="description-2">
@@ -345,11 +361,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {psdm.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -359,6 +376,7 @@ const StrukturAnggota = () => {
 
           {/* Bagian DIKTI */}
           <div className="DIKTI ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">DIKTI</h2>
             <p className="description-1">Pendidikan dan Penelitian</p>
             <p className="description-2">
@@ -373,11 +391,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {dikti.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -387,6 +406,7 @@ const StrukturAnggota = () => {
 
           {/* Bagian MEDKOM */}
           <div className="MEDKOM ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">MEDKOM</h2>
             <p className="description-1">Media dan Komunikasi</p>
             <p className="description-2">
@@ -395,11 +415,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {medkom.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -409,6 +430,7 @@ const StrukturAnggota = () => {
 
           {/* Bagian PERHUB */}
           <div className="PERHUB ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">PERHUB</h2>
             <p className="description-1">Perhubungan Eksternal</p>
             <p className="description-2">
@@ -417,11 +439,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {perhub.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -431,6 +454,7 @@ const StrukturAnggota = () => {
 
           {/* Bagian ADKESMA */}
           <div className="ADKESMA ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus "/>
             <h2 className="heading-2">ADKESMA</h2>
             <p className="description-1">Advokasi Kesejahteraan Mahasiswa</p>
             <p className="description-2">
@@ -441,11 +465,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {adkesma.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -455,6 +480,7 @@ const StrukturAnggota = () => {
 
           {/* Bagian URT */}
           <div className="URT ms-auto">
+            <img alt="logo" src={Icon} className="icon-pengurus"/>
             <h2 className="heading-2">URT</h2>
             <p className="description-1">Urusan Rumah Tangga</p>
             <p className="description-2">
@@ -470,11 +496,12 @@ const StrukturAnggota = () => {
             <Row xs={1} md={3} className="gallery g-4">
               {urt.map((StrukturAnggota, index) => (
                 <Col>
-                  <Card>
+                  <Card className="card-pengurus">
                     <Card.Img variant="top" src="holder.js/100px160" />
                     <Card.Body>
-                      <Card.Title>{StrukturAnggota.nama}</Card.Title>
-                      <Card.Text>{StrukturAnggota.bidang}</Card.Text>
+                      <Card.Title className="name-anggota">{StrukturAnggota.nama}</Card.Title>
+                      <Card.Text className="name-bidang">{StrukturAnggota.bidang}</Card.Text>
+                      <img alt="logo" src={Instagram} className="icon-instagram "/>
                     </Card.Body>
                   </Card>
                 </Col>
