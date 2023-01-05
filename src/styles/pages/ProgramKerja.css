@@ -1,8 +1,8 @@
-.program-kerja {
+.gradient {
   position: absolute;
   width: 100%;
   height: 595px;
-  left: 0px;
+
   background: linear-gradient(
     180deg,
     #082240 17.63%,
@@ -11,18 +11,64 @@
   );
 }
 
-.search-bar {
-  padding-top: 150px;
+.judul {
+  margin: 0;
+}
+
+.eventList .row {
   width: 1240px;
-  margin: auto;
   max-width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 1240px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  z-index: 10;
+  padding-top: 150px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.filter-img {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.filter-box {
+  box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+  position: absolute;
+  z-index: 10;
+  left: 70%;
+  width: 320px;
+  border-radius: 8px;
+  max-width: 100%;
+  margin-left: auto !important;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff !important;
+  font-family: "Montserrat", sans-serif !important;
+  line-height: 22px !important;
+}
+
+.filter-box-kategori,
+.filter-box-bidang {
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 input[type="text"] {
-  width: 1105px;
-  max-width: 89.1129032258%;
+  width: 1025px;
+  max-width: 80%;
+  position: absolute;
   height: 56px;
-  padding: 8px 130px;
+  padding: 7px 80px;
   border-radius: 40px 0 0 40px;
   font-family: "Montserrat", sans-serif;
   border-width: 1px 0 1px 1px;
@@ -30,11 +76,82 @@ input[type="text"] {
   border-color: #f49c45;
   border-style: solid;
   background-image: url("../../assets/img/Magnifer.png");
-  background-position: 10px 10px;
+  background-position: 45px center;
   background-repeat: no-repeat;
   background-size: 25px;
-  background-position-x: 95px;
-  background-position-y: center;
+}
+
+/* -------------CHECKBOX-------------- */
+.filter-box .container {
+  display: block;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.filter-box .container p {
+  margin: 0;
+  margin-left: 40px;
+  font-weight: 400;
+}
+
+.option {
+  background-color: #fff;
+}
+/* Hide the browser's default checkbox */
+.filter-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  border-radius: 3px;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #828282;
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.filter-box .container input:checked ~ .checkmark {
+  background-color: #f49c45;
+  border-width: 0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: relative;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.filter-box .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.filter-box .container .checkmark:after {
+  left: 8.7px;
+  top: 2px;
+  width: 9px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .clear {
@@ -42,6 +159,7 @@ input[type="text"] {
 }
 
 .judul h1 {
+  position: relative;
   color: #fff;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -50,12 +168,13 @@ input[type="text"] {
   line-height: 62px;
 }
 
+/* -------Search Bar-------- */
 input[type="submit"] {
-  width: 135px;
   position: absolute;
-  max-width: 9.7870967742%;
+  left: 76.5%;
+  width: 135px;
   height: 56px;
-  padding: 8px 25px;
+  padding: 7px 25px;
   border-width: 1px 1px 1px 0;
   outline: none;
   border-radius: 0 40px 40px 0;
@@ -86,4 +205,24 @@ input[type="submit"] {
   border: none;
   color: #fff;
   border-radius: 100%;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  input[type="text"] {
+    width: 63%;
+  }
+
+  input[type="submit"] {
+    left: 67.7%;
+  }
+
+  .eventList {
+    width: 100%;
+  }
+
+  .eventList .row {
+    margin-bottom: 30px;
+  }
 }
