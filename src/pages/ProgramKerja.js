@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import EventItem from "../components/EventItem";
 
@@ -39,93 +39,97 @@ const ProgramKerja = () => {
   // Filter Button Variable
   const [show, setShow] = useState(false);
 
-  const [checkboxs, setCheckboxs] = useState([
-    {
-      id: "1",
-      name: "internal_HIMSI",
-    },
-    {
-      id: "2",
-      name: "eksternal_HIMSI",
-    },
-  ]);
+  const [checkboxs, setCheckboxs] = useState();
 
-  const renderCheckboxs = () => {
-    return checkboxs.map((item) => {
-      <div className="filter-box" key={item.id}>
-        {/* Kategori */}
-        <p className="filter-box-kategori">Kategori</p>
-        <label for="internal_HIMSI" className="container">
-          {item.name}
-          <span>{item.inStock}</span>
-          <input
-            type="checkbox"
-            id={item.id}
-            name="internal_HIMSI"
-            value="Internal HIMSI"
-          />
-          <span class="checkmark"></span>
-          <p>Internal HIMSI</p>
-        </label>
-        <br />
-        <label for="external_HIMSI" className="container">
-          <input
-            type="checkbox"
-            id="external_HIMSI"
-            name="external_HIMSI"
-            value="External HIMSI"
-          />
-          <span class="checkmark"></span>
-          <p>External HIMSI</p>
-        </label>
-        <br />
+  useEffect(() => {
+    setCheckboxs([
+      {
+        id: "1",
+        name: "internal_HIMSI",
+      },
+      {
+        id: "2",
+        name: "eksternal_HIMSI",
+      },
+    ])
+  }, [])
 
-        {/* Bidang */}
-        <p className="filter-box-bidang">Bidang</p>
-        <label for="BPH" className="container">
-          <input type="checkbox" id="BPH" name="BPH" value="BPH" />
-          <span class="checkmark"></span>
-          <p>BPH</p>
-        </label>
-        <br />
-        <label for="PSDM" className="container">
-          <input type="checkbox" id="PSDM" name="PSDM" value="PSDM" />
-          <span className="checkmark"></span>
-          <p>PSDM</p>
-        </label>
-        <br />
-        <label for="DIKTI" className="container">
-          <input type="checkbox" id="DIKTI" name="DIKTI" value="DIKTI" />
-          <span className="checkmark"></span>
-          <p>DIKTI</p>
-        </label>
-        <br />
-        <label for="MEDKOM" className="container">
-          <input type="checkbox" id="MEDKOM" name="MEDKOM" value="MEDKOM" />
-          <span className="checkmark"></span>
-          <p>MEDKOM</p>
-        </label>
-        <br />
-        <label for="PERHUB" className="container">
-          <input type="checkbox" id="PERHUB" name="PERHUB" value="PERHUB" />
-          <span className="checkmark"></span>
-          <p>PERHUB</p>
-        </label>
-        <br />
-        <label for="ADKESMA" className="container">
-          <input type="checkbox" id="ADKESMA" name="ADKESMA" value="ADKESMA" />
-          <span className="checkmark"></span>
-          <p>ADKESMA</p>
-        </label>
-        <br />
-        <label for="URT" className="container">
-          <input type="checkbox" id="URT" name="URT" value="URT" />
-          <span className="checkmark"></span>
-          <p>URT</p>
-        </label>
-      </div>;
-    });
-  };
+  // const renderCheckboxs = () => {
+  //   return checkboxs.map((item) => {
+  //     <div className="filter-box" key={item.id}>
+  //       {/* Kategori */}
+  //       <p className="filter-box-kategori">Kategori</p>
+  //       <label for="internal_HIMSI" className="container">
+  //         {item.name}
+  //         <span>{item.inStock}</span>
+  //         <input
+  //           type="checkbox"
+  //           id={item.id}
+  //           name="internal_HIMSI"
+  //           value="Internal HIMSI"
+  //         />
+  //         <span class="checkmark"></span>
+  //         <p>Internal HIMSI</p>
+  //       </label>
+  //       <br />
+  //       <label for="external_HIMSI" className="container">
+  //         <input
+  //           type="checkbox"
+  //           id="external_HIMSI"
+  //           name="external_HIMSI"
+  //           value="External HIMSI"
+  //         />
+  //         <span class="checkmark"></span>
+  //         <p>External HIMSI</p>
+  //       </label>
+  //       <br />
+
+  //       {/* Bidang */}
+  //       <p className="filter-box-bidang">Bidang</p>
+  //       <label for="BPH" className="container">
+  //         <input type="checkbox" id="BPH" name="BPH" value="BPH" />
+  //         <span class="checkmark"></span>
+  //         <p>BPH</p>
+  //       </label>
+  //       <br />
+  //       <label for="PSDM" className="container">
+  //         <input type="checkbox" id="PSDM" name="PSDM" value="PSDM" />
+  //         <span className="checkmark"></span>
+  //         <p>PSDM</p>
+  //       </label>
+  //       <br />
+  //       <label for="DIKTI" className="container">
+  //         <input type="checkbox" id="DIKTI" name="DIKTI" value="DIKTI" />
+  //         <span className="checkmark"></span>
+  //         <p>DIKTI</p>
+  //       </label>
+  //       <br />
+  //       <label for="MEDKOM" className="container">
+  //         <input type="checkbox" id="MEDKOM" name="MEDKOM" value="MEDKOM" />
+  //         <span className="checkmark"></span>
+  //         <p>MEDKOM</p>
+  //       </label>
+  //       <br />
+  //       <label for="PERHUB" className="container">
+  //         <input type="checkbox" id="PERHUB" name="PERHUB" value="PERHUB" />
+  //         <span className="checkmark"></span>
+  //         <p>PERHUB</p>
+  //       </label>
+  //       <br />
+  //       <label for="ADKESMA" className="container">
+  //         <input type="checkbox" id="ADKESMA" name="ADKESMA" value="ADKESMA" />
+  //         <span className="checkmark"></span>
+  //         <p>ADKESMA</p>
+  //       </label>
+  //       <br />
+  //       <label for="URT" className="container">
+  //         <input type="checkbox" id="URT" name="URT" value="URT" />
+  //         <span className="checkmark"></span>
+  //         <p>URT</p>
+  //       </label>
+  //     </div>;
+  //   });
+  // };
 
   const renderFilters = () => {
     return checkboxs.map((item) => {

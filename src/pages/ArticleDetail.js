@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 import '../styles/pages/DetailArtikel.css'
 import EventSlider from '../components/EventSlider'
@@ -50,7 +50,7 @@ const DetailArtikel = () => {
                     </div>
                     <div className='links'>
                         <img className='menu-icon' src={GambarLink} alt="gambar" />
-                        <a href="">https://www.google.com</a>
+                        <a href="/">https://www.google.com</a>
                     </div>
                     <button className='attached-file'>
                         <img src={AttachFile} alt="PDF" />
