@@ -34,13 +34,11 @@ h4 {
 }
 
 /* -------------- Event Slider ---------------- */
-.home .event-slider .swiper-pagination {
-    display: none !important;
-}
 
+/* 
 .home .event-slider .swiper {
     padding-bottom: 0px !important;
-}
+} */
 
 /* ----------------- Lastest Event ----------------- */
 

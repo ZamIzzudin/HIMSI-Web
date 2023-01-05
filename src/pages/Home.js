@@ -9,6 +9,8 @@ import '../styles/pages/Home.css'
 import EventSlider from "../components/EventSlider";
 import { Container, Button } from "react-bootstrap";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="home">
@@ -17,7 +19,9 @@ const Home = () => {
       <Container>
         <div className="header">
           <h3 className="title">Up Coming Events</h3>
-          <Button className='btn-header' variant="primary">View More</Button>
+          <Button className='btn-header' variant="primary">
+            <Link to={`/layanan-mahasiswa`}>View More</Link>
+          </Button>
         </div>
         <EventSlider />
         <div className="header">

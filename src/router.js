@@ -14,6 +14,7 @@ import Profile from "./pages/Profile";
 import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
 import StrukturAnggota from "./pages/StrukturAnggota";
+import LayananMahasiswa from "./pages/LayananMahasiswa";
 
 export default function Router() {
     return (
@@ -39,10 +40,13 @@ export default function Router() {
                 <Route path="/article" component={Article} />
                 <Route path="/article-detail/:id" component={ArticleDetail} />
 
+                {/* Page Layanan Mahasiswa */}
+                <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
+
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
-            <Footer />
+            {/* <Footer /> */}
 
             {/* <EventDetail /> */}
         </BrowserRouter>

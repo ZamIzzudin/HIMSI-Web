@@ -1,0 +1,279 @@
+.layanan-mahasiswa {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.layanan-mahasiswa .content-section {
+    margin-bottom: 24px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+    margin: 0 30px;
+    /*border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    */
+    border-radius: 40px !important;
+    -webkit-border-radius: 40px !important;
+    -moz-border-radius: 40px !important;
+    -ms-border-radius: 40px !important;
+    -o-border-radius: 40px !important;
+}
+
+.layanan-mahasiswa .section-header-container {
+    background-color: #092C4C;
+    display: flex;
+    color: #FFF;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 22px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    /* margin-top: 100px; */
+}
+
+.layanan-mahasiswa .section-header {
+    font-size: 1.8em;
+    color: #FFF !important;
+    font-weight: 600;
+    margin: 30px 0 30px 80px;
+    width: 100% !important;
+}
+
+.layanan-mahasiswa .section-body {
+    padding: 24px 24px 24px 24px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    border-radius: 40px !important;
+    -webkit-border-radius: 40px !important;
+    -moz-border-radius: 40px !important;
+    -ms-border-radius: 40px !important;
+    -o-border-radius: 40px !important;
+    padding-right: 50px !important;
+}
+
+.layanan-mahasiswa .section-body .dot {
+    margin: 10px 30px 0 10px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    font-size: 1.4em;
+}
+
+.layanan-mahasiswa .section-body a {
+    color: #082240 !important;
+    font-size: 25px;
+    font-weight: 400 !important;
+}
+
+.layanan-mahasiswa .section-body table {
+    width: 100%;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.layanan-mahasiswa .section-body table td {
+    border-bottom: 1px solid #082240 !important;
+    width: 100%;
+    padding: 10px !important;
+    align-items: center;
+}
+
+.layanan-mahasiswa tr td:nth-child(1) {
+    width: 30px;
+    text-align: left !important;
+    /* padding: 0 !important; */
+}
+
+.layanan-mahasiswa .dot {
+    display: flex;
+    margin: 0 !important;
+    /* font-size: 5px !important; */
+    /* height: 2px; */
+    height: 4px;
+    width: 4px;
+}
+
+/*-------------------- Accordion / FaQ ---------------------- */
+.layanan-mahasiswa .accordion {
+    margin: 0 20px 0 100px !important;
+    padding: 30px 30px 50px 0;
+}
+
+.layanan-mahasiswa .accordion-button {
+    font-size: 25px;
+    color: var(--primaryColor) !important;
+    font-weight: 400;
+    padding-left: 5px;
+    background-color: white !important;
+    border: none !important;
+}
+
+.layanan-mahasiswa .accordion-button::after {
+    display: none;
+}
+
+.layanan-mahasiswa .accordion-button::before {
+    content: "";
+    background-image: url(../../assets/img/minus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 16px;
+}
+
+.layanan-mahasiswa .accordion-button.collapsed {
+    border-bottom: 1px solid var(--primaryColor) !important;
+}
+
+.layanan-mahasiswa .accordion-button.collapsed::before {
+    content: "";
+    display: inline !important;
+    background-image: url(../../assets/img/plus.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 16px;
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.layanan-mahasiswa .accordion-item {
+    border: none;
+}
+
+.layanan-mahasiswa .accordion-body {
+    font-size: 20px;
+    color: var(--grey3) !important;
+    padding-left: 40px !important;
+    border-bottom: 1px solid var(--primaryColor) !important;
+}
+
+.accordion-button:focus {
+    /* display: none; */
+    border: none !important;
+}
+
+/* ------------------- Responsive ------------------- */
+@media screen and (max-width: 1200px) {
+
+    table,
+    th,
+    td {
+        font-size: 1.2em;
+    }
+
+    .layanan-mahasiswa .section-header {
+        font-size: 42px !important;
+    }
+
+    .layanan-mahasiswa .section-body a,
+    .layanan-mahasiswa .accordion-button {
+        font-size: 22px !important;
+    }
+
+    .layanan-mahasiswa .accordion-body {
+        font-size: 16px;
+    }
+
+    .layanan-mahasiswa .section-header,
+    .layanan-mahasiswa .section-body table {
+        margin-left: 30px;
+    }
+
+    .layanan-mahasiswa .section-body,
+    .layanan-mahasiswa .accordion {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .layanan-mahasiswa .accordion {
+        margin: 0 20px 0 50px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .layanan-mahasiswa .section-header {
+        font-size: 32px !important;
+        margin: 10px 0 10px 35px;
+
+    }
+
+    .layanan-mahasiswa .section-body a,
+    .layanan-mahasiswa .accordion-button {
+        font-size: 20px !important;
+    }
+
+    .layanan-mahasiswa .accordion-body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    table,
+    th,
+    td {
+        font-size: 1em;
+    }
+
+    .layanan-mahasiswa .section-header {
+        font-size: 24px !important;
+    }
+
+    .layanan-mahasiswa .section-body a,
+    .layanan-mahasiswa .accordion-button {
+        font-size: 16px !important;
+    }
+
+    .layanan-mahasiswa .accordion-body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    table,
+    th,
+    td {
+        font-size: 0em;
+    }
+
+    .layanan-mahasiswa .section-header {
+        font-size: 16px !important;
+        margin-left: 15px;
+    }
+
+    .layanan-mahasiswa .section-body a,
+    .layanan-mahasiswa .accordion-button {
+        font-size: 12px !important;
+    }
+
+    .layanan-mahasiswa .accordion-body,
+    .layanan-mahasiswa .section-body table {
+        margin-left: 10px;
+    }
+
+    .layanan-mahasiswa .section-body {
+        padding-right: 40px !important;
+    }
+
+    .layanan-mahasiswa .accordion {
+        margin: 0 20px 0 35px !important;
+        padding-right: 10px;
+    }
+
+    .layanan-mahasiswa .accordion-button::before,
+    .layanan-mahasiswa .accordion-button.collapsed::before {
+        min-width: 15px;
+        min-height: 15px;
+    }
+
+    .layanan-mahasiswa .accordion-body {
+        font-size: 9px;
+        padding-left: 25px !important;
+    }
+}

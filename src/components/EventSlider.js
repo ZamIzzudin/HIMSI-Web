@@ -14,7 +14,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Navigation, Pagination } from "swiper";
 
 const EventSlider = () => {
     return (
@@ -28,7 +28,8 @@ const EventSlider = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[FreeMode, Pagination]}
+                    navigation={true}
+                    modules={[FreeMode, Pagination, Navigation]}
                     className="mySwiper"
                 >
                     {ComingEvent.map((event, index) => {

@@ -62,8 +62,9 @@
     /* object-fit: contain !important; */
 }
 
-.swiper-pagination-bullet {
-    height: 10px !important;
+.partner .swiper-pagination-bullet {
+    height: 12px !important;
+    width: 12px !important;
 }
 
 .partner .swiper-pagination-bullet-active {
@@ -73,7 +74,7 @@
     -moz-border-radius: 15px !important;
     -ms-border-radius: 15px !important;
     -o-border-radius: 15px !important;
-    background-color: #082240 !important;
+    background-color: #F49C45 !important;
 }
 
 /* ----------- Responsive ------------- */

@@ -23,7 +23,7 @@ const LatestEvents = () => {
                                     <Card.Title>{event.title}</Card.Title>
                                     <Card.Text className='date'>{event.date}</Card.Text>
                                     <Card.Text className='deskripsi'>{event.content}</Card.Text>
-                                    <Button className='btn-card flex-fill'>Learn More - </Button>
+                                    <Button className='btn-card flex-fill'>Learn More</Button>
                                 </Card.Body>
                             </Card>
                         )

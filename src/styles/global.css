@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --primaryColor: #082240;
+    --primaryColor2: #f49c45;
+    --secondaryColor: #0A3F45;
+    --secondaryColor2: #FCE58D;
+    --stateColorInfo: #2F80ED;
+    --stateColorSuccess: #27AE60;
+    --stateColorWarning: #E2B93B;
+    --stateColorError: #EB5757;
+    --black: #000000;
+    --black2: #1D1D1D;
+    --black3: #282828;
+    --white: #FFF;
+    --gray: #333333;
+    --gray2: #4F4F4F;
+    --gray3: #828282;
+    --gray4: #BDBDBD;
+    --gray5: #E0E0E0;
+
+    --black20: rgba(255, 255, 255, 0.2);
+
+    --textHeader: 'Montserrat', sans-serif;
+    --textReguler: 'Mulish', sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;

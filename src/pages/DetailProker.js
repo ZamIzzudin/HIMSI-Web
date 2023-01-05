@@ -5,11 +5,13 @@ import '../styles/pages/DetailProker.css'
 import EventSlider from '../components/EventSlider'
 import ImageHeader from '../assets/img/meetup.png'
 import bgProker from '../assets/img/bg-proker.png'
+import imgLink from '../assets/img/link.svg'
+import ProgramKerja from './ProgramKerja'
+import ImageSlider from '../components/ProgramKerja/ImageSlider'
 
 
 const DetailProker = () => {
     return (
-
         <div className='detail-proker'>
             <div className='blank-space'></div>
             {/* -------------------------- Bagian Img Header ------------------------- */}
@@ -38,14 +40,18 @@ const DetailProker = () => {
                         </div>
                     </div>
                     <div className='deskripsi'>
-                        {/* <div className="image-content">
-                            <img src="" alt="" />
-                        </div> */}
+                        <div className="image-content">
+                            <img src={ImageHeader} alt="" />
+                        </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ipsam rem sit aliquid.
                             Lorem ipsum dolor sit amet <br /> <span>consectetur</span> adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ip adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ip
                         </p>
-
                     </div>
+                    <div className='link'>
+                        <img src={imgLink} alt="" />
+                        <a href="https://www.youtube.com/">https://www.youtube.com/LoremipsumdolorsitametconsecteturadipisicingelitPariatuquaeratestutquasdelenitiexrerumevenietommodivoluptatibussequi?</a>
+                    </div>
+                    <ImageSlider />
                 </div>
                 {/*--------------------- header-event -----------------------*/}
                 <div className="header-event">
