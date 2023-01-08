@@ -1,7 +1,10 @@
-h3,
-h4 {
+.home h3,
+.home h4 {
     font-family: 'Montserrat', sans-serif !important;
+}
 
+.home .container {
+    padding-top: 0px !important;
 }
 
 h3 {
@@ -18,18 +21,20 @@ h4 {
 /* -----------header--------------- */
 .home .header {
     margin-top: 69px !important;
+    margin-bottom: 40px !important;
     display: flex !important;
     justify-content: space-between;
     align-items: center !important;
 }
 
 .home .header .title {
+    padding: 0px !important;
     margin: 0px !important;
     font-size: 61px !important;
 }
 
 .home .btn-header {
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-weight: 700 !important;
 }
 
@@ -96,6 +101,8 @@ h4 {
 
     .home .header .title {
         font-size: 36px !important;
+        margin-bottom: 25px !important;
+
     }
 
 

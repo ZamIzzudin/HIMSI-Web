@@ -132,7 +132,7 @@
     border-radius: 12px;
     display: block;
     font-weight: 700;
-    
+
 }
 
 /* ---------------- Deskripsi ------------------- */
@@ -149,7 +149,7 @@
 .detail-artikel .deskripsi .desc-img {
     width: 500px !important;
     height: 500px !important;
-    float: right !important; 
+    float: right !important;
     padding: 15px !important;
 }
 
@@ -168,7 +168,7 @@
     line-height: 22.4px !important;
     font-style: italic !important;
     ;
-    
+
 }
 
 .menu-icon {
@@ -176,7 +176,7 @@
     height: 20px !important;
     color: #f49c45 !important;
     margin-top: 3px !important;
-    
+
 }
 
 .detail-artikel .attached-file {

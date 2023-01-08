@@ -1,6 +1,7 @@
 /* gradient Color Blue */
 .hero .gradient {
-    position: relative;
+    position: relative !important;
+    /* height: 90vh !important; */
 }
 
 .hero .gradient .gradient-overlay {
@@ -14,9 +15,9 @@
 
 /* Hero Information */
 .hero img {
-    height: 878px;
-    object-fit: cover;
-    object-position: center;
+    height: 100%x !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
 
 .hero .judul {
@@ -34,8 +35,8 @@
     background-color: rgb(214, 130, 45) !important;
 }
 
-
 /* Indicator  */
+
 .hero .carousel-indicators {
     margin-bottom: 39px !important;
 }
@@ -93,6 +94,23 @@
     -o-transition: 0.3s;
     transform-origin: left !important;
     box-sizing: content-box !important;
+}
+
+/* Carousel Control */
+.hero .carousel-control-next,
+.hero .carousel-control-prev {
+    opacity: 0.5 !important;
+}
+
+.hero .carousel-control-next-icon,
+.hero .carousel-control-prev-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
 }
 
 /* Responsive  */
