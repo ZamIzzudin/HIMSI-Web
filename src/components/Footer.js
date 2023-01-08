@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer class="footer-bs">
                 <div className="row">
-                    <div className="col-md-4 footer-brand ">
+                    <div className="col-sm-6 footer-brand ">
                         <h2 className="footer-judul" >Dapatkan Informasi Terbaru</h2> 
                         <p>Subscribe untuk mendapatkan info terbaru terkait HIMSI</p>
                         <p>
@@ -24,10 +24,10 @@ const Footer = () => {
                         </p>
                     </div>
 
-                    <div class="col-md-3 footer-contact ">
+                    <div class="col-sm-3 footer-contact ">
             	        <h2 className="footer-judul">Contact us</h2>
                             <Row>
-                                <Col className='contact-logo d-flex justify-content-left flex-wrap'>
+                                <Col className='contact-logo '>
                                 <img src={Whatsapp} className="contact-logo" alt="Logo" />
                                 <img src={Gmail} className="contact-logo mx-5  " alt="Logo" /> 
                                 </Col>
@@ -36,16 +36,16 @@ const Footer = () => {
                 </div>
 
 
-                <div class="row ">
-        	        <div class="col-md-2 footer-brand  ">
+                <div class="row description">
+        	        <div class="col-sm-3 footer-brand">
             	        <h2 className="footer-judul">HIMSI</h2>
                         <p>Jl. Ir H. Juanda No.95, Cemp. Putih,<br></br> Kec. Ciputat Tim., Kota Tangerang <br></br>Selatan, Banten 15412</p>
                         <p>Email : <br></br> uinjakarta@gmail.com <br></br> Website : HIMSI.uinjkt.ac.id </p>
                     </div>
 
-                <div class="col-md-2 footer-social  ">
+                <div class="col-sm-2 footer-social  ">
                     <h2 className="footer-judul">Informasi</h2>
-                        <ul class="pages">
+                        <ul className="pages">
                             <li><Link to ="/profile">Profile HIMSI</Link></li>
                             <li><Link to ="/">Berita terbaru</Link></li>
                             <li><Link to ="/">Upcoming Events</Link></li>
@@ -54,9 +54,9 @@ const Footer = () => {
                         </ul>
                 </div>
 
-                    <div class="col-md-2 footer-social ">
+                    <div class="col-sm-3 footer-social ">
                         <h2 className="footer-judul">Tautan Penting </h2>
-                            <ul>
+                            <ul className="pages">
                                 <li><Link to ="/">Layanan Mahsiswa</Link></li>
                                 <li><Link to ="/">Database Materi</Link></li>
                                 <li><Link to ="/">Laporan PKL & KKN</Link></li>
