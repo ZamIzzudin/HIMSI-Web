@@ -1,81 +1,86 @@
 .eventItem {
-    background-color: #fff;
-    border-radius: 24px;
-    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
-    position: relative;
-    border: none;
-    height: 30%;
-    max-width: 100%;
-  }
-  
-  .eventItem .content .deskripsi {
-    font-family: "Inter", sans-serif;
-    text-align: justify;
-  }
-  
-  .eventList .row {
-    width: 1240px;
-    max-width: 100%;
-    margin: auto;
-  }
-  
-  .tag {
-    background-color: #082240;
-    color: #fff;
-    width: 160px;
-    height: 48px;
-    padding: 12px;
-    margin-top: 14px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    
-  }
-  
-  .eventItem .content {
-    padding: 30px 75px 30px 75px;
-  }
-  
-  .date {
-    font-family: "mulish", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 22px;
-    color: #f49c45;
-  }
-  
-  .eventItem .judul {
-    font-weight: 700;
-    font-size: 32px;
-    font-family: "Montserrat", sans-serif;
-    padding: 16px 0 16px 0;
-    margin: 0;
-    line-height: 35px;
-  }
-  
-  .eventItem button {
-    width: 241px;
-    height: 48px;
-    border-radius: 8px;
-    border: none;
-    background-color: #f49c45;
-    margin: 10px 0 10px 0;
-  }
-  
-  .eventItem button a {
-    text-decoration: none;
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19.6px;
-  }
-  
-  .eventItem img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 525px;
-    padding: 0;
-    border-radius: 0 24px 24px 0;
-  }
-  
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+  position: relative;
+  border: none;
+  height: 30%;
+  max-width: 100%;
+}
+
+.eventItem .content .deskripsi {
+  font-family: "Inter", sans-serif;
+  text-align: justify;
+}
+
+.eventList .row {
+  width: 1240px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.tag {
+  background-color: #082240;
+  color: #fff;
+  width: 160px;
+  height: 48px;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+
+}
+
+.eventItem .content {
+  padding: 30px 75px 30px 75px;
+}
+
+.date {
+  font-family: "mulish", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: #f49c45;
+}
+
+.eventItem .judul {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  padding: 16px 0 16px 0;
+  margin: 0;
+  line-height: 35px;
+}
+
+.eventItem button {
+  width: 241px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f49c45;
+  margin: 10px 0 10px 0;
+}
+
+.eventItem button a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.6px;
+}
+
+.eventItem img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 525px;
+  padding: 0;
+  border-radius: 0 24px 24px 0;
+}
+
+.card-deskripsi {
+  text-align: justify;
+  max-height: 100px;
+  overflow: hidden;
+}

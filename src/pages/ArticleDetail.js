@@ -1,56 +1,64 @@
-import React from 'react'
 import { Container } from 'react-bootstrap'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import api from '../utils/api'
 
-import '../styles/pages/DetailArtikel.css'
 import EventSlider from '../components/EventSlider'
-import ImageHeader from '../assets/img/meetup.png'
 import bgProker from '../assets/img/bg-proker.png'
-import GambarDeskripsi from "../assets/img/mengajar.png"
 import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
 import AttachFile from "../assets/img/ArticlePage/attach.png"
 
+import '../styles/pages/DetailArtikel.css'
+
 const DetailArtikel = () => {
+    const { id } = useParams()
+    const [detail, setDetail] = useState(null)
+
+    async function getDetailArticle(id) {
+        const data = await api.getDetailArticle(id)
+        setDetail(data)
+    }
+
+    useEffect(() => {
+        getDetailArticle(id)
+    }, [id])
+
     return (
 
         <div className='detail-artikel'>
             <div className='blank-space'></div>
             {/* -------------------------- Bagian Img Header ------------------------- */}
             <div className='img-header'>
-                <img src={ImageHeader} alt="header" />
+                <img src={detail?.header_berita.url} alt="header" />
             </div>
             <Container>
                 <div className='background'>
                     <div className="bg-1">
-                        <img src={bgProker} alt="h" />
+                        <img src={bgProker} alt="hiasan" />
                     </div>
                     <div className="bg-2">
-                        <img src={bgProker} alt="h" />
+                        <img src={bgProker} alt="hiasan" />
                     </div>
                 </div>
                 {/* -------------------------- Content ------------------------- */}
                 <div className='content'>
                     <div className='header'>
-                        <h4 className='judul'>Lomba Milad</h4>
+                        <h4 className='judul'>{detail?.judul_berita}</h4>
                         <div className='sub-judul'>
                             <div>
-                                <p className='penulis'>Wildan Nur Rahman</p>
-                                <p className='tanggal'>Jan 02, 2023</p>
+                                <p className='penulis'>{detail?.penulis_berita}</p>
+                                <p className='tanggal'>{detail?.tanggal_berita.toString().substring(0, 10)}</p>
                             </div>
-                            <button className='adkesmagazine'>Adkesmagazine</button>
+                            <button className='adkesmagazine'>{detail?.kategori_berita[0]}</button>
                         </div>
                     </div>
                     <div className='deskripsi'>
-                        {/* <div className="image-content">
-                            <img src="" alt="" />
-                        </div> */}
-                        <img className='desc-img' src={GambarDeskripsi} alt="gambar" />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ipsam rem sit aliquid.
-                            Lorem ipsum dolor sit amet <br /> <span>consectetur</span> adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ip adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ip
-                        </p>
+                        <img className='desc-img' src={detail?.gambar_berita.url} alt="gambar berita" />
+                        <p dangerouslySetInnerHTML={{ __html: `${detail?.isi_berita}` }}></p>
                     </div>
                     <div className='links'>
                         <img className='menu-icon' src={GambarLink} alt="gambar" />
-                        <a href="/">https://www.google.com</a>
+                        <a href={detail?.link_pdf}>{detail?.link_pdf}</a>
                     </div>
                     <button className='attached-file'>
                         <img src={AttachFile} alt="PDF" />

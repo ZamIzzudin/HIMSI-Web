@@ -286,12 +286,14 @@ const ProgramKerja = () => {
           </Col>
           <Row className="blank-space"></Row>
         </Row>
+
         <div className="eventList">
           <div className="clear"></div>
           {detailEvents.map((detailEvent, index) => {
             return <EventItem detailEvent={detailEvent} index={index} />;
           })}
         </div>
+
       </Container>
     </>
   );
