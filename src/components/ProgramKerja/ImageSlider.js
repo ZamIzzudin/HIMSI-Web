@@ -30,6 +30,12 @@ const ImageSlider = () => {
                     <SwiperSlide>
                         <img src={imgSlider} alt="pict-slider" />
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={imgSlider} alt="pict-slider" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={imgSlider} alt="pict-slider" />
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div>

@@ -12,8 +12,8 @@
 /* gradinet Color Blue */
 .lastestEvents .gradient {
     position: relative;
-    /* height: 100% !important;
-    width: 100% !important; */
+    height: 100% !important;
+    /* width: 100% !important; */
 }
 
 .lastestEvents .gradient-overlay {
@@ -103,16 +103,21 @@
 .lastestEvents .btn-card {
     max-height: 48px !important;
     width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lastestEvents .btn-card::after {
-    content: "";
-    background-repeat: no-repeat;
+    display: inline-flex !important;
+    content: "" !important;
+    background-repeat: no-repeat !important;
     z-index: 2 !important;
-    background-size: contain;
-    min-width: 16px !important;
-    min-height: 16px !important;
-    background-image: url(../../assets/img/arrow.svg);
+    background-size: contain !important;
+    width: 16px !important;
+    margin-left: 10px;
+    height: 16px !important;
+    background-image: url(../../assets/img/arrow.svg) !important;
 }
 
 /* responsive */
@@ -199,6 +204,11 @@
         -o-border-radius: 8px !important;
     }
 
+    .lastestEvents .btn-card::after {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
     .lastestEvents .card-body {
         gap: 5px !important;
     }
@@ -230,6 +240,11 @@
     .lastestEvents .btn-card {
         font-size: 8px !important;
         max-height: 24px !important;
+    }
+
+    .lastestEvents .btn-card::after {
+        width: 10px !important;
+        height: 10px !important;
     }
 
     .lastestEvents .card-body {
@@ -294,6 +309,11 @@
     .lastestEvents .btn-card {
         font-size: 12px !important;
         max-height: 28px !important;
+    }
+
+    .lastestEvents .btn-card::after {
+        width: 14px !important;
+        height: 14px !important;
     }
 }
 
