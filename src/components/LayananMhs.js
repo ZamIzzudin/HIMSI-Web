@@ -2,34 +2,7 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import '../styles/pages/LayananMahasiswa.css'
 
-const LayananMhs = () => {
-
-    const layananMhs = [
-        {
-            judul: 'SOP E-layanan Mahasiswa',
-            url: '/#'
-        },
-        {
-            judul: 'Layanan Tanda Tangan',
-            url: '/#'
-        },
-        {
-            judul: 'Pendaftaran Proposal',
-            url: '/#'
-        },
-        {
-            judul: 'Pendaftaran Seminar Hasil',
-            url: '/#'
-        },
-        {
-            judul: 'Pendaftaran Sidang',
-            url: '/#'
-        },
-        {
-            judul: 'Form Distribusi',
-            url: '/#'
-        },
-    ]
+const LayananMhs = ({ data }) => {
     return (
         <div className="layanan-mahasiswa">
             <Container>
@@ -42,11 +15,11 @@ const LayananMhs = () => {
                         <table>
                             <tbody>
 
-                                {layananMhs.map((layanan, index) => {
+                                {data.map((item, index) => {
                                     return (
                                         <tr key={index}>
                                             <td><span className='dot'></span></td>
-                                            <td><a href={layanan.url}>{layanan.judul}</a></td>
+                                            <td><a href={item.url}>{item.nama_link}</a></td>
                                         </tr>
                                     )
                                 })}

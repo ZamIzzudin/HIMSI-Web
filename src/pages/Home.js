@@ -1,6 +1,4 @@
-
-import React from "react";
-
+import { useEffect } from 'react'
 import Hero from "../components/Hero";
 import LatestEvents from "../components/LatestEvents";
 import Partner from "../components/Partner";
@@ -12,6 +10,11 @@ import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home">
       <div className="blank-space" />

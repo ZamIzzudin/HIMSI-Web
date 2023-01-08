@@ -29,9 +29,9 @@ export default function Navbar() {
             <ul className="navbar-items">
                 <Link to="/">Home</Link>
                 <Link to="/profile">Profile</Link>
-                <Link to="/program-kerja">Event</Link>
-                {/* <Link to="/event">Event</Link> */}
+                <Link to="/event">Event</Link>
                 <Link to="/article">Article</Link>
+                <Link to="/layanan-mahasiswa">Layanan Mahasiswa</Link>
                 <Button onClick={() => setSubscribeModal(!showSubscribeModal)}>Contact us</Button>
             </ul>
 

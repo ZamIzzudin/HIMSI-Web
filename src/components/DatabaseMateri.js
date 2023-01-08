@@ -2,29 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import '../styles/pages/LayananMahasiswa.css'
 
-const DatabaseMateri = () => {
-    const databases = [
-        {
-            judul: 'Kurikulum 2020',
-            url: '/#'
-        },
-        {
-            judul: 'Kurikulum 2015',
-            url: '/#'
-        },
-        {
-            judul: 'Laporan PKL & KKN',
-            url: '/#'
-        },
-        {
-            judul: 'Skripsi',
-            url: '/#'
-        },
-        {
-            judul: 'E-letter FST',
-            url: '/#'
-        }
-    ]
+const DatabaseMateri = ({ data }) => {
     return (
         <div className="layanan-mahasiswa">
             <Container>
@@ -35,11 +13,11 @@ const DatabaseMateri = () => {
                     <div className="section-body">
                         <table>
                             <tbody>
-                                {databases.map((database, index) => {
+                                {data.map((item, index) => {
                                     return (
                                         <tr key={index}>
                                             <td><span className='dot'></span></td>
-                                            <td><a href={database.url}>{database.judul}</a></td>
+                                            <td><a href={item.url}>{item.nama_link}</a></td>
                                         </tr>
                                     )
                                 })}

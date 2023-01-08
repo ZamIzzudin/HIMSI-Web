@@ -1,12 +1,8 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-// import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
+import api from '../utils/api'
 
-// import Slider from 'react-slick'
 import '../styles/components/Partner.css'
-import PartnerImages from '../utils/PartnerImages'
-import Image from '../assets/img/partner/image9.png'
-// import image1 from '../assets/img/'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -18,6 +14,16 @@ import { FreeMode, Grid, Pagination } from "swiper";
 
 
 const Partner = () => {
+    const [partner, setPartner] = useState([])
+
+    async function getPartner() {
+        const data = await api.getPartner()
+        setPartner(data)
+    }
+
+    useEffect(() => {
+        getPartner()
+    }, [])
 
     return (
         <Container>
@@ -43,16 +49,13 @@ const Partner = () => {
                         modules={[FreeMode, Grid, Pagination]}
                         className="mySwiper"
                     >
-                        {PartnerImages.map((image, index) => {
+                        {partner.map((item, index) => {
                             return (
-                                <SwiperSlide key={index}>
-                                    <img src={image} alt={`patner ${index}`}></img>
+                                <SwiperSlide key={`patner ${index}`}>
+                                    <img src={item.logo_partner.url} alt={`patner ${index}`}></img>
                                 </SwiperSlide>
                             );
                         })}
-                        <SwiperSlide>
-                            <img src={Image} alt='patner'></img>
-                        </SwiperSlide>
                     </Swiper>
                 </div>
             </div>

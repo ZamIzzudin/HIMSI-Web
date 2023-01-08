@@ -23,6 +23,11 @@ const DetailArtikel = () => {
         getDetailArticle(id)
     }, [id])
 
+    // Scroll to top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
 
         <div className='detail-artikel'>

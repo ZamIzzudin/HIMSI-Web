@@ -19,9 +19,100 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getPartner() {
+        const url = BaseUrl + '/partner'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getHimpunan() {
+        const url = BaseUrl + '/himpunan'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getVisiMisi() {
+        const url = BaseUrl + '/visi'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getStruktur() {
+        const url = BaseUrl + '/pengurus_dashboard'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getELayanan() {
+        const url = BaseUrl + '/link?kategori=e-layanan'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getDBMateri() {
+        const url = BaseUrl + '/link?kategori=database-materi'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getFAQ() {
+        const url = BaseUrl + '/faq'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getFooter() {
+        const url = BaseUrl + '/footer'
+
+        const response = await axios.get(url)
+
+        return response.data.data[0]
+    }
+
+    async function getSocmed() {
+        const url = BaseUrl + '/link?kategori=sosmed'
+
+        const response = await axios.get(url)
+
+        return response.data.data[0]
+    }
+
+    async function getSlider() {
+        const url = BaseUrl + '/slider'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+
     return {
         getArticle,
-        getDetailArticle
+        getDetailArticle,
+        getPartner,
+        getHimpunan,
+        getVisiMisi,
+        getStruktur,
+        getELayanan,
+        getDBMateri,
+        getFAQ,
+        getFooter,
+        getSocmed,
+        getSlider
     }
 })()
 

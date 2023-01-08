@@ -1,31 +1,49 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-
-import Logo from "../assets/img/logohimsi.png";
-import Struktur from "../assets/img/struktur-organisasi.png";
+import { useState, useEffect } from 'react';
+import api from '../utils/api';
 
 import "../styles/pages/Profile.css";
 
 const Profile = () => {
+  const [himpunan, setHimpunan] = useState()
+  const [visiMisi, setVisiMisi] = useState()
+
+  async function getDataHimpunan() {
+    const data = await api.getHimpunan()
+    const data2 = await api.getVisiMisi()
+
+    setHimpunan(data)
+    setVisiMisi(data2)
+  }
+
+  useEffect(() => {
+    getDataHimpunan()
+  }, [])
+
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div class='container'>
       <div class='heading'>
-        <h1 className='himsi'>Himpunan Mahasiswa Sistem Informasi</h1>
-        <h2 className='namauniv'>UIN Syarif Hidayatulah Jakarta</h2>
+        <h1 className='himsi'>{himpunan?.nama_himpunan}</h1>
+        <h2 className='namauniv'>{himpunan?.nama_universitas}</h2>
       </div>
 
       <div class='logo'>
-        <img src={Logo} className="profile-logo" alt="Logo" />
+        <img src={himpunan?.logo_himpunan.url} className="profile-logo" alt="Logo" />
       </div>
 
 
       {/* -------------------------- Bagian Visi ------------------------- */}
       <div class='visi'>
-          <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-          <p className='visi-p'> 
-          Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif
-          guna meningkatkan potensi, kemampuan, dan wawasan, serta kepribadian mahasiswa SI.
-          </p>
+        <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
+        <p className='visi-p'>
+          {visiMisi?.visi}
+        </p>
       </div>
 
 
@@ -34,43 +52,12 @@ const Profile = () => {
         <h1 className="misi-judul"> <span class="dot"></span> Misi <span class="dot"></span> </h1>
         <br></br>
 
-        {/*--------------- Bagian Misi 1 ---------------------- */}
-        <div class="flex-container">
-          <div className='misi-number'>1</div>
-          <p className='misi-paragraf'>Menjadikan kerjasama tim dan kolaborasi sebagai pondasi dalam menyelenggarakan maupun mengikuti segala kegiatan HIMSI maupun luar HIMSI.</p>
-        </div>
-        <br></br>
-
-
-        {/*--------------- Bagian Misi 2 ---------------------*/}
-        <div class="flex-container">
-          <div className='misi-number'>2</div>
-          <p className='misi-paragraf' >Mengoptimalkan potensi mahasiswa HIMSI dengan penyaluran minat bakat mahasiswa sesuai tujuan yang akan dicapai.</p>
-        </div>
-        <br></br>
-
-
-        {/*---------------- Bagian Misi 3 -------------------- */}
-        <div class="flex-container">
-          <div className='misi-number'>3</div>
-          <p className='misi-paragraf'>Meningkatkan rasa kepedulian anggota HIMSI untuk terjun langsung ke masyarakat.</p>
-        </div>
-        <br></br>
-
-
-        {/*---------------- Bagian Misi 4----------------------- */}
-        <div class="flex-container">
-          <div className='misi-number'>4</div>
-          <p className='misi-paragraf'>Aktif menerima, mengevaluasi, dan menyampaikan aspirasi kepada pihak terkait sesuai dengan kebutuhan.</p>
-        </div>
-        <br></br>
-
-
-        {/*----------------- Bagian Misi 5 ----------------------*/}
-        <div class="flex-container">
-          <div className='misi-number'>5</div>
-          <p className='misi-paragraf'>Menjalin silaturahmi yang baik antar keluarga besar HIMSI, serta para individu dan organisasi yang terlibat di dalamnya. </p>
-        </div>
+        {visiMisi?.misi.map((item, index) => (
+          <div class="flex-container">
+            <div className='misi-number'>{index + 1}</div>
+            <p className='misi-paragraf'>{item}</p>
+          </div>
+        ))}
       </div>
 
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
@@ -86,7 +73,7 @@ const Profile = () => {
       </div>
 
       <div class="logo">
-        <img src={Struktur} className="struktur-logo" alt="Logo" />
+        <img src={himpunan?.gambar_struktur.url} className="struktur-logo" alt="Logo" />
       </div>
 
 
@@ -97,7 +84,7 @@ const Profile = () => {
         </button>
       </div>
 
-</div>
+    </div>
   );
 };
 

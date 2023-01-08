@@ -6,8 +6,6 @@ import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
 import Page404 from "./pages/Page404";
-// import Event from "./pages/Event";
-// import EventDetail from "./pages/EventDetail";
 import Article from "./pages/Article";
 import DetailArtikel from "./pages/ArticleDetail";
 import Profile from "./pages/Profile";
@@ -15,7 +13,6 @@ import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
 import StrukturAnggota from "./pages/StrukturAnggota";
 import LayananMahasiswa from "./pages/LayananMahasiswa";
-
 
 export default function Router() {
     return (
@@ -30,16 +27,12 @@ export default function Router() {
                 <Route path="/struktur-anggota" component={StrukturAnggota} />
 
                 {/* Page Proker */}
-                <Route path="/program-kerja" component={ProgramKerja} />
-                <Route path="/detail-program-kerja" component={DetailProker} />
-
-                {/* Page Event */}
-                {/* <Route path="/event" component={Event} />
-                <Route path="/event-detail/:id" component={EventDetail} /> */}
+                <Route path="/event" component={ProgramKerja} />
+                <Route path="/event-detail" component={DetailProker} />
 
                 {/* Page Article */}
                 <Route path="/article" component={Article} />
-                <Route path="/detail-artikel/:id" component={DetailArtikel} />
+                <Route path="/article-detail/:id" component={DetailArtikel} />
 
                 {/* Page Layanan Mahasiswa */}
                 <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />

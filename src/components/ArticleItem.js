@@ -14,7 +14,7 @@ export default function ArticleItem({ article, index }) {
           <p className="card-deskripsi">{article.isi_berita}</p>
           {/* manggil detailArticle id */}
           <button>
-            <Link to={`/detail-artikel/${article._id}`}>Learn More ➜</Link>
+            <Link to={`/article-detail/${article._id}`}>Learn More ➜</Link>
             {/* <Link to={`/event-detail/${article.id}`}>Learn More ➜</Link> */}
           </button>
         </div>

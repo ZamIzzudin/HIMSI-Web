@@ -52,6 +52,11 @@ const Article = () => {
     getArticle()
   }, [])
 
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container>
 

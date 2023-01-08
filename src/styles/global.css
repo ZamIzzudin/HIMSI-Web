@@ -31,6 +31,10 @@
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none !important;
     color: white !important;
