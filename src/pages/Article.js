@@ -164,6 +164,7 @@ const Article = () => {
       }
     })
   }
+  console.info(checkboxs);
   return (
 
     <Container>
@@ -193,7 +194,7 @@ const Article = () => {
                   return(
                     <div className='wrapper-list' key={category.id}>
                       <form action="">
-                          <input type="checkbox" id={category.id} onClick={() => handleChangeCheckBoxs(category.id)} />
+                          <input type="checkbox" checked={category.checked} id={category.id} onClick={() => handleChangeCheckBoxs(category.id)} />
                           <label htmlFor="">{category.namaFilter}</label>
                       </form>
                     </div>
