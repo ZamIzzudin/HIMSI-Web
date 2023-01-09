@@ -1,3 +1,4 @@
+/* -----GRADIENT----- */
 .gradient {
   position: absolute;
   width: 100%;
@@ -11,36 +12,60 @@
   );
 }
 
-.judul {
-  margin: 0;
-}
-
-.eventList .row {
-  width: 1240px;
-  max-width: 100%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
+/* -----SEARCH BAR----- */
 .search-bar {
-  width: 1240px;
+  position: relative;
   max-width: 100%;
   display: flex;
   flex-direction: row;
-
-  z-index: 10;
   padding-top: 150px;
   max-width: 100%;
   margin: auto;
 }
 
-.filter-img {
-  position: relative;
-  margin-left: auto;
-  margin-right: 0;
-  cursor: pointer;
+.search-bar input[type="text"] {
+  width: 1025px;
+  /* max-width: 100%; */
+  position: absolute;
+  height: 56px;
+  padding: 7px 80px;
+  border-radius: 40px 0 0 40px;
+  font-family: "Montserrat", sans-serif;
+  border-width: 1px 0 1px 1px;
+  outline: none;
+  border-color: #f49c45;
+  border-style: solid;
+  background-image: url("../../assets/img/Magnifer.png");
+  background-position: 39px center;
+  background-repeat: no-repeat;
+  background-size: 25px;
 }
 
+.search-bar input[type="submit"] {
+  position: absolute !important;
+  /* max-width: 100%; */
+  top: 73%;
+  left: 82.7% !important;
+  width: 135px !important;
+  height: 56px !important;
+  padding: 7px 25px !important;
+  border-width: 1px 1px 1px 0 !important;
+  outline: none !important;
+  border-radius: 0 40px 40px 0 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 15px !important;
+  border-color: #f49c45 !important;
+  border-style: solid !important;
+  cursor: pointer !important;
+  background-color: #f49c45;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* -----FILTER FEATURE----- */
+
+/* -----FILTER-BUTTON----- */
 .filter-box {
   box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
   position: absolute;
@@ -57,32 +82,21 @@
   line-height: 22px !important;
 }
 
+.filter-img {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+
 .filter-box-kategori,
 .filter-box-bidang {
   font-weight: 600 !important;
   font-size: 16px !important;
 }
 
-input[type="text"] {
-  width: 1025px;
-  max-width: 80%;
-  position: absolute;
-  height: 56px;
-  padding: 7px 80px;
-  border-radius: 40px 0 0 40px;
-  font-family: "Montserrat", sans-serif;
-  border-width: 1px 0 1px 1px;
-  outline: none;
-  border-color: #f49c45;
-  border-style: solid;
-  background-image: url("../../assets/img/Magnifer.png");
-  background-position: 45px center;
-  background-repeat: no-repeat;
-  background-size: 25px;
-}
-
-/* -------------CHECKBOX-------------- */
-.filter-box .container {
+/* -----FILTER CHECKBOX----- */
+/* .filter-box .container {
   display: block;
   border-radius: 2px;
   -webkit-user-select: none;
@@ -99,11 +113,31 @@ input[type="text"] {
   margin: 0;
   margin-left: 40px;
   font-weight: 400;
+} */
+
+.filter-container {
+  background-color: #fff;
+  width: 320px;
+  height: 833px;
+  box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+  border-radius: 8px;
+  margin-top: 30px;
+  position: absolute;
+  z-index: 1;
+  right: 9%;
+}
+
+.checkbox-value {
+  position: absolute;
+  top: 81%;
+  left: 6.5%;
+  z-index: 1;
 }
 
 .option {
   background-color: #fff;
 }
+
 /* Hide the browser's default checkbox */
 .filter-box input {
   position: absolute;
@@ -114,35 +148,35 @@ input[type="text"] {
 }
 
 /* Create a custom checkbox */
-.checkmark {
+/* .checkmark {
   position: absolute;
   border-radius: 3px;
   height: 25px;
   width: 25px;
   border: 2px solid #828282;
   background-color: #fff;
-}
+} */
 
 /* When the checkbox is checked, add a blue background */
-.filter-box .container input:checked ~ .checkmark {
+/* .filter-box .container input:checked ~ .checkmark {
   background-color: #f49c45;
   border-width: 0;
-}
+} */
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+/* .checkmark:after {
   content: "";
   position: relative;
   display: none;
-}
+} */
 
 /* Show the checkmark when checked */
-.filter-box .container input:checked ~ .checkmark:after {
+/* .filter-box .container input:checked ~ .checkmark:after {
   display: block;
-}
+} */
 
 /* Style the checkmark/indicator */
-.filter-box .container .checkmark:after {
+/* .filter-box .container .checkmark:after {
   left: 8.7px;
   top: 2px;
   width: 9px;
@@ -152,10 +186,85 @@ input[type="text"] {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+} */
+
+.checked {
+  padding: 7px;
+  margin-right: 0.5rem;
+  background-color: #f49c45;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
 }
 
-.clear {
-  clear: right;
+.wrapper-list {
+  display: flex;
+  padding: 14px 32px;
+}
+
+.wrapper-list input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #828282;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.wrapper-list input[type="checkbox"]:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 15px;
+  color: #fff;
+  background-color: #f49c45;
+  display: none;
+  cursor: pointer;
+}
+
+.wrapper-list input[type="checkbox"]:checked {
+  background-color: #f49c45;
+  border: none;
+}
+
+.wrapper-list input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.wrapper-list label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #4f4f4f;
+  font-style: normal;
+}
+
+.filter-kategori,
+.filter-bidang {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  padding: 14px 32px;
+  margin: 0;
+}
+
+/* -----JUDUL (EVENT)----- */
+.judul {
+  margin: 0;
+}
+
+/* -----EVENT LIST----- */
+.eventList .row {
+  width: 1240px;
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .judul h1 {
@@ -168,54 +277,80 @@ input[type="text"] {
   line-height: 62px;
 }
 
-/* -------Search Bar-------- */
-input[type="submit"] {
-  position: absolute;
-  left: 76.5%;
-  width: 135px;
-  height: 56px;
-  padding: 7px 25px;
-  border-width: 1px 1px 1px 0;
-  outline: none;
-  border-radius: 0 40px 40px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  border-color: #f49c45;
-  border-style: solid;
-  cursor: pointer;
-  background-color: #f49c45;
-  color: #fff;
-  font-weight: 700;
-  text-align: center;
+.tags:nth-child(2) {
+  background: linear-gradient(180deg, #b03a77 0%, rgba(176, 58, 119, 0.3) 100%);
+}
+.tags:nth-child(3) {
+  background: linear-gradient(180deg, #3d8968 0%, rgba(61, 137, 104, 0.3) 100%);
+}
+.tags:nth-child(4) {
+  background: linear-gradient(180deg, #cb3f4a 0%, rgba(203, 63, 74, 0.3) 100%);
+}
+.tags:nth-child(5) {
+  background: linear-gradient(180deg, #436392 0%, rgba(67, 99, 146, 0.3) 100%);
 }
 
 .blank-space {
   height: 70px;
 }
 
+/* -----CLEAR CSS----- */
+.clear {
+  clear: right;
+}
+
+/* -----PAGINATION----- */
 .pagination {
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 100px;
-  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255) !important;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0.2rem !important;
+  border-radius: 100% !important;
+  margin: 0.2rem;
 }
 
 .page-item:first-child .page-link {
   background-color: #f49c45;
-  border: none;
-  color: #fff;
-  border-radius: 100%;
+  color: white !important;
+  border-width: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
 }
 
-/* RESPONSIVE */
+.page-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  background-color: none !important;
+  border: rgba(189, 189, 189, 1) 1px solid !important;
+  border-radius: 100% !important;
+  color: rgba(189, 189, 189, 1) !important;
+  width: 32px !important;
+  height: 32px !important;
+}
 
-@media screen and (max-width: 1000px) {
+/* -----RESPONSIVE----- */
+
+@media screen and (max-width: 1200px) {
   input[type="text"] {
     width: 63%;
+    max-width: 80%;
   }
 
   input[type="submit"] {
-    left: 67.7%;
+    margin-right: 2rem;
+    max-width: 80%;
   }
 
   .eventList {
