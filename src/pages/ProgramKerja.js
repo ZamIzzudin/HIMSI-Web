@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import EventItem from "../components/EventItem";
-
+import Pagination from "react-bootstrap/Pagination";
 import "../styles/pages/ProgramKerja.css";
 
 const ProgramKerja = () => {
@@ -9,7 +9,7 @@ const ProgramKerja = () => {
   const detailEvents = [
     {
       tag: "ADKESMA",
-      title: "Meet Up 13.0",
+      title: "Care for Maba",
       date: "01/12/21",
       deskripsi:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
@@ -17,126 +17,105 @@ const ProgramKerja = () => {
       id: "1",
     },
     {
-      tag: "PSDM",
-      title: "Meet Up 13.0",
+      tag: "PERHUB",
+      title: "HIMSI Goes to School",
       date: "01/12/21",
       deskripsi:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
       img: "../assets/img/meetup.png",
-      id: "10",
+      id: "2",
     },
     {
       tag: "DIKTI",
-      title: "Meet Up 13.0",
+      title: "Mini Club Developer",
       date: "01/12/21",
       deskripsi:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
       img: "../assets/img/meetup.png",
       id: "3",
     },
+    {
+      tag: "PSDM",
+      title: "PBAK",
+      date: "01/12/21",
+      deskripsi:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
+      img: "../assets/img/meetup.png",
+      id: "4",
+    },
+    {
+      tag: "MEDKOM",
+      title: "Social Media HIMSI",
+      date: "01/12/21",
+      deskripsi:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ",
+      img: "../assets/img/meetup.png",
+      id: "5",
+    },
   ];
 
-  // Filter Button Variable
   const [show, setShow] = useState(false);
 
-  const [checkboxs, setCheckboxs] = useState();
+  const [checkboxsKategori, setCheckboxsKategori] = useState([
+    {
+      id: 1,
+      namaFilter: "Internal HIMSI",
+      checked: false,
+    },
+    {
+      id: 2,
+      namaFilter: "Eksternal HIMSI",
+      checked: false,
+    },
+  ]);
 
-  useEffect(() => {
-    setCheckboxs([
-      {
-        id: "1",
-        name: "internal_HIMSI",
-      },
-      {
-        id: "2",
-        name: "eksternal_HIMSI",
-      },
-    ])
-  }, [])
+  const [checkboxsBidang, setCheckboxsBidang] = useState([
+    {
+      id: 1,
+      namaFilter: "BPH",
+      checked: false,
+    },
+    {
+      id: 2,
+      namaFilter: "PSDM",
+      checked: false,
+    },
+    {
+      id: 3,
+      namaFilter: "DIKTI",
+      checked: false,
+    },
+    {
+      id: 4,
+      namaFilter: "MEDKOM",
+      checked: false,
+    },
+    {
+      id: 5,
+      namaFilter: "PERHUB",
+      checked: false,
+    },
+    {
+      id: 6,
+      namaFilter: "ADKESMA",
+      checked: false,
+    },
+    {
+      id: 7,
+      namaFilter: "URT",
+      checked: false,
+    },
+  ]);
 
-  // const renderCheckboxs = () => {
-  //   return checkboxs.map((item) => {
-  //     <div className="filter-box" key={item.id}>
-  //       {/* Kategori */}
-  //       <p className="filter-box-kategori">Kategori</p>
-  //       <label for="internal_HIMSI" className="container">
-  //         {item.name}
-  //         <span>{item.inStock}</span>
-  //         <input
-  //           type="checkbox"
-  //           id={item.id}
-  //           name="internal_HIMSI"
-  //           value="Internal HIMSI"
-  //         />
-  //         <span class="checkmark"></span>
-  //         <p>Internal HIMSI</p>
-  //       </label>
-  //       <br />
-  //       <label for="external_HIMSI" className="container">
-  //         <input
-  //           type="checkbox"
-  //           id="external_HIMSI"
-  //           name="external_HIMSI"
-  //           value="External HIMSI"
-  //         />
-  //         <span class="checkmark"></span>
-  //         <p>External HIMSI</p>
-  //       </label>
-  //       <br />
-
-  //       {/* Bidang */}
-  //       <p className="filter-box-bidang">Bidang</p>
-  //       <label for="BPH" className="container">
-  //         <input type="checkbox" id="BPH" name="BPH" value="BPH" />
-  //         <span class="checkmark"></span>
-  //         <p>BPH</p>
-  //       </label>
-  //       <br />
-  //       <label for="PSDM" className="container">
-  //         <input type="checkbox" id="PSDM" name="PSDM" value="PSDM" />
-  //         <span className="checkmark"></span>
-  //         <p>PSDM</p>
-  //       </label>
-  //       <br />
-  //       <label for="DIKTI" className="container">
-  //         <input type="checkbox" id="DIKTI" name="DIKTI" value="DIKTI" />
-  //         <span className="checkmark"></span>
-  //         <p>DIKTI</p>
-  //       </label>
-  //       <br />
-  //       <label for="MEDKOM" className="container">
-  //         <input type="checkbox" id="MEDKOM" name="MEDKOM" value="MEDKOM" />
-  //         <span className="checkmark"></span>
-  //         <p>MEDKOM</p>
-  //       </label>
-  //       <br />
-  //       <label for="PERHUB" className="container">
-  //         <input type="checkbox" id="PERHUB" name="PERHUB" value="PERHUB" />
-  //         <span className="checkmark"></span>
-  //         <p>PERHUB</p>
-  //       </label>
-  //       <br />
-  //       <label for="ADKESMA" className="container">
-  //         <input type="checkbox" id="ADKESMA" name="ADKESMA" value="ADKESMA" />
-  //         <span className="checkmark"></span>
-  //         <p>ADKESMA</p>
-  //       </label>
-  //       <br />
-  //       <label for="URT" className="container">
-  //         <input type="checkbox" id="URT" name="URT" value="URT" />
-  //         <span className="checkmark"></span>
-  //         <p>URT</p>
-  //       </label>
-  //     </div>;
-  //   });
-  // };
-
-  const renderFilters = () => {
-    return checkboxs?.map((item) => {
-      if (item.check) {
+  const renderFilterKategori = () => {
+    return checkboxsKategori.map((item) => {
+      if (item.checked) {
         return (
-          <span className="option" key={item.id}>
-            {item.name}
+          <span
+            onClick={() => handleChangeCheckBoxsKategori(item.id)}
+            className="checked"
+            key={item.id}>
+            {item.namaFilter} X
           </span>
         );
       } else {
@@ -145,15 +124,81 @@ const ProgramKerja = () => {
     });
   };
 
+  const renderFilterBidang = () => {
+    return checkboxsBidang.map((item) => {
+      if (item.checked) {
+        return (
+          <span
+            onClick={() => handleChangeCheckBoxsBidang(item.id)}
+            className="checked"
+            key={item.id}>
+            {item.namaFilter} X
+          </span>
+        );
+      } else {
+        return null;
+      }
+    });
+  };
+
+  const handleChangeCheckBoxsKategori = (id) => {
+    setCheckboxsKategori((prev) => {
+      return prev.map((item) => {
+        if (item.id === id) {
+          return { ...item, checked: !item.checked };
+        } else {
+          return { ...item };
+        }
+      });
+    });
+  };
+
+  const handleChangeCheckBoxsBidang = (id) => {
+    setCheckboxsBidang((prev) => {
+      return prev.map((item) => {
+        if (item.id === id) {
+          return { ...item, checked: !item.checked };
+        } else {
+          return { ...item };
+        }
+      });
+    });
+  };
+
+  // ----------PAGINATION-----------
+  let active = 1;
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active}>
+        {number}
+      </Pagination.Item>
+    );
+  }
+
   return (
     <>
       <div className="gradient"></div>
       <Container>
+        {/* Search Bar */}
         <div className="search-bar">
-          {renderFilters()}
           <form>
-            <input type="text" name="" placeholder="Search Proker" />
-            <input type="submit" name="" value="Search" />
+            <div className="checkbox-value">
+              {renderFilterKategori()}
+              {renderFilterBidang()}
+            </div>
+            <input
+              type="submit"
+              name=""
+              value="Search"
+              className="search-bar-submit"
+            />
+            <input
+              type="text"
+              name=""
+              placeholder="Search Proker"
+              className="search-bar-text"
+            />
           </form>
 
           {/* filter button */}
@@ -200,80 +245,39 @@ const ProgramKerja = () => {
 
         {/* filter button: show */}
         {show && (
-          <div className="filter-box">
-            {/* Kategori */}
-            <p className="filter-box-kategori">Kategori</p>
-            <label for="internal_HIMSI" className="container">
-              <input
-                type="checkbox"
-                id="internal_HIMSI"
-                name="internal_HIMSI"
-                value="Internal HIMSI"
-              />
-              <span class="checkmark"></span>
-              <p>Internal HIMSI</p>
-            </label>
-            <br />
-            <label for="external_HIMSI" className="container">
-              <input
-                type="checkbox"
-                id="external_HIMSI"
-                name="external_HIMSI"
-                value="External HIMSI"
-              />
-              <span class="checkmark"></span>
-              <p>External HIMSI</p>
-            </label>
-            <br />
-
-            {/* Bidang */}
-            <p className="filter-box-bidang">Bidang</p>
-            <label for="BPH" className="container">
-              <input type="checkbox" id="BPH" name="BPH" value="BPH" />
-              <span class="checkmark"></span>
-              <p>BPH</p>
-            </label>
-            <br />
-            <label for="PSDM" className="container">
-              <input type="checkbox" id="PSDM" name="PSDM" value="PSDM" />
-              <span className="checkmark"></span>
-              <p>PSDM</p>
-            </label>
-            <br />
-            <label for="DIKTI" className="container">
-              <input type="checkbox" id="DIKTI" name="DIKTI" value="DIKTI" />
-              <span className="checkmark"></span>
-              <p>DIKTI</p>
-            </label>
-            <br />
-            <label for="MEDKOM" className="container">
-              <input type="checkbox" id="MEDKOM" name="MEDKOM" value="MEDKOM" />
-              <span className="checkmark"></span>
-              <p>MEDKOM</p>
-            </label>
-            <br />
-            <label for="PERHUB" className="container">
-              <input type="checkbox" id="PERHUB" name="PERHUB" value="PERHUB" />
-              <span className="checkmark"></span>
-              <p>PERHUB</p>
-            </label>
-            <br />
-            <label for="ADKESMA" className="container">
-              <input
-                type="checkbox"
-                id="ADKESMA"
-                name="ADKESMA"
-                value="ADKESMA"
-              />
-              <span className="checkmark"></span>
-              <p>ADKESMA</p>
-            </label>
-            <br />
-            <label for="URT" className="container">
-              <input type="checkbox" id="URT" name="URT" value="URT" />
-              <span className="checkmark"></span>
-              <p>URT</p>
-            </label>
+          <div className="filter-container">
+            <p className="filter-kategori">Kategori</p>
+            <div>
+              {checkboxsKategori.map((filter) => {
+                return (
+                  <div className="wrapper-list" key={filter.id}>
+                    <form action="">
+                      <input
+                        type="checkbox"
+                        id={filter.id}
+                        onClick={() => handleChangeCheckBoxsKategori(filter.id)}
+                      />
+                      <label htmlFor="">{filter.namaFilter}</label>
+                    </form>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="filter-bidang">Bidang</p>
+            {checkboxsBidang.map((filter) => {
+              return (
+                <div className="wrapper-list" key={filter.id}>
+                  <form action="">
+                    <input
+                      type="checkbox"
+                      id={filter.id}
+                      onClick={() => handleChangeCheckBoxsBidang(filter.id)}
+                    />
+                    <label htmlFor="">{filter.namaFilter}</label>
+                  </form>
+                </div>
+              );
+            })}
           </div>
         )}
 
@@ -294,6 +298,11 @@ const ProgramKerja = () => {
           })}
         </div>
 
+        {/* Pagination */}
+        <div className="pagination">
+          <Pagination className="pagination-items">{items}</Pagination>
+          <br />
+        </div>
       </Container>
     </>
   );
