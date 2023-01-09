@@ -9,7 +9,7 @@ export default function ArticleItem({ article, index }) {
       <Col className="eventItem d-flex flex-row mb-3 p-0">
         <div className="content me-auto d-flex \ flex-column">
 
-          <div>
+          <div className="d-flex gap-1">
             {article.kategori_berita.map(kategori => (
               <span className="tag text-center">{kategori}</span>
             ))}
