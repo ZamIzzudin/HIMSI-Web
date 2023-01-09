@@ -19,12 +19,39 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getEvent() {
+        const url = BaseUrl + '/event'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getDetailEvent(id) {
+        const url = BaseUrl + '/event/' + id
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
     async function getPartner() {
         const url = BaseUrl + '/partner'
 
         const response = await axios.get(url)
 
         return response.data.data
+    }
+
+    async function getLatestEvent() {
+        const url = BaseUrl + '/event'
+
+        const response = await axios.get(url)
+
+        const get3 = response.data.data.filter((item, index) => index <= 2)
+
+        console.log(get3)
+        return get3
     }
 
     async function getHimpunan() {
@@ -88,7 +115,12 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        return response.data.data[0]
+        const toObj = {}
+        response.data.data.forEach(item => {
+            toObj[item.nama_link] = item.url
+        })
+
+        return toObj
     }
 
     async function getSlider() {
@@ -99,10 +131,19 @@ const api = (() => {
         return response.data.data
     }
 
+    // Sisa
+    // Upcoming Event
+    // Filtering Event and Article
+    // Event (tinggal make)
+    // Detail Event (tinggl make)
+    // Contact Us
+    // Subscribe
 
     return {
         getArticle,
         getDetailArticle,
+        getEvent,
+        getDetailEvent,
         getPartner,
         getHimpunan,
         getVisiMisi,
@@ -112,7 +153,8 @@ const api = (() => {
         getFAQ,
         getFooter,
         getSocmed,
-        getSlider
+        getSlider,
+        getLatestEvent
     }
 })()
 

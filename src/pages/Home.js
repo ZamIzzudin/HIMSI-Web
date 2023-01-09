@@ -22,14 +22,16 @@ const Home = () => {
       <Container>
         <div className="header">
           <h3 className="title">Up Coming Events</h3>
-          <Button className='btn-header' variant="primary">
-            <Link to={`/layanan-mahasiswa`}>View More</Link>
+          <Button className='btn-header'>
+            <Link to={`/event`}>View More</Link>
           </Button>
         </div>
         <EventSlider />
         <div className="header">
           <h3 className="title">Lastest Event</h3>
-          <Button className='btn-header' variant="primary">View More</Button>
+          <Button className='btn-header'>
+            <Link to={`/event`}>View More</Link>
+          </Button>
         </div>
         <LatestEvents />
         <Partner />

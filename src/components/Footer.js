@@ -10,11 +10,14 @@ import Gmail from "../assets/img/Gmail.png";
 
 const Footer = () => {
     const [dataFooter, setDataFooter] = useState()
+    const [socmed, setSocmed] = useState()
 
     async function getDataFooter() {
         const data = await api.getFooter()
+        const data2 = await api.getSocmed()
 
         setDataFooter(data)
+        setSocmed(data2)
     }
 
     useEffect(() => {
@@ -83,19 +86,32 @@ const Footer = () => {
 
             <div>
                 <Row className='mb-2'>
-                    <Col className='logo-sosmed d-flex justify-content-center flex-wrap  '>
-                        <i class="fa-brands fa-instagram mx-4 mx-sm-3  pb-4" ></i>
-                        <i class="fa-brands fa-facebook mx-4 mx-sm-3 pb-4"></i>
-                        <i class="fa-brands fa-twitter mx-4 mx-sm-3 pb-4"></i>
-                        <i class="fa-brands fa-discord mx-4 mx-sm-3 pb-4"></i>
-                        <i class="fa-brands fa-tiktok mx-4 mx-sm-3 pb-4"></i>
-                        <i class="fa-brands fa-youtube mx-4 mx-sm-3 pb-4"></i>
-                        <i class="fa-brands fa-linkedin mx-4 mx-sm-3 pb-4"></i>
+                    <Col className='logo-sosmed d-flex justify-content-center flex-wrap'>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Instagram}>
+                            <i class="fa-brands fa-instagram mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Facebook}>
+                            <i class="fa-brands fa-facebook mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Twitter}>
+                            <i class="fa-brands fa-twitter mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Discord}>
+                            <i class="fa-brands fa-discord mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.TikTok}>
+                            <i class="fa-brands fa-tiktok mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Youtube}>
+                            <i class="fa-brands fa-youtube mx-4 mx-sm-3 pb-4"></i>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Linkedin}>
+                            <i class="fa-brands fa-linkedin mx-4 mx-sm-3 pb-4"></i>
+                        </a>
                     </Col>
                 </Row>
                 <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkang oleh MCD Internship</p>
             </div>
-
         </footer>
 
 

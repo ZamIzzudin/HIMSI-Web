@@ -1,29 +1,43 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import api from '../utils/api'
 import { Container, Button, Card } from 'react-bootstrap'
-import imageLastest from '../assets/img/mengajar.png'
 
-import { dataEvents } from '../utils/dataEvent'
 import '../styles/components/LastestEvents.css'
 
 const LatestEvents = () => {
+    const [latestEvent, setLatestEvent] = useState([])
+
+    async function getDataLatestEvent() {
+        const data = await api.getLatestEvent()
+
+        setLatestEvent(data)
+    }
+
+    useEffect(() => {
+        getDataLatestEvent()
+    }, [])
+
     return (
         <Container>
             <div className='lastestEvents'>
                 <div className='list-event'>
-                    {dataEvents.map((event, index) => {
+                    {latestEvent?.map((event, index) => {
                         return (
                             <Card key={index}>
                                 <div className='img-layout'>
                                     <div className='gradient'>
                                         <div className='gradient-overlay'></div>
-                                        <Card.Img src={imageLastest} />
+                                        <Card.Img src={event?.gambar_event.url} />
                                     </div>
                                 </div>
                                 <Card.Body>
-                                    <Card.Title>{event.title}</Card.Title>
-                                    <Card.Text className='date'>{event.date}</Card.Text>
-                                    <Card.Text className='deskripsi'>{event.content}</Card.Text>
-                                    <Button className='btn-card flex-fill'>Learn More</Button>
+                                    <Card.Title>{event?.judul_event}</Card.Title>
+                                    <Card.Text className='date'>{event?.tanggal_mulai_event.toString().substring(0, 10)}</Card.Text>
+                                    <Card.Text className='deskripsi' dangerouslySetInnerHTML={{ __html: `${event?.isi_event}` }}></Card.Text>
+                                    <Button className='btn-card flex-fill'>
+                                        <Link to={`/event-detail/${event._id}`}>Learn More</Link>
+                                    </Button>
                                 </Card.Body>
                             </Card>
                         )
