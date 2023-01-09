@@ -8,7 +8,7 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        return response.data.data
+        return response.data.data[0].berita
     }
 
     async function getDetailArticle(id) {
@@ -24,7 +24,7 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        return response.data.data
+        return response.data.data[0].event
     }
 
     async function getDetailEvent(id) {
@@ -48,7 +48,7 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        const get3 = response.data.data.filter((item, index) => index <= 2)
+        const get3 = response.data.data[0].event.filter((item, index) => index <= 2)
 
         return get3
     }
@@ -135,7 +135,7 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        const get4 = response.data.data.filter((item, index) => index <= 3)
+        const get4 = response.data.data[0].event.filter((item, index) => index <= 3)
 
         return get4
     }

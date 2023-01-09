@@ -21,7 +21,7 @@ const Hero = () => {
     return (
         <div className='hero'>
             <Carousel >
-                {slider.map(item => (
+                {slider?.map(item => (
                     <Carousel.Item interval={2000}>
                         <div className='gradient'>
                             <div className='gradient-overlay'></div>
