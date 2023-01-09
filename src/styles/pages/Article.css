@@ -72,6 +72,7 @@
   border-radius: 8px;
   padding: 5px 8px;
   color: #fff;
+ 
 }
 
 .clear {
@@ -152,8 +153,8 @@ input[type="submit"] {
   border-radius: 8px;
   position: absolute;
   z-index: 1;
-  right: 5%;
-  top: 38%;
+  right: 7.5%;
+  top: 27%;
 }
 
 .wrapper-list {
@@ -205,6 +206,9 @@ input[type="submit"] {
   font-style: normal;
 }
 
+.del-category-icon {
+  cursor: pointer;
+}
 
 /* Azzam Nambahin */
 .article-header {
@@ -225,6 +229,7 @@ input[type="submit"] {
   color: var(--white);
   font-weight: bold;
   font-size: 3em;
+  padding-top: 70px;
 }
 
 .filter-category {
@@ -259,6 +264,7 @@ input[type="submit"] {
 
 .category-display {
   display: flex;
+  overflow: hidden;
 }
 
 .search-bar-input {
@@ -294,3 +300,16 @@ input[type="submit"] {
 .article-list {
   margin-top: 45vh;
 }
+
+/* Responshitt */
+@media screen and (max-height: 768px) {
+  .category-container {
+    position: absolute;
+    top: 35%;
+  }
+  .article-header-title {
+    padding-top: 50px;
+    font-size: 45px;
+  }
+}
+

@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 import { filterData } from '../utils/filterArticle'
-
+import cancelIcon from "../assets/icons/x-circle.svg"
 import ArticleItem from "../components/ArticleItem"
 import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
@@ -33,7 +33,7 @@ const Article = () => {
       if (item.checked) {
         return (
           <span onClick={() => handleChangeCheckBoxs(item.id)} className='selected-category' key={item.id}>
-            {item.namaFilter} X
+            {item.namaFilter} <img src={cancelIcon} className="del-category-icon"  alt="cancelIcon" />
           </span>
         );
       } else {
@@ -78,7 +78,7 @@ const Article = () => {
           </button>
 
         </div>
-        <h1 className="article-header-title">Article</h1>
+        <h1 className="article-header-title">Artikel</h1>
       </div>
 
       {/* Karegori Filter Hide */}
