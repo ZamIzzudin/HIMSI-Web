@@ -36,14 +36,14 @@ const DetailArtikel = () => {
             <div className='img-header'>
                 <img src={detail?.header_berita.url} alt="header" />
             </div>
-                    <div className="bg-1">
-                        <img src={bgProker} alt="hiasan" />
-                    </div>
-                    <div className="bg-2">
-                        <img src={bgProker} alt="hiasan" />
-                    </div>
-                <div className='background'>
-                </div>
+            <div className="bg-1">
+                <img src={bgProker} alt="hiasan" />
+            </div>
+            <div className="bg-2">
+                <img src={bgProker} alt="hiasan" />
+            </div>
+            <div className='background'>
+            </div>
             <Container>
                 {/* -------------------------- Content ------------------------- */}
                 <div className='content'>

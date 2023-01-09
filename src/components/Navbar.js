@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap'
 import SubscribeModal from './SubsribeModal'
 import Logo from "../assets/img/logohimsi.png";
 
-
 import { useState } from 'react'
 
 import '../styles/components/Navbar.css'

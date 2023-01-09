@@ -72,7 +72,7 @@
   border-radius: 8px;
   padding: 5px 8px;
   color: #fff;
- 
+
 }
 
 .clear {
@@ -307,9 +307,9 @@ input[type="submit"] {
     position: absolute;
     top: 35%;
   }
+
   .article-header-title {
     padding-top: 50px;
     font-size: 45px;
   }
 }
-

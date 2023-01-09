@@ -131,13 +131,14 @@
     margin: 0 auto;
     padding: 0;
 }
+
 .detail-artikel .deskripsi p {
     font-family: 'Mulish', sans-serif !important;
     line-height: 35px !important;
     font-weight: 500 !important;
     font-size: 15px !important;
     text-align: justify;
-    
+
     /* width: 100% !important; */
     /* text-align: justify; */
 }
@@ -171,7 +172,7 @@
     width: 15px !important;
     height: 15px !important;
     color: #f49c45 !important;
-    
+
 
 }
 
@@ -232,13 +233,14 @@
     .detail-artikel .deskripsi p {
         font-size: 22px !important;
     }
-    
+
 }
 
 @media screen and (max-width: 1920px) {
     .detail-artikel .bg-1 img {
         width: 600px;
     }
+
     .detail-artikel .bg-2 img {
         width: 600px;
         left: -10%;
@@ -276,7 +278,7 @@
         right: 0;
         width: 500px;
     }
-    
+
     .detail-artikel .bg-2 img {
         position: absolute;
         top: 100%;
@@ -333,4 +335,3 @@
 
     }
 }
-

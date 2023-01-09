@@ -37,6 +37,10 @@ export default function Router() {
                 {/* Page Layanan Mahasiswa */}
                 <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
 
+                {/* Page Layanan Mahasiswa */}
+                <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
+                <Route path="/detail-artikel" component={DetailArtikel} />
+
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
