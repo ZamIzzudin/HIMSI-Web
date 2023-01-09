@@ -35,9 +35,12 @@ const LatestEvents = () => {
                                     <Card.Title>{event?.judul_event}</Card.Title>
                                     <Card.Text className='date'>{event?.tanggal_mulai_event.toString().substring(0, 10)}</Card.Text>
                                     <Card.Text className='deskripsi' dangerouslySetInnerHTML={{ __html: `${event?.isi_event}` }}></Card.Text>
-                                    <Button className='btn-card flex-fill'>
-                                        <Link to={`/event-detail/${event._id}`}>Learn More</Link>
-                                    </Button>
+                                    <Link to={`/event-detail/${event._id}`}>
+                                        <Button className='btn-card flex-fill'>
+                                            Learn More
+                                        </Button>
+                                    </Link>
+
                                 </Card.Body>
                             </Card>
                         )

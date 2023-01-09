@@ -50,7 +50,6 @@ const api = (() => {
 
         const get3 = response.data.data.filter((item, index) => index <= 2)
 
-        console.log(get3)
         return get3
     }
 
@@ -131,11 +130,22 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getUpComing() {
+        const url = BaseUrl + '/event?status=up coming'
+
+        const response = await axios.get(url)
+
+        const get4 = response.data.data.filter((item, index) => index <= 3)
+
+        return get4
+    }
+
     // Sisa
-    // Upcoming Event
-    // Filtering Event and Article
+
     // Event (tinggal make)
     // Detail Event (tinggl make)
+    // Filtering Event and Article
+    // Rekomendasi Event dan Artikel (opsional)
     // Contact Us
     // Subscribe
 
@@ -154,7 +164,8 @@ const api = (() => {
         getFooter,
         getSocmed,
         getSlider,
-        getLatestEvent
+        getLatestEvent,
+        getUpComing
     }
 })()
 

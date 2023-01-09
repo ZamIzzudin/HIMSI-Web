@@ -28,7 +28,7 @@ export default function Router() {
 
                 {/* Page Proker */}
                 <Route path="/event" component={ProgramKerja} />
-                <Route path="/event-detail" component={DetailProker} />
+                <Route path="/event-detail/:id" component={DetailProker} />
 
                 {/* Page Article */}
                 <Route path="/article" component={Article} />
