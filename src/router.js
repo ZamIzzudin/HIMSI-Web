@@ -23,6 +23,7 @@ export default function Router() {
 
                 {/* Page Profile */}
                 <Route path="/profile" component={Profile} />
+
                 {/* Struktur Anggota */}
                 <Route path="/struktur-anggota" component={StrukturAnggota} />
 
@@ -36,10 +37,6 @@ export default function Router() {
 
                 {/* Page Layanan Mahasiswa */}
                 <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
-
-                {/* Page Layanan Mahasiswa */}
-                <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
-                <Route path="/detail-artikel" component={DetailArtikel} />
 
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />

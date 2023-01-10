@@ -54,7 +54,11 @@ const DetailArtikel = () => {
                                 <p className='penulis'>{detail?.penulis_berita}</p>
                                 <p className='tanggal'>{detail?.tanggal_berita.toString().substring(0, 10)}</p>
                             </div>
-                            <button className='adkesmagazine'>{detail?.kategori_berita[0]}</button>
+                            <div className="d-flex gap-2">
+                                {detail?.kategori_berita.map(item => (
+                                    <button className='adkesmagazine'>{item}</button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className='deskripsi'>

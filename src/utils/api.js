@@ -3,12 +3,12 @@ import axios from 'axios'
 const api = (() => {
     const BaseUrl = "https://himsi-website-be.vercel.app"
 
-    async function getArticle() {
-        const url = BaseUrl + '/berita'
+    async function getArticle(page) {
+        const url = BaseUrl + '/berita?limit=2&skip=2&page=' + page
 
         const response = await axios.get(url)
 
-        return response.data.data[0].berita
+        return response.data.data[0]
     }
 
     async function getDetailArticle(id) {
@@ -19,12 +19,12 @@ const api = (() => {
         return response.data.data
     }
 
-    async function getEvent() {
-        const url = BaseUrl + '/event'
+    async function getEvent(page) {
+        const url = BaseUrl + '/event?limit=2&skip=2&page=' + page
 
         const response = await axios.get(url)
 
-        return response.data.data[0].event
+        return response.data.data[0]
     }
 
     async function getDetailEvent(id) {
@@ -44,13 +44,11 @@ const api = (() => {
     }
 
     async function getLatestEvent() {
-        const url = BaseUrl + '/event'
+        const url = BaseUrl + '/event?limit=3'
 
         const response = await axios.get(url)
 
-        const get3 = response.data.data[0].event.filter((item, index) => index <= 2)
-
-        return get3
+        return response.data.data[0].event
     }
 
     async function getHimpunan() {
@@ -122,6 +120,14 @@ const api = (() => {
         return toObj
     }
 
+    async function getContact() {
+        const url = BaseUrl + '/link?kategori=contact'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
     async function getSlider() {
         const url = BaseUrl + '/slider'
 
@@ -131,22 +137,18 @@ const api = (() => {
     }
 
     async function getUpComing() {
-        const url = BaseUrl + '/event?status=up coming'
+        const url = BaseUrl + '/event?status=up coming?limit=4'
 
         const response = await axios.get(url)
 
-        const get4 = response.data.data[0].event.filter((item, index) => index <= 3)
-
-        return get4
+        return response.data.data[0].event
     }
 
     // Sisa
-
     // Event (tinggal make)
     // Detail Event (tinggl make)
     // Filtering Event and Article
     // Rekomendasi Event dan Artikel (opsional)
-    // Contact Us
     // Subscribe
 
     return {
@@ -163,6 +165,7 @@ const api = (() => {
         getFAQ,
         getFooter,
         getSocmed,
+        getContact,
         getSlider,
         getLatestEvent,
         getUpComing

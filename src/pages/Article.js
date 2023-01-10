@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap'
+import { Container, Pagination } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 import { filterData } from '../utils/filterArticle'
@@ -10,11 +10,12 @@ import { ReactComponent as Search } from "../assets/icons/search.svg"
 import "../styles/pages/Article.css"
 
 const Article = () => {
-  const [articleList, setArticleList] = useState([])
+  const [articleList, setArticleList] = useState({ berita: [] })
 
   const [showKategoriList, setShowKategoriList] = useState(false);
 
   const [checkboxs, setCheckboxs] = useState(filterData)
+  const [page, setPage] = useState(1)
 
   const handleChangeCheckBoxs = id => {
     setCheckboxs(prev => {
@@ -43,23 +44,32 @@ const Article = () => {
   }
 
   // Get data from API
-  async function getArticle() {
-    const data = await api.getArticle()
+  async function getDataArticle(page) {
+    const data = await api.getArticle(page)
     setArticleList(data)
   }
 
   useEffect(() => {
-    getArticle()
-  }, [])
+    getDataArticle(page)
+  }, [page])
 
   // Scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [page]);
+
+  // Pagination
+  let items = [];
+  for (let number = 1; number <= articleList.total / 2; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === page} onClick={() => setPage(number)}>
+        {number}
+      </Pagination.Item>
+    );
+  }
 
   return (
     <Container>
-
       <div className="article-header">
         <div className="filter-category">
           <div className="search-bar-viewpoint">
@@ -84,6 +94,7 @@ const Article = () => {
       {/* Karegori Filter Hide */}
       {showKategoriList && (
         <div className='category-container'>
+          <h5>Kategori</h5>
           <div>
             {checkboxs.map((category) => {
               return (
@@ -100,9 +111,13 @@ const Article = () => {
       )}
 
       <div className="article-list">
-        {articleList.map((article, index) => (
+        {articleList?.berita.map((article, index) => (
           <ArticleItem article={article} index={index} />
         ))}
+      </div>
+
+      <div className="pagination">
+        <Pagination className="pagination-items">{items}</Pagination>
       </div>
     </Container>
   )

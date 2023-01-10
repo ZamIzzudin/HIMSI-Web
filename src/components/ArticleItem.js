@@ -18,7 +18,7 @@ export default function ArticleItem({ article, index }) {
           <h2 className="judul">{article.judul_berita}</h2>
           <p className="date">{article.tanggal_berita?.toString().substring(0, 10)}</p>
           <p className="card-deskripsi" dangerouslySetInnerHTML={{ __html: `${article?.isi_berita}` }}></p>
-          {/* manggil detailArticle id */}
+
           <Link to={`/article-detail/${article._id}`}>
             <button>
               Learn More ➜
