@@ -1,35 +1,41 @@
 import { Button, Container } from 'react-bootstrap'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import api from '../utils/api'
 
-import '../styles/pages/DetailProker.css'
 import EventSlider from '../components/EventSlider'
-import ImageHeader from '../assets/img/meetup.png'
 import bgProker from '../assets/img/bg-proker.png'
-import imgLink from '../assets/img/link.svg'
 import ImageSlider from '../components/ProgramKerja/ImageSlider'
 
+import '../styles/pages/DetailProker.css'
 
 const DetailProker = () => {
 
-    // innner HTML (p)
-    function handleP() {
-        return { __html: `${EventProker.isi}` }
+    const { id } = useParams()
+    const [detail, setDetail] = useState(null)
+
+    async function getDetailEvent(id) {
+        const data = await api.getDetailEvent(id)
+        setDetail(data)
     }
 
-    const EventProker = {
-        judul: 'Meet Up HIMSI',
-        penulis: 'Amir Kholiluddin Ismail',
-        tanggal: '19 Desember 2022',
-        divisi: 'PSDM',
-        isi: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam. Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at? Necessitatibus, sequi? Unde, nulla consequuntur. Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error. Nemo quia doloribus minus error numquam similique, assumenda ipsum. Voluptates voluptatibus ipsam rem sit aliquid. <br/> <b> consectetur </b> Lorem ipsum dolor sit ametadipisicing elit.Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam.Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at?Necessitatibus, sequi?Unde, nulla consequuntur.Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error.Nemo quia doloribus minus error numquam similique, assumenda ipsum.Voluptates voluptatibus ip adipisicing elit.Minus numquam nihil tenetur nesciunt reiciendis temporibus natus doloremque consequatur vero molestias nemo, laudantium non dolorem distinctio ab soluta corporis saepe accusantium ipsum rerum nam.Voluptatem illo commodi cupiditate saepe sunt architecto unde, quae ipsa ipsum modi suscipit praesentium, facere, repellendus aspernatur molestiae explicabo autem at?Necessitatibus, sequi?Unde, nulla consequuntur.Consequatur voluptates qui tempore eaque quae earum provident fuga exercitationem assumenda repellat velit, eum quam magnam officia quis asperiores expedita corporis iusto aut neque rem error.Nemo quia doloribus minus error numquam similique, assumenda ipsum.Voluptates voluptatibus ip",
-        link: 'https://www.youtube.com/LoremipsumdolorsitametconsecteturadipisicingelitPariatuquaeratestutquasdelenitiexrerumevenietommodivoluptatibussequi?'
-    }
+    useEffect(() => {
+        getDetailEvent(id)
+    }, [id])
+
+    // Scroll to top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    // innner HTML (p)
 
     return (
         <div className='detail-proker'>
             <div className='blank-space'></div>
             {/* -------------------------- Bagian Img Header ------------------------- */}
             <div className='img-header'>
-                <img src={ImageHeader} alt="header" />
+                <img src={detail?.header_event.url} alt="header" />
             </div>
             <Container>
                 <div className='background'>
@@ -43,28 +49,26 @@ const DetailProker = () => {
                 {/* -------------------------- Content ------------------------- */}
                 <div className='content'>
                     <div className='header'>
-                        <h4 className='judul'>{EventProker.judul}</h4>
+                        <h4 className='judul'>{detail?.judul_event}</h4>
                         <div className='sub-judul'>
                             <div>
-                                <p className='penulis'>{EventProker.penulis}</p>
-                                <p className='tanggal'>{EventProker.tanggal}</p>
+                                <p className='penulis'>{detail?.penulis_event}</p>
+                                <p className='tanggal'>{detail?.tanggal_mulai_event.toString().substring(0, 10)}</p>
                             </div>
-                            <Button className={`${EventProker.divisi}`}>{EventProker.divisi}</Button>
+                            <Button className={`BPH`}>{detail?.kategori_event}</Button>
                         </div>
                     </div>
                     <div className='deskripsi'>
                         <div className="image-content">
-                            <img src={ImageHeader} alt="preview" />
+                            <img src={detail?.gambar_event.url} alt="preview" />
                         </div>
-                        <p
-                            dangerouslySetInnerHTML={handleP()}
-                        ></p>
+                        <p dangerouslySetInnerHTML={{ __html: `${detail?.isi_event}` }}></p>
                     </div>
-                    <div className='link'>
-                        <img src={imgLink} alt="" />
-                        <a href="https://www.youtube.com/">{EventProker.link}</a>
-                    </div>
-                    <ImageSlider />
+
+                    {detail?.dokumentasi_event.length > 0 && (
+                        <ImageSlider />
+                    )}
+
                 </div>
                 {/*--------------------- header-event -----------------------*/}
                 <div className="header-event">

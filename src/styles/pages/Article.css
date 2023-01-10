@@ -18,25 +18,6 @@
   max-width: 100%;
 }
 
-/* input[type="text"] {
-    width: 1105px;
-    max-width: 89.1129032258%;
-    height: 56px;
-    padding: 8px 130px;
-    border-radius: 40px 0 0 40px;
-    font-family: "Montserrat", sans-serif;
-    border-width: 1px 0 1px 1px;
-    outline: none;
-    border-color: #f49c45;
-    border-style: solid;
-    background-image: url("../../assets/img/Magnifer.png");
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position-x: 95px;
-    background-position-y: center;
-  } */
-
 .category-wrapper {
   width: 1105px;
   max-width: 89.1129032258%;
@@ -112,13 +93,6 @@ input[type="submit"] {
 .blank-space {
   height: 70px;
 }
-
-/* .pagination {
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 100px;
-    padding-top: 50px;
-  } */
 
 .menu-button {
   background-color: #f49c45;

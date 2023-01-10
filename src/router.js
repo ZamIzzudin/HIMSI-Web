@@ -43,7 +43,6 @@ export default function Router() {
             </Switch>
             <Footer />
 
-            {/* <EventDetail /> */}
         </BrowserRouter>
     );
 }

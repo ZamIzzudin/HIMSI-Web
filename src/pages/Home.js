@@ -17,9 +17,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="blank-space" />
       <Hero />
+
       <Container>
+
         <div className="header">
           <h3 className="title">Up Coming Events</h3>
           <Button className='btn-header'>
@@ -27,6 +28,7 @@ const Home = () => {
           </Button>
         </div>
         <EventSlider />
+
         <div className="header">
           <h3 className="title">Lastest Event</h3>
           <Button className='btn-header'>
@@ -34,8 +36,11 @@ const Home = () => {
           </Button>
         </div>
         <LatestEvents />
+
         <Partner />
+
         <SocialMedia />
+
       </Container>
     </div>
 

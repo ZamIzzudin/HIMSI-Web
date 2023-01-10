@@ -56,6 +56,9 @@ const Partner = () => {
                                 </SwiperSlide>
                             );
                         })}
+                        {/* <SwiperSlide>
+                            <img src={ImgPancingan} alt="s"></img>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>

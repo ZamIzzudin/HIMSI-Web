@@ -7,14 +7,13 @@ const LayananMhs = ({ data }) => {
         <div className="layanan-mahasiswa">
             <Container>
                 <Row className='blank-space'></Row>
-                <section className="content-section mb-5">
+                <section className="content-section">
                     <div className="section-header-container">
                         <h4 className="section-header">E-Layanan Mahasiswa</h4>
                     </div>
                     <div className="section-body">
                         <table>
                             <tbody>
-
                                 {data.map((item, index) => {
                                     return (
                                         <tr key={index}>

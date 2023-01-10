@@ -6,7 +6,7 @@ const Faq = ({ data }) => {
     return (
         <div className="layanan-mahasiswa">
             <Container>
-                <section className="content-section mb-5">
+                <section className="content-section">
                     <div className="section-header-container">
                         <h4 className="section-header">FAQ</h4>
                     </div>

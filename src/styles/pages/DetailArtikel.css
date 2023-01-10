@@ -10,16 +10,8 @@
     display: flex;
     align-items: center;
     flex-direction: column !important;
-    /* background-color: #dad4ce; */
     position: relative !important;
 }
-
-/* .detail-proker .content-layer {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 1000px !important;
-    align-items: center !important;
-} */
 
 .detail-artikel .content {
     background-color: rgb(255, 255, 255);
@@ -29,8 +21,6 @@
     -moz-border-radius: 32px;
     -ms-border-radius: 32px;
     -o-border-radius: 32px;
-    position: relative !important;
-    /* margin: 0px 30px 50px 30px; */
     padding: 50px 70px !important;
     top: -250px !important;
     margin-bottom: -250px;
@@ -39,9 +29,7 @@
 /* ----------------Background------------------- */
 .detail-artikel .background {
     position: absolute !important;
-    /* background-color: aqua; */
     max-height: 2000px !important;
-    /* min-width: 1400px !important; */
     width: 100% !important;
     overflow: hidden;
     z-index: 0 !important;
@@ -71,11 +59,7 @@
     background-color: #feba76;
     height: 400px !important;
     width: 85% !important;
-    /* position: relative !important; */
     margin: auto !important;
-    /* float: left !important; */
-    /* margin-top: 200px !important;
-    margin-bottom: -200px !important; */
     top: 100px !important;
 }
 
@@ -138,9 +122,6 @@
     font-weight: 500 !important;
     font-size: 15px !important;
     text-align: justify;
-
-    /* width: 100% !important; */
-    /* text-align: justify; */
 }
 
 .detail-artikel .deskripsi .desc-img {
@@ -208,16 +189,11 @@
 }
 
 /* ------Event Lainnya------- */
-/* .detail-proker .header {
-    text-align: left !important;
-} */
 .detail-artikel .header-event {
     margin: 0px !important;
     display: flex !important;
     justify-content: flex-start !important;
     width: 100% !important;
-
-
 }
 
 .detail-artikel .header-event .title {
@@ -225,7 +201,6 @@
     font-weight: 700 !important;
     color: black !important;
     margin: 0px !important;
-
 }
 
 /* ------------------- Responsive ---------------------- */

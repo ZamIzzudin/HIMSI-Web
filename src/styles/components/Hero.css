@@ -1,7 +1,12 @@
 /* gradient Color Blue */
+.hero {
+    padding-top: 6%;
+}
+
 .hero .gradient {
     position: relative !important;
-    /* height: 90vh !important; */
+    height: 0px !important;
+    height: 92vh !important;
 }
 
 .hero .gradient .gradient-overlay {
@@ -15,7 +20,7 @@
 
 /* Hero Information */
 .hero img {
-    height: 100%x !important;
+    height: 100% !important;
     object-fit: cover !important;
     object-position: center !important;
 }
@@ -28,7 +33,7 @@
 }
 
 .hero .btn-hero {
-    margin-bottom: 90px !important;
+    margin-bottom: 50px !important;
 }
 
 .hero .btn-hero:hover {
@@ -53,46 +58,15 @@
     opacity: 100 !important;
 }
 
-/* .hero button.active::before {
-    transform: scaleX(0) !important;
-    -webkit-transform: scaleX(0) !important;
-    -moz-transform: scaleX(0) !important;
-    -ms-transform: scaleX(0) !important;
-    -o-transform: scaleX(0) !important;
-    transform-origin: left;
-}
-
-.hero button.active::after::before {
-    transform: scaleX(1) !important;
-    -webkit-transform: scaleX(1) !important;
-    -moz-transform: scaleX(1) !important;
-    -ms-transform: scaleX(1) !important;
-    -o-transform: scaleX(1) !important;
-    transition: transform 0.3s ease-in-out !important;
-    -webkit-transition: transform 0.3s ease-in-out !important;
-    -moz-transition: transform 0.3s ease-in-out !important;
-    -ms-transition: transform 0.3s ease-in-out !important;
-    -o-transition: transform 0.3s ease-in-out !important;
-} */
-
 .hero button.active {
-    width: 55px !important;
-    height: 10px !important;
-    border-radius: 0px !important;
-    /*border-radius: 15px !important;
-    -webkit-border-radius: 12px !important;
-    -moz-border-radius: 12px !important;
-    -ms-border-radius: 12px !important;
-    -o-border-radius: 12px !important;
-    */
-    border-radius: 12px !important;
+    width: 80px !important;
+    height: 12px !important;
+    border-radius: 50px !important;
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -ms-border-radius: 50px !important;
+    -o-border-radius: 50px !important;
     background-color: rgba(244, 156, 69, 1) !important;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transform-origin: left !important;
     box-sizing: content-box !important;
 }
 

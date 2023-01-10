@@ -3,7 +3,6 @@
 
 
 .container {
-    /* background-color: #f49c45; */
     padding-top: 80px;
 }
 
@@ -175,7 +174,7 @@
     background: #F49C45;
     padding: 15px 80px;
     border: none;
-    border-radius: 12px; 
+    border-radius: 12px;
     font-size: 20px;
     font-family: "Montserrat";
     font-weight: 700;

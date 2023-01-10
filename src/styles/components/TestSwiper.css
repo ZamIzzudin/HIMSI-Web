@@ -5,7 +5,6 @@
 .test .slider {
     width: 100% !important;
     height: 200px !important;
-    /* background-color: rgb(191, 193, 255) !important; */
     margin-bottom: 50px;
 }
 
@@ -14,26 +13,17 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    /* display: flex;*/
     align-items: center !important;
     padding-bottom: 30px !important;
-    /* overflow: visible !important; */
 }
 
 .test .swiper-wrapper {
     align-items: center;
-    /* margin-bottom: 50px !important; */
-    /* padding-bottom: 50px !important; */
-
 }
 
 .test .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /* background: rgb(221, 52, 52); */
-    /* height: calc((100% - 30px) / 2) !important; */
-
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -46,8 +36,6 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    /* width: 100px !important; */
-    /* width: auto !important; */
     max-height: 54px !important;
     max-width: 264px !important;
     overflow: hidden !important;
@@ -56,9 +44,7 @@
 }
 
 .test .swiper-slide img {
-    /* max-width: 264px !important; */
     max-height: 54px !important;
-    /* object-fit: contain !important; */
 }
 
 .swiper-pagination-bullet-active {
@@ -70,10 +56,3 @@
     -o-border-radius: 15px !important;
     background-color: #082240;
 }
-
-/* .test .swiper-pagination {
-    background-color: blue;
-    position: static !important;
-    height: 50px !important;
-    top: 150px !important;
-} */

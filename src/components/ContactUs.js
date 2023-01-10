@@ -2,13 +2,13 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import '../styles/pages/LayananMahasiswa.css'
 
-const DatabaseMateri = ({ data }) => {
+const ContactUs = ({ data }) => {
     return (
         <div className="layanan-mahasiswa">
             <Container>
                 <section className="content-section">
                     <div className="section-header-container">
-                        <h4 className="section-header">Database Materi</h4>
+                        <h4 className="section-header">Contact Support</h4>
                     </div>
                     <div className="section-body">
                         <table>
@@ -22,6 +22,7 @@ const DatabaseMateri = ({ data }) => {
                                     )
                                 })}
                             </tbody>
+
                         </table>
                     </div>
                 </section >
@@ -30,4 +31,4 @@ const DatabaseMateri = ({ data }) => {
     )
 }
 
-export default DatabaseMateri
+export default ContactUs

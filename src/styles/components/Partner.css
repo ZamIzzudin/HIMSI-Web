@@ -5,8 +5,6 @@
 .partner .slider {
     width: 100% !important;
     height: 230px !important;
-    /* background-color: rgb(191, 193, 255) !important; */
-    /* margin-bottom: 50px; */
 }
 
 .partner .swiper {
@@ -14,26 +12,17 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    /* display: flex;*/
     align-items: center !important;
     padding-bottom: 50px !important;
-    /* overflow: visible !important; */
 }
 
 .partner .swiper-wrapper {
     align-items: center;
-    /* margin-bottom: 50px !important; */
-    /* padding-bottom: 50px !important; */
-
 }
 
 .partner .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /* background: rgb(221, 52, 52); */
-    /* height: calc((100% - 30px) / 2) !important; */
-
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -46,20 +35,15 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    /* width: 100px !important; */
-    /* width: auto !important; */
     max-height: 54px !important;
     max-width: 264px !important;
     overflow: hidden !important;
     width: auto !important;
     margin-top: 0 !important;
-    /* margin: 0 35px; */
 }
 
 .partner .swiper-slide img {
-    /* max-width: 264px !important; */
     max-height: 54px !important;
-    /* object-fit: contain !important; */
 }
 
 .partner .swiper-pagination-bullet {
@@ -94,6 +78,15 @@
     .partner .swiper-slide img {
         max-height: 38px !important;
     }
+
+    .partner .swiper-pagination-bullet {
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .partner .swiper-pagination-bullet-active {
+        width: 4em !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -106,4 +99,13 @@
     }
 }
 
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .partner .swiper-pagination-bullet {
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+    .partner .swiper-pagination-bullet-active {
+        width: 3em !important;
+    }
+}
