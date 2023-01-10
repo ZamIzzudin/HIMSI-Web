@@ -3,11 +3,12 @@
     height: 100%;
     padding-bottom: 70px !important;
     margin-bottom: 50px !important;
+    background-color: white !important;
 }
 
 .event-slider .swiper-slide {
-    height: 636.35px !important;
-    max-width: 461px !important;
+    height: 500px !important;
+    max-width: 360px !important;
     font-size: 18px;
     flex-direction: column !important;
     display: -webkit-box;
@@ -87,7 +88,7 @@
     display: flex !important;
     flex-direction: column !important;
     padding-bottom: 30px !important;
-    gap: 20px;
+    gap: 10px;
     font-family: var(--textReguler);
 }
 
@@ -138,15 +139,41 @@
 /* ----------responsive---------- */
 @media screen and (max-width: 1400px) {
     .event-slider .swiper-slide {
-        height: 600px !important;
-        max-width: 400px !important;
+        height: 480px !important;
+        max-width: 330px !important;
+    }
+
+    .event-slider .event-body .title {
+        font-size: 22px !important;
+    }
+
+    .event-slider .event-body .deskripsi,
+    .event-slider .event-body .btn {
+        font-size: 14px !important;
+    }
+
+    .event-slider .event-body .deskripsi {
+        max-height: 68px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .event-slider .event-body .btn {
+        height: 50px !important;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .event-slider .swiper-slide {
-        height: 550px !important;
-        max-width: 400px !important;
+        height: 400px !important;
+        max-width: 280px !important;
+    }
+
+    .event-slider .event-body .title {
+        font-size: 20px !important;
+    }
+
+    .event-slider .event-body .btn {
+        height: 45px !important;
     }
 
     /* prev-next btn */
@@ -164,8 +191,22 @@
 
 @media screen and (max-width: 992px) {
     .event-slider .swiper-slide {
-        height: 500px !important;
-        max-width: 350px !important;
+        height: 350px !important;
+        max-width: 250px !important;
+    }
+
+    .event-slider .event-body .deskripsi,
+    .event-slider .event-body .btn {
+        font-size: 12px !important;
+    }
+
+    .event-slider .event-body {
+        padding-bottom: 20px !important;
+    }
+
+    .event-slider .event-body .deskripsi {
+        max-height: 52px !important;
+        margin-bottom: 0px !important;
     }
 
     .event-slider .swiper-pagination-bullet {
@@ -181,6 +222,9 @@
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 576px) {
+    .event-slider .event-body .btn {
+        height: 40px !important;
+    }
 
     .event-slider .swiper-button-next:after,
     .event-slider .swiper-button-prev:after {

@@ -77,13 +77,16 @@
 .detail-proker .bg-2 {
     height: 550px;
     overflow: hidden !important;
+    z-index: 0 !important;
 }
 
 .detail-proker .bg-2 img {
     position: absolute !important;
     right: 850px;
     margin-top: -100px;
+    z-index: 0 !important;
 }
+
 
 /* ---------------- image-content -------------------- */
 .detail-proker .image-content {
@@ -218,6 +221,9 @@
     display: flex !important;
     justify-content: flex-start !important;
     width: 100% !important;
+    background-color: rgb(255, 255, 255) !important;
+    text-align: start !important;
+    z-index: 1 !important;
 }
 
 .detail-proker .header-event .title {
@@ -225,6 +231,7 @@
     font-weight: 700 !important;
     color: black !important;
     margin: 0px !important;
+    /* width: 100% !important; */
 }
 
 
@@ -355,7 +362,6 @@
         width: 16px;
         height: 16px;
     }
-
 }
 
 @media screen and (max-width: 480px) {

@@ -40,7 +40,6 @@ const LatestEvents = () => {
                                             Learn More
                                         </Button>
                                     </Link>
-
                                 </Card.Body>
                             </Card>
                         )

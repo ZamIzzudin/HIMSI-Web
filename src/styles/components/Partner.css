@@ -14,10 +14,12 @@
     margin-right: auto;
     align-items: center !important;
     padding-bottom: 50px !important;
+
 }
 
 .partner .swiper-wrapper {
-    align-items: center;
+    align-items: center !important;
+    margin: 0px !important;
 }
 
 .partner .swiper-slide {
@@ -68,8 +70,6 @@
     }
 }
 
-@media screen and (max-width: 1200px) {}
-
 @media screen and (max-width: 992px) {
     .partner .slider {
         height: 180px !important;
@@ -108,4 +108,9 @@
     .partner .swiper-pagination-bullet-active {
         width: 3em !important;
     }
+
+    /* .partner .swiper-slide {
+        max-height: 44px !important;
+        max-width: 204px !important;
+    } */
 }

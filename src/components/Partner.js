@@ -35,18 +35,38 @@ const Partner = () => {
                 </Row>
                 <div className='slider'>
                     <Swiper
-                        slidesPerView='auto'
+                        slidesPerView={5}
                         grid={{
                             rows: 2,
                             fill: 'row'
                         }}
                         spaceBetween={70}
+                        breakpoints={{
+                            // when window width is >= 320px
+                            1200: {
+                                slidesPerView: 5
+                            },
+                            992: {
+                                slidesPerView: 4
+                            },
+                            // when window width is >= 480px
+                            768: {
+                                slidesPerView: 3
+                            },
+                            // when window width is >= 640px
+                            576: {
+                                slidesPerView: 2
+                            },
+                            320: {
+                                slidesPerView: 2
+                            }
+                        }}
                         grabCursor={true}
                         freeMode={true}
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[FreeMode, Grid, Pagination]}
+                        modules={[Grid, FreeMode, Pagination]}
                         className="mySwiper"
                     >
                         {partner.map((item, index) => {
@@ -56,9 +76,6 @@ const Partner = () => {
                                 </SwiperSlide>
                             );
                         })}
-                        {/* <SwiperSlide>
-                            <img src={ImgPancingan} alt="s"></img>
-                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>

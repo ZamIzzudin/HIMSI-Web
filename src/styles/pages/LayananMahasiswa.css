@@ -159,6 +159,7 @@ td {
     color: var(--grey3) !important;
     padding: 10px 20px 10px 40px !important;
     border-bottom: 1px solid var(--primaryColor) !important;
+    overflow-x: hidden !important;
 }
 
 .accordion-button:focus {
