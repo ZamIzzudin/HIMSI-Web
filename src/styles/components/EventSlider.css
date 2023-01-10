@@ -174,6 +174,15 @@
         height: 500px !important;
         max-width: 350px !important;
     }
+
+    .event-slider .swiper-pagination-bullet {
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .event-slider .swiper-pagination-bullet-active {
+        width: 4em !important;
+    }
 }
 
 @media screen and (max-width: 768px) {}
@@ -189,5 +198,14 @@
     .event-slider .swiper-button-next {
         width: 44px !important;
         height: 44px !important;
+    }
+
+    .event-slider .swiper-pagination-bullet {
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+    .event-slider .swiper-pagination-bullet-active {
+        width: 3em !important;
     }
 }

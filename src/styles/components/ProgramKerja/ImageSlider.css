@@ -132,6 +132,15 @@
         width: 44px !important;
         height: 44px !important;
     }
+
+    .img-slider .swiper-pagination-bullet {
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .img-slider .swiper-pagination-bullet-active {
+        width: 4em !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -192,5 +201,14 @@
 
     .img-slider .swiper-button-next {
         right: -10px !important;
+    }
+
+    .img-slider .swiper-pagination-bullet {
+        height: 8px !important;
+        width: 8px !important;
+    }
+
+    .img-slider .swiper-pagination-bullet-active {
+        width: 3em !important;
     }
 }

@@ -3,12 +3,10 @@
   width: 100%;
   height: 595px;
 
-  background: linear-gradient(
-    180deg,
-    #082240 17.63%,
-    rgba(8, 34, 64, 0.31) 83.66%,
-    rgba(8, 34, 64, 0) 98.51%
-  );
+  background: linear-gradient(180deg,
+      #082240 17.63%,
+      rgba(8, 34, 64, 0.31) 83.66%,
+      rgba(8, 34, 64, 0) 98.51%);
 }
 
 .judul {
@@ -104,6 +102,7 @@ input[type="text"] {
 .option {
   background-color: #fff;
 }
+
 /* Hide the browser's default checkbox */
 .filter-box input {
   position: absolute;
@@ -124,7 +123,7 @@ input[type="text"] {
 }
 
 /* When the checkbox is checked, add a blue background */
-.filter-box .container input:checked ~ .checkmark {
+.filter-box .container input:checked~.checkmark {
   background-color: #f49c45;
   border-width: 0;
 }
@@ -137,7 +136,7 @@ input[type="text"] {
 }
 
 /* Show the checkmark when checked */
-.filter-box .container input:checked ~ .checkmark:after {
+.filter-box .container input:checked~.checkmark:after {
   display: block;
 }
 

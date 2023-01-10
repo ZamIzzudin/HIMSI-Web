@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 
-import { Carousel, Button } from 'react-bootstrap'
+import { Carousel, Button, Row } from 'react-bootstrap'
 
 import '../styles/components/Hero.css'
 

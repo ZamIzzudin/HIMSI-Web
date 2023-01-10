@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: column !important;
+    padding: 0px !important;
     /* background-color: #dad4ce; */
     position: relative !important;
 }
@@ -36,8 +37,8 @@
     /* margin: 0px 30px 50px 30px; */
     padding: 50px 70px !important;
     top: 0 !important;
-    top: -305px !important;
-    margin-bottom: -250px;
+    top: -205px !important;
+    margin-bottom: -190px;
 }
 
 .detail-proker .content:nth-child(4) {
@@ -88,17 +89,11 @@
 .detail-proker .image-content {
     float: right !important;
     background-color: #feba76;
-    height: 500px !important;
+    height: 400px !important;
     width: 50% !important;
     margin-left: 20px;
     overflow: hidden;
     box-shadow: 4px 4px 10px rgba(226, 226, 226, 0.8);
-    /* border: 4px solid #f49c45; */
-    /* position: relative !important; */
-    /* margin: auto !important; */
-    /* margin-top: 200px !important;
-    margin-bottom: -200px !important; */
-    /* top: 100px !important; */
 }
 
 .detail-proker .image-content img {
@@ -120,22 +115,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center !important;
-    padding-bottom: 20px !important;
+    padding-bottom: 10px !important;
     border-bottom: 2px solid #f49c45 !important;
-    margin-bottom: 38px !important;
+    margin-bottom: 30px !important;
 }
 
 .detail-proker .sub-judul p {
     margin: 0px !important;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 400 !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
 }
 
 .detail-proker .sub-judul .penulis {
     font-weight: 700 !important;
     color: rgba(244, 156, 69, 1);
-    font-size: 24px !important;
+    font-size: 18px !important;
 }
 
 /* ---------------- Header Button ------------------- */
@@ -165,6 +160,7 @@
 
 .detail-proker .BPH {
     background-image: linear-gradient(to top, rgb(83, 160, 248), rgba(8, 34, 64, 1)) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .detail-proker .URT {
@@ -172,17 +168,16 @@
 }
 
 /* ---------------- Deskripsi ------------------- */
-.detail-proker .deskripsi p,
+.detail-proker .content .deskripsi p,
 .detail-proker .link {
     font-family: 'Mulish', sans-serif !important;
-    line-height: 40px !important;
+    line-height: 35px !important;
     font-weight: 500 !important;
-    font-size: 24px !important;
-    /* width: 100% !important; */
+    font-size: 16px !important;
     text-align: justify;
 }
 
-.detail-proker .deskripsi p b,
+.detail-proker .content .deskripsi p b,
 .detail-proker .link a {
     color: #f49c45 !important;
     font-weight: 700 !important;
@@ -203,41 +198,9 @@
 .detail-proker .link a {
     width: 50%;
     overflow: hidden;
-    height: 40px;
+    height: 35px;
     word-break: break-all;
 }
-
-/* .detail-proker .link {
-    display: flex;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: hidden;
-
-} */
-
-/* .detail-proker .link a {
-    box-sizing: content-box !important;
-    width: 80% !important;
-    height: 40px;
-    position: relative !important;
-    padding-left: 30px;
-    align-items: center !important;
-} */
-
-/* .detail-proker .link a::before {
-    content: "";
-    width: 20px !important;
-    height: 20px !important;
-    color: #f49c45;
-    background-image: url(../../assets/img/link.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    margin-left: -30px;
-    margin-right: 18px;
-    box-sizing: border-box;
-    display: inline-block !important;
-} */
 
 .detail-proker .deskripsi .test {
     display: block;
@@ -249,9 +212,7 @@
 }
 
 /* ------Event Lainnya------- */
-/* .detail-proker .header {
-    text-align: left !important;
-} */
+
 .detail-proker .header-event {
     margin: 0px !important;
     display: flex !important;
@@ -271,38 +232,59 @@
 @media screen and (max-width: 1200px) {
     .detail-proker .content {
         max-width: 1100px;
-    }
-
-    .detail-proker .deskripsi p,
-    .detail-proker .link a {
-        font-size: 22px !important;
-    }
-
-    .detail-proker .image-content {
-        height: 400px !important;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .detail-proker .content {
-        padding: 50px 50px !important;
+        top: -195px !important;
     }
 
     .detail-proker .judul {
         font-size: 42px !important;
     }
 
-    .detail-proker .deskripsi p,
+    .detail-proker .sub-judul .btn {
+        height: 45px !important;
+        width: 120px !important;
+    }
+
+    .detail-proker .content .deskripsi p,
     .detail-proker .link a {
-        font-size: 20px !important;
+        font-size: 16px !important;
+    }
+
+    .detail-proker .image-content {
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .detail-proker .content {
+        padding: 50px 50px !important;
+        top: -185px !important;
+    }
+
+    .detail-proker .judul {
+        font-size: 38px !important;
+    }
+
+    .detail-proker .sub-judul .btn {
+        height: 45px !important;
+        font-size: 14px !important;
+    }
+
+    .detail-proker .content .deskripsi p,
+    .detail-proker .link a {
+        font-size: 14px !important;
+        line-height: 30px !important;
+    }
+
+    .detail-proker .link a {
+        height: 30px;
     }
 
     .detail-proker .sub-judul .penulis {
-        font-size: 22px !important;
+        font-size: 16px !important;
     }
 
     .detail-proker .sub-judul .tanggal {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
 
     /* image Content */
@@ -323,55 +305,57 @@
     .detail-proker .content {
         padding: 50px 30px !important;
         max-width: 650px;
+        top: -165px !important;
     }
 
     .detail-proker .judul {
         margin-bottom: 25px !important;
+        font-size: 32px !important;
     }
 
     .detail-proker .sub-judul .btn {
         height: 35px !important;
-        width: 120px !important;
-        margin-bottom: 10px !important;
+        width: 100px !important;
+        font-size: 12px !important;
     }
 
     .detail-proker .sub-judul :nth-child(1) {
         display: flex !important;
         flex-direction: column;
         justify-content: center !important;
-        align-items: center !important;
+        /* align-items: center !important; */
     }
 
     .detail-proker .sub-judul {
-        flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
         padding-bottom: 10px !important;
     }
 
     .detail-proker .sub-judul .penulis {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
 
     .detail-proker .sub-judul .tanggal {
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
 
     .detail-proker .image-content {
         max-height: 200px !important;
     }
 
-    .detail-proker .deskripsi p,
+    .detail-proker .content .deskripsi p,
     .detail-proker .link a {
-        font-size: 18px !important;
-        line-height: 35px !important;
+        font-size: 12px !important;
+        line-height: 25px !important;
+    }
+
+    .detail-proker .link a {
+        height: 25px;
     }
 
     .detail-proker .link img {
         width: 16px;
         height: 16px;
-    }
-
-    .detail-proker .link a {
-        height: 35px;
     }
 
 }
@@ -381,13 +365,29 @@
         font-size: 32px !important;
     }
 
+    .detail-proker .sub-judul .btn {
+        width: 90px !important;
+    }
+
+    .detail-proker .sub-judul .btn {
+        font-size: 10px !important;
+    }
+
+    .detail-proker .sub-judul .penulis {
+        font-size: 12px !important;
+    }
+
+    .detail-proker .sub-judul .tanggal {
+        font-size: 10px !important;
+    }
+
     .detail-proker .image-content {
         max-height: 150px !important;
     }
 
-    .detail-proker .deskripsi p,
+    .detail-proker .content .deskripsi p,
     .detail-proker .link a {
-        font-size: 16px !important;
-        line-height: 30px !important;
+        font-size: 12px !important;
+        line-height: 20px !important;
     }
 }

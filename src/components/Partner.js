@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
+import ImgPancingan from '../assets/img/partner/image1.png'
 
 import '../styles/components/Partner.css'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -56,6 +57,9 @@ const Partner = () => {
                                 </SwiperSlide>
                             );
                         })}
+                        {/* <SwiperSlide>
+                            <img src={ImgPancingan} alt="s"></img>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>

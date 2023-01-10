@@ -34,6 +34,9 @@
 .lastestEvents .list-event {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    /* justify-content: flex-start !important; */
+    align-items: center !important;
 }
 
 .lastestEvents .card {
@@ -48,11 +51,10 @@
     -moz-border-radius: 16px !important;
     -ms-border-radius: 16px !important;
     -o-border-radius: 16px !important;
-    margin-bottom: 54px;
     align-items: center;
-    max-height: 307px !important;
     overflow: hidden;
-    width: auto !important;
+    width: 90% !important;
+    height: 280px !important;
 }
 
 .lastestEvents .img-layout {
@@ -68,10 +70,10 @@
 .lastestEvents .card-body {
     display: flex;
     flex-direction: column;
-    margin: 0 105px 0px 84px;
+    margin: 0 72px 0px 54px;
     padding: 0 !important;
     width: 100% !important;
-    gap: 16px;
+    gap: 10px;
 }
 
 .lastestEvents .h5 {
@@ -85,27 +87,33 @@
 }
 
 .lastestEvents .date {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     color: rgba(244, 156, 69, 1);
     margin-bottom: 0px;
 }
 
 .lastestEvents .deskripsi {
-    width: 100%;
     font-family: 'Mulish', sans-serif;
-    max-height: 42px !important;
     font-weight: 400;
+    font-size: 14px !important;
+    width: 100%;
+    max-height: 65px !important;
     overflow: hidden !important;
     margin-bottom: 0px;
 }
 
 .lastestEvents .btn-card {
     max-height: 48px !important;
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
 }
 
 .lastestEvents .btn-card::after {
@@ -122,16 +130,12 @@
 
 /* responsive */
 @media screen and (max-width: 1400px) {
+    .lastestEvents .card {
+        width: 100% !important;
+    }
+
     .lastestEvents .card-title {
         font-size: 28px;
-    }
-
-    .lastestEvents .date {
-        font-size: 18px;
-    }
-
-    .lastestEvents .deskripsi {
-        font-size: 14px;
     }
 
     .lastestEvents .btn-card {
@@ -142,21 +146,20 @@
 
 @media screen and (max-width: 1200px) {
     .lastestEvents .card {
-        margin-bottom: 54px;
+        height: 250px !important;
     }
 
     .lastestEvents .card-title {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .lastestEvents .date {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .lastestEvents .deskripsi {
-        font-size: 12px;
-        max-height: 36px !important;
-
+        font-size: 12px !important;
+        max-height: 55px !important;
     }
 
     .lastestEvents .btn-card {
@@ -164,44 +167,36 @@
         max-height: 38px !important;
     }
 
-    .lastestEvents .card-body {
-        gap: 10px !important;
-    }
-
 }
 
 @media screen and (max-width: 992px) {
     .lastestEvents .card {
-        margin-bottom: 44px;
+        height: 200px !important;
     }
 
     .lastestEvents .card-body {
-        margin: 0 50px 0px 54px;
+        margin: 0 50px 0px 44px;
         padding: 0 !important;
         width: 100% !important;
     }
 
-    .lastestEvents .date {
-        font-size: 14px;
-    }
-
     .lastestEvents .card-title {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .lastestEvents .deskripsi {
-        font-size: 10px;
-        max-height: 32px !important;
+        max-height: 35px !important;
+        margin-bottom: 5px !important;
     }
 
     .lastestEvents .btn-card {
-        font-size: 10px !important;
-        max-height: 28px !important;
-        border-radius: 8px !important;
-        -webkit-border-radius: 8px !important;
-        -moz-border-radius: 8px !important;
-        -ms-border-radius: 8px !important;
-        -o-border-radius: 8px !important;
+        font-size: 11px !important;
+        max-height: 32px !important;
+        border-radius: 5px !important;
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -ms-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
     }
 
     .lastestEvents .btn-card::after {
@@ -216,11 +211,13 @@
 
 @media screen and (max-width: 767px) {
     .lastestEvents .card {
-        margin-bottom: 34px;
+        height: 150px !important;
+        gap: 5px !important;
     }
 
     .lastestEvents .card-body {
-        margin: 0 50px 0px 44px;
+        margin: 0 30px 0px 30px;
+        gap: 0px !important;
     }
 
     .lastestEvents .card-title {
@@ -228,12 +225,12 @@
     }
 
     .lastestEvents .date {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .lastestEvents .deskripsi {
-        font-size: 8px;
-        max-height: 24px !important;
+        font-size: 10px !important;
+        max-height: 30px !important;
         margin-bottom: 5px;
     }
 
@@ -247,12 +244,13 @@
         height: 10px !important;
     }
 
-    .lastestEvents .card-body {
-        gap: 0px !important;
-    }
 }
 
 @media screen and (max-width: 576px) {
+    /* .lastestEvents .img-layout {
+        height: 100% !important;
+    } */
+
     .lastestEvents .card-img {
         height: 100% !important;
         object-fit: cover !important;
@@ -280,14 +278,16 @@
     .lastestEvents .card {
         flex-direction: column;
         text-align: center;
-        width: 80% !important;
-        max-height: 500px !important;
+        width: 70% !important;
+        height: auto !important;
+        gap: 0px !important;
     }
 
     .lastestEvents .card-body {
         display: flex !important;
         flex-direction: column;
         align-items: center;
+        height: 100%;
         margin: 20px 0px !important;
         width: 80% !important;
         gap: 4px !important;
@@ -303,12 +303,15 @@
 
     .lastestEvents .deskripsi {
         font-size: 12px;
-        max-height: 38px !important;
+        /* width: 50%; */
+
+        min-height: 32px !important;
     }
 
     .lastestEvents .btn-card {
         font-size: 12px !important;
         max-height: 28px !important;
+        width: 100% !important;
     }
 
     .lastestEvents .btn-card::after {
@@ -318,18 +321,14 @@
 }
 
 @media screen and (max-width: 480px) {
+    .lastestEvents .card {
+        width: 90% !important;
+    }
+
     .lastestEvents .card-title {
         font-size: 16px;
     }
 
-    .lastestEvents .date {
-        font-size: 12px;
-    }
-
-    .lastestEvents .deskripsi {
-        font-size: 9px;
-        max-height: 24px !important;
-    }
 
     .lastestEvents .btn-card {
         font-size: 9px !important;
