@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 
-import { Carousel, Button } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 
 import '../styles/components/Hero.css'
 
@@ -33,7 +33,6 @@ const Hero = () => {
                         </div>
                         <Carousel.Caption>
                             <h3 className='judul'>{item?.judul_slider}</h3>
-                            <Button variant="primary" className=' btn-hero'>View More</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))}

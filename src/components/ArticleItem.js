@@ -26,7 +26,7 @@ export default function ArticleItem({ article, index }) {
           </Link>
 
         </div>
-        <img src={article.gambar_berita.url} alt="display article" className="imageEvent ms-auto" />
+        <img src={article.header_berita.url} alt="display article" className="imageEvent ms-auto" />
       </Col>
     </Row>
   );

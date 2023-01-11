@@ -24,7 +24,7 @@ export default function EventItem({ event, index }) {
           </Link>
 
         </div>
-        <img src={event?.gambar_event.url} alt="" className="imageEvent ms-auto" />
+        <img src={event?.header_event.url} alt="" className="imageEvent ms-auto" />
       </Col>
     </Row>
   );

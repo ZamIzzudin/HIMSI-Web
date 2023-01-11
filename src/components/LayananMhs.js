@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import '../styles/pages/LayananMahasiswa.css'
 
 const LayananMhs = ({ data }) => {
+    console.log(data)
     return (
         <div className="layanan-mahasiswa">
             <Container>
