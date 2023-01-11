@@ -55,7 +55,7 @@ const DetailProker = () => {
                                 <p className='penulis'>{detail?.penulis_event}</p>
                                 <p className='tanggal'>{detail?.tanggal_mulai_event.toString().substring(0, 10)}</p>
                             </div>
-                            <Button className={`BPH`}>{detail?.kategori_event}</Button>
+                            <Button className={`BPH`}>{detail?.bidang}</Button>
                         </div>
                     </div>
                     <div className='deskripsi'>
