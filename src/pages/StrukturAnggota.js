@@ -1,22 +1,22 @@
-import api from '../utils/api';
-import { useState, useEffect } from 'react'
+import api from "../utils/api";
+import { useState, useEffect } from "react";
 
 import "../styles/components/StrukturAnggota.css";
 import Instagram from "../assets/img/instagram.png";
 import { Card, Col, Row } from "react-bootstrap";
 
 const StrukturAnggota = () => {
-  const [struktur, setStruktur] = useState()
+  const [struktur, setStruktur] = useState();
 
   async function getDataStruktur() {
-    const data = await api.getStruktur([])
+    const data = await api.getStruktur([]);
 
-    setStruktur(data)
+    setStruktur(data);
   }
 
   useEffect(() => {
-    getDataStruktur()
-  }, [])
+    getDataStruktur();
+  }, []);
 
   // Scroll to top
   useEffect(() => {
@@ -36,14 +36,16 @@ const StrukturAnggota = () => {
         </div>
 
         <div className="content">
-          {struktur?.map(item => (
+          {struktur?.map((item) => (
             <div className="PSDM">
-              <img alt="logo" src={item.logo_bidang.url} className="icon-pengurus " />
+              <img
+                alt="logo"
+                src={item.logo_bidang.url}
+                className="icon-pengurus "
+              />
               <h2 className="heading-2">{item.nama_bidang}</h2>
               <p className="description-1">{item.kepanjangan_bidang}</p>
-              <p className="description-2">
-                {item.deskripsi_bidang}
-              </p>
+              <p className="description-2">{item.deskripsi_bidang}</p>
               <p className="divisi">Divisi</p>
               <div className="container">
                 {item.divisi.map((divisi, index) => (
@@ -53,12 +55,27 @@ const StrukturAnggota = () => {
               <Row xs={1} md={3} className="gallery g-4">
                 {item.pengurus.map((pengurus, index) => (
                   <Col>
-                    <Card className="card-pengurus">
-                      <Card.Img variant="top" src={pengurus.foto_pengurus.url} />
+                    <Card
+                      className="card-pengurus"
+                      style={{ borderRadius: "16px", border: "none" }}>
+                      <Card.Img
+                        variant="top"
+                        src={pengurus.foto_pengurus.url}
+                      />
                       <Card.Body>
-                        <Card.Title className="name-anggota">{pengurus.nama_pengurus}</Card.Title>
-                        <Card.Text className="name-bidang">{pengurus.jabatan}</Card.Text>
-                        <img alt="logo" src={Instagram} className="icon-instagram " />
+                        <Card.Title
+                          className="name-anggota"
+                          style={{ fontWeight: "700" }}>
+                          {pengurus.nama_pengurus}
+                        </Card.Title>
+                        <Card.Text className="name-bidang">
+                          {pengurus.jabatan}
+                        </Card.Text>
+                        <img
+                          alt="logo"
+                          src={Instagram}
+                          className="icon-instagram "
+                        />
                       </Card.Body>
                     </Card>
                   </Col>
@@ -69,7 +86,6 @@ const StrukturAnggota = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
