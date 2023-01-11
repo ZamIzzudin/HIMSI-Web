@@ -145,8 +145,6 @@ const api = (() => {
     }
 
     // Sisa
-    // Event (tinggal make)
-    // Detail Event (tinggl make)
     // Filtering Event and Article
     // Rekomendasi Event dan Artikel (opsional)
     // Subscribe
