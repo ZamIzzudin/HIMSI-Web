@@ -1,7 +1,7 @@
 export const filterData = [
     {
         id: 1,
-        namaFilter: "Adkesmagazine",
+        namaFilter: "Adkesmagezine",
         checked: false,
     },
     {
@@ -21,12 +21,12 @@ export const filterData = [
     },
     {
         id: 5,
-        namaFilter: 'HIMSITechNews',
+        namaFilter: 'HIMSI Tech NEWS',
         checked: false,
     },
     {
         id: 6,
-        namaFilter: 'Sharing Sessions',
+        namaFilter: 'Sharing Session',
         checked: false,
     },
     {
@@ -51,7 +51,7 @@ export const filterData = [
     },
     {
         id: 11,
-        namaFilter: 'Care For Maba',
+        namaFilter: 'Care For MABA',
         checked: false,
     },
     {
