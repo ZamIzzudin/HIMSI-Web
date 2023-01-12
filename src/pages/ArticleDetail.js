@@ -68,7 +68,7 @@ const DetailArtikel = () => {
             </div>
             <div className='background'>
             </div>
-            <Container>
+            <Container className='container'>
                 {/* -------------------------- Content ------------------------- */}
                 <div className='content'>
                     <div className='header'>
@@ -86,7 +86,7 @@ const DetailArtikel = () => {
                         </div>
                     </div>
                     <div className='deskripsi'>
-                        <img className='desc-img' src={detail?.gambar_berita.url} alt="gambar berita" />
+                        <img className='image-content' src={detail?.gambar_berita.url} alt="gambar berita" />
                         <p dangerouslySetInnerHTML={{ __html: `${detail?.isi_berita}` }}></p>
                     </div>
                     <div className='links'>
@@ -102,7 +102,7 @@ const DetailArtikel = () => {
                 <div className="header-event">
                     <h3 className='title' >Event Lainnya</h3>
                 </div>
-                {recommend.length > 0 && (
+                {recommend.length && (
                     <RecommendSlider data={recommend} article />
                 )}
             </Container>
