@@ -40,7 +40,8 @@ export default function Router() {
                 <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
 
                 {/* Success Subscribe Page */}
-                <Route path="/Ay1igfM-MnGAml_FOQVK7co" component={SuccessSubsribe} />
+                <Route path="/Ay1igfM0MnGAml0FOQVK7co" component={SuccessSubsribe} />
+
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>
