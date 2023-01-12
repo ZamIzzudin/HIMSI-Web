@@ -4,7 +4,15 @@ const api = (() => {
     const BaseUrl = "https://himsi-website-be.vercel.app"
 
     async function getArticle(page) {
-        const url = BaseUrl + '/berita?limit=2&skip=2&page=' + page
+        const url = BaseUrl + '/berita?limit=4&skip=4&page=' + page
+
+        const response = await axios.get(url)
+
+        return response.data.data[0]
+    }
+
+    async function getArticleByParams(page, params) {
+        const url = BaseUrl + '/berita' + params + 'limit=4&skip=4&page=' + page
 
         const response = await axios.get(url)
 
@@ -19,8 +27,24 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getRecommendArticle(params) {
+        const url = BaseUrl + '/berita' + params + 'limit=6&skip=6'
+
+        const response = await axios.get(url)
+
+        return response.data.data[0].berita
+    }
+
     async function getEvent(page) {
-        const url = BaseUrl + '/event?limit=2&skip=2&page=' + page
+        const url = BaseUrl + '/event?limit=4&skip=4&page=' + page
+
+        const response = await axios.get(url)
+
+        return response.data.data[0]
+    }
+
+    async function getEventByParams(page, params) {
+        const url = BaseUrl + '/event' + params + 'limit=4&skip=4&page=' + page
 
         const response = await axios.get(url)
 
@@ -33,6 +57,15 @@ const api = (() => {
         const response = await axios.get(url)
 
         return response.data.data
+    }
+
+    async function getRecommendEvent(params) {
+        const url = BaseUrl + '/event' + params + 'limit=6&skip=6'
+
+        const response = await axios.get(url)
+
+        console.log(response.data.data)
+        return response.data.data[0].event
     }
 
     async function getPartner() {
@@ -144,16 +177,27 @@ const api = (() => {
         return response.data.data[0].event
     }
 
-    // Sisa
-    // Filtering Event and Article
-    // Rekomendasi Event dan Artikel (opsional)
-    // Subscribe
+    async function subscribe(email) {
+        const url = BaseUrl + '/member'
+
+        const data = {
+            "email": email
+        }
+
+        const response = await axios.post(url, data)
+
+        return response.data.data
+    }
 
     return {
         getArticle,
+        getArticleByParams,
         getDetailArticle,
+        getRecommendArticle,
         getEvent,
+        getEventByParams,
         getDetailEvent,
+        getRecommendEvent,
         getPartner,
         getHimpunan,
         getVisiMisi,
@@ -166,7 +210,8 @@ const api = (() => {
         getContact,
         getSlider,
         getLatestEvent,
-        getUpComing
+        getUpComing,
+        subscribe
     }
 })()
 

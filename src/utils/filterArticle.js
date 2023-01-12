@@ -21,7 +21,7 @@ export const filterData = [
     },
     {
         id: 5,
-        namaFilter: 'HIMSI TechNews',
+        namaFilter: 'HIMSITechNews',
         checked: false,
     },
     {

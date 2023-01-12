@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, Container } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../utils/api'
 
-import EventSlider from '../components/EventSlider'
+import RecommendSlider from '../components/RecommendSlider'
 import bgProker from '../assets/img/bg-proker.png'
 import ImageSlider from '../components/ProgramKerja/ImageSlider'
 
@@ -13,22 +14,40 @@ const DetailProker = () => {
 
     const { id } = useParams()
     const [detail, setDetail] = useState(null)
+    const [recommend, setRecommend] = useState([])
+    const [params, setParams] = useState('?')
+
+    function setupParams(data) {
+        let url = `?bidang=${data.bidang}&`
+        setParams(url)
+    }
 
     async function getDetailEvent(id) {
         const data = await api.getDetailEvent(id)
+        setupParams(data)
         setDetail(data)
+    }
+
+    async function getRecommend(params) {
+        const data = await api.getRecommendEvent(params)
+        console.log(data)
+        setRecommend(data)
     }
 
     useEffect(() => {
         getDetailEvent(id)
     }, [id])
 
+    useEffect(() => {
+        if (params !== '?') {
+            getRecommend(params)
+        }
+    }, [params])
+
     // Scroll to top
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
-
-    // innner HTML (p)
+    }, [detail]);
 
     return (
         <div className='detail-proker'>
@@ -74,7 +93,9 @@ const DetailProker = () => {
                 <div className="header-event">
                     <h3 className='title' >Event Lainnya</h3>
                 </div>
-                <EventSlider />
+                {recommend.length > 0 && (
+                    <RecommendSlider data={recommend} event />
+                )}
             </Container>
             {/* -------------------------- Artikel Lainnya ------------------------- */}
         </div >

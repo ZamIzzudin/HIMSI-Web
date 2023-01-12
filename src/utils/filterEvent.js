@@ -12,6 +12,24 @@ export const filterData = [
         checked: false,
     },
     {
+        id: 31,
+        namaFilter: "Up Coming",
+        type: 'Status',
+        checked: false,
+    },
+    {
+        id: 32,
+        namaFilter: "On Going",
+        type: 'Status',
+        checked: false,
+    },
+    {
+        id: 33,
+        namaFilter: "Done",
+        type: 'Status',
+        checked: false,
+    },
+    {
         id: 1,
         namaFilter: "BPH",
         type: 'Bidang',

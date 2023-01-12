@@ -13,6 +13,7 @@ import ProgramKerja from "./pages/ProgramKerja";
 import DetailProker from "./pages/DetailProker";
 import StrukturAnggota from "./pages/StrukturAnggota";
 import LayananMahasiswa from "./pages/LayananMahasiswa";
+import SuccessSubsribe from "./pages/SuccessSubscribe";
 
 export default function Router() {
     return (
@@ -38,6 +39,8 @@ export default function Router() {
                 {/* Page Layanan Mahasiswa */}
                 <Route path="/layanan-mahasiswa" component={LayananMahasiswa} />
 
+                {/* Success Subscribe Page */}
+                <Route path="/Ay1igfM-MnGAml_FOQVK7co" component={SuccessSubsribe} />
                 {/* 404 Handle Page */}
                 <Route path="*" component={Page404} />
             </Switch>

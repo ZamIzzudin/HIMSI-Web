@@ -1,0 +1,19 @@
+.loading-page {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loading-heading {
+    font-family: var(--textHeader);
+    font-size: 2em;
+    color: var(--primaryColor2) !important;
+}

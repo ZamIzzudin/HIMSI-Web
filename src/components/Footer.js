@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react'
-import api from '../utils/api'
-
-import "../styles/components/Footer.css";
 import { Link } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
+import api from '../utils/api'
+
+import SubscribeModal from './SubsribeModal'
+
 import Whatsapp from "../assets/img/Whatsapp.png";
 import Gmail from "../assets/img/Gmail.png";
+import "../styles/components/Footer.css";
 
 
 const Footer = () => {
     const [dataFooter, setDataFooter] = useState()
+    const [email, setEmail] = useState()
     const [socmed, setSocmed] = useState()
+
+    const [showModal, setShowModal] = useState(false)
 
     async function getDataFooter() {
         const data = await api.getFooter()
@@ -18,6 +23,11 @@ const Footer = () => {
 
         setDataFooter(data)
         setSocmed(data2)
+    }
+
+    async function handleSubscribe() {
+        await api.subscribe(email)
+        setShowModal(true)
     }
 
     useEffect(() => {
@@ -30,16 +40,15 @@ const Footer = () => {
                 <div className="col-sm-6 footer-brand ">
                     <h2 className="footer-judul" >Dapatkan Informasi Terbaru</h2>
                     <p>Subscribe untuk mendapatkan info terbaru terkait HIMSI</p>
-                    <p>
-
-                        <div className="mb-5">
-                            <input
-                                type="email"
-                                placeholder="Masukan Email anda "
-                                className="footer-input" />
-                            <button type="submit" class="footer-btn btn-primary">Submit</button>
-                        </div>
-                    </p>
+                    <div className="mb-5">
+                        <input
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            type="email"
+                            placeholder="Masukan Email anda "
+                            className="footer-input" />
+                        <button onClick={() => handleSubscribe()} type="button" class="footer-btn btn-primary">Submit</button>
+                    </div>
                 </div>
 
                 <div class="col-sm-3 footer-contact ">
@@ -112,9 +121,8 @@ const Footer = () => {
                 </Row>
                 <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkang oleh MCD Internship</p>
             </div>
+            <SubscribeModal showSubscribeModal={showModal} setSubscribeModal={setShowModal} />
         </footer>
-
-
     )
 }
 

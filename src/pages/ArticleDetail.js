@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Container } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../utils/api'
 
-import EventSlider from '../components/EventSlider'
+import RecommendSlider from '../components/RecommendSlider'
 import bgProker from '../assets/img/bg-proker.png'
 import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
 import AttachFile from "../assets/img/ArticlePage/attach.png"
@@ -13,20 +14,43 @@ import '../styles/pages/DetailArtikel.css'
 const DetailArtikel = () => {
     const { id } = useParams()
     const [detail, setDetail] = useState(null)
+    const [recommend, setRecommend] = useState([])
+    const [params, setParams] = useState('?')
+
+    function setupParams() {
+        let url = '?'
+
+        detail?.kategori_berita.forEach(kategori => {
+            url += `kategori=${kategori}&`
+        })
+        setParams(url)
+    }
 
     async function getDetailArticle(id) {
         const data = await api.getDetailArticle(id)
+        setupParams(data)
         setDetail(data)
+    }
+
+    async function getRecommend(params) {
+        const data = await api.getRecommendArticle(params)
+        setRecommend(data)
     }
 
     useEffect(() => {
         getDetailArticle(id)
     }, [id])
 
+    useEffect(() => {
+        if (params !== '?') {
+            getRecommend(params)
+        }
+    }, [params])
+
     // Scroll to top
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+    }, [detail]);
 
     return (
 
@@ -78,7 +102,9 @@ const DetailArtikel = () => {
                 <div className="header-event">
                     <h3 className='title' >Event Lainnya</h3>
                 </div>
-                <EventSlider />
+                {recommend.length > 0 && (
+                    <RecommendSlider data={recommend} article />
+                )}
             </Container>
             {/* -------------------------- Artikel Lainnya ------------------------- */}
 

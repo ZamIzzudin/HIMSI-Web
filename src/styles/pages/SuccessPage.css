@@ -1,0 +1,21 @@
+.success-page {
+    flex-direction: column;
+    padding-top: 6%;
+    gap: 10px;
+}
+
+.success-heading {
+    color: var(--primaryColor2) !important;
+    font-family: var(--textHeader);
+    font-size: 2.5em;
+}
+
+.success-btn {
+    background-color: var(--primaryColor2);
+    color: var(--white);
+    border: none;
+    padding: 18px 30px;
+    font-size: 1em;
+    border-radius: 15px !important;
+    font-family: var(--textReguler);
+}

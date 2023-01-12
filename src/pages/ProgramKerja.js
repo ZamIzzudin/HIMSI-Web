@@ -18,6 +18,8 @@ const ProgramKerja = () => {
 
   const [showFilterList, setFilterList] = useState(false);
   const [checkboxs, setCheckboxs] = useState(filterData)
+  const [search, setSearch] = useState('')
+  const [params, setParams] = useState('')
 
   const handleChangeCheckBoxs = id => {
     setCheckboxs(prev => {
@@ -45,15 +47,51 @@ const ProgramKerja = () => {
     })
   }
 
+  function setFilterParams() {
+    const filter = checkboxs.filter(item => item.checked)
+    let url = '?'
+
+    if (search !== '') {
+      url += `search=${search}&`
+    }
+
+    if (filter.length > 0) {
+      filter.forEach(item => {
+        switch (item.type) {
+          case 'Kategori':
+            return url += `kategori=${item.namaFilter}&`
+          case 'Status':
+            return url += `status=${item.namaFilter}&`
+          case 'Bidang':
+            return url += `bidang=${item.namaFilter}&`
+          default:
+            return url;
+        }
+      })
+    }
+
+    setPage(1)
+    setParams(url)
+  }
+
   // Get data from API
   async function getDataEvent(page) {
     const data = await api.getEvent(page)
     setEventList(data)
   }
 
+  async function getDataEventByParams(page, params) {
+    const data = await api.getEventByParams(page, params)
+    setEventList(data)
+  }
+
   useEffect(() => {
-    getDataEvent(page)
-  }, [page])
+    if (params !== '') {
+      getDataEventByParams(page, params)
+    } else {
+      getDataEvent(page)
+    }
+  }, [page, params])
 
   // Scroll to top
   useEffect(() => {
@@ -62,7 +100,7 @@ const ProgramKerja = () => {
 
   // Pagination
   let items = [];
-  for (let number = 1; number <= eventList.total / 2; number++) {
+  for (let number = 1; number <= Math.round(eventList?.total / 4); number++) {
     items.push(
       <Pagination.Item key={number} active={number === page} onClick={() => setPage(number)}>
         {number}
@@ -80,9 +118,9 @@ const ProgramKerja = () => {
                 <Search />
                 {renderFilter()}
               </div>
-              <input className="search-bar-input" type="search" placeholder='Search' />
+              <input onChange={(e) => setSearch(e.target.value)} value={search} className="search-bar-input" type="search" placeholder='Search' />
             </div>
-            <button className="search-bar-button">Search</button>
+            <button onClick={() => setFilterParams()} type="button" className="search-bar-button">Search</button>
           </div>
 
           <button className='filter-button' onClick={() => setFilterList(!showFilterList)}>
@@ -100,6 +138,20 @@ const ProgramKerja = () => {
           {checkboxs.map((category) => (
             <>
               {category.type === "Kategori" && (
+                <div className='wrapper-list' key={category.id}>
+                  <form action="">
+                    <input type="checkbox" checked={category.checked} id={category.id} onClick={() => handleChangeCheckBoxs(category.id)} />
+                    <label htmlFor="">{category.namaFilter}</label>
+                  </form>
+                </div>
+              )}
+            </>
+          ))}
+
+          <h5>Status</h5>
+          {checkboxs.map((category) => (
+            <>
+              {category.type === "Status" && (
                 <div className='wrapper-list' key={category.id}>
                   <form action="">
                     <input type="checkbox" checked={category.checked} id={category.id} onClick={() => handleChangeCheckBoxs(category.id)} />

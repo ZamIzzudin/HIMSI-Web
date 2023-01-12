@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
-
 import { Carousel } from 'react-bootstrap'
+
+import Loading from '../pages/Loading'
 
 import '../styles/components/Hero.css'
 
@@ -20,6 +21,9 @@ const Hero = () => {
 
     return (
         <div className='hero'>
+            {slider.length === 0 && (
+                <Loading />
+            )}
             <Carousel >
                 {slider?.map(item => (
                     <Carousel.Item interval={2000}>
