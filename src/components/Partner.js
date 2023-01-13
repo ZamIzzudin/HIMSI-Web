@@ -30,7 +30,7 @@ const Partner = () => {
             <div className='partner'>
                 <Row className='header mb-5'>
                     <Col>
-                        <h4 className='judul text-center'>Partner</h4>
+                        <h4 className='judul text-center'>Our Partner</h4>
                     </Col>
                 </Row>
                 <div className='slider'>

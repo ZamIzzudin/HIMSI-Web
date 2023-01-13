@@ -55,8 +55,12 @@ const Footer = () => {
                     <h2 className="footer-judul">Contact us</h2>
                     <Row>
                         <Col className='contact-logo '>
-                            <img src={Whatsapp} className="contact-logo" alt="Logo" />
-                            <img src={Gmail} className="contact-logo mx-5  " alt="Logo" />
+                            <a href={socmed?.Whatsapp}>
+                                <img src={Whatsapp} className="contact-logo" alt="Logo" />
+                            </a>
+                            <a href={`mailto:${socmed?.Gmail}`}>
+                                <img src={Gmail} className="contact-logo mx-5  " alt="Logo" />
+                            </a>
                         </Col>
                     </Row>
                 </div>
@@ -119,7 +123,7 @@ const Footer = () => {
                         </a>
                     </Col>
                 </Row>
-                <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkang oleh MCD Internship</p>
+                <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkan oleh MCD Internship</p>
             </div>
             <SubscribeModal showSubscribeModal={showModal} setSubscribeModal={setShowModal} />
         </footer>

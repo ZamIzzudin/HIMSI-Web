@@ -30,7 +30,6 @@ const DetailProker = () => {
 
     async function getRecommend(params) {
         const data = await api.getRecommendEvent(params)
-        console.log(data)
         setRecommend(data)
     }
 
@@ -85,7 +84,7 @@ const DetailProker = () => {
                     </div>
 
                     {detail?.dokumentasi_event.length > 0 && (
-                        <ImageSlider />
+                        <ImageSlider data={detail?.dokumentasi_event} />
                     )}
 
                 </div>

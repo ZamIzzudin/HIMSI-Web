@@ -47,7 +47,8 @@ const ProgramKerja = () => {
     })
   }
 
-  function setFilterParams() {
+  function setFilterParams(e) {
+    e.preventDefault();
     const filter = checkboxs.filter(item => item.checked)
     let url = '?'
 
@@ -112,7 +113,7 @@ const ProgramKerja = () => {
     <Container>
       <div className="article-header">
         <div className="filter-category">
-          <div className="search-bar-viewpoint">
+          <form onSubmit={(e) => setFilterParams(e)} className="search-bar-viewpoint">
             <div className="category-display">
               <div className="search-bar-display">
                 <Search />
@@ -120,8 +121,8 @@ const ProgramKerja = () => {
               </div>
               <input onChange={(e) => setSearch(e.target.value)} value={search} className="search-bar-input" type="search" placeholder='Search' />
             </div>
-            <button onClick={() => setFilterParams()} type="button" className="search-bar-button">Search</button>
-          </div>
+            <button type="submit" className="search-bar-button">Search</button>
+          </form>
 
           <button className='filter-button' onClick={() => setFilterList(!showFilterList)}>
             <img className='menu-icon' src={icon} alt="filter-icon" />

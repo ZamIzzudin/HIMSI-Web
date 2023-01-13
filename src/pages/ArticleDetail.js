@@ -17,12 +17,13 @@ const DetailArtikel = () => {
     const [recommend, setRecommend] = useState([])
     const [params, setParams] = useState('?')
 
-    function setupParams() {
+    function setupParams(data) {
         let url = '?'
 
-        detail?.kategori_berita.forEach(kategori => {
+        data.kategori_berita.forEach(kategori => {
             url += `kategori=${kategori}&`
         })
+
         setParams(url)
     }
 
@@ -107,9 +108,7 @@ const DetailArtikel = () => {
                 )}
             </Container>
             {/* -------------------------- Artikel Lainnya ------------------------- */}
-
         </div >
-
     )
 }
 

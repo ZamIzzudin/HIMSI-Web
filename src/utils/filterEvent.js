@@ -13,7 +13,7 @@ export const filterData = [
     },
     {
         id: 31,
-        namaFilter: "Up Coming",
+        namaFilter: "Upcoming",
         type: 'Status',
         checked: false,
     },

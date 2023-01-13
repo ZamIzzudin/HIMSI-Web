@@ -80,7 +80,7 @@ const Profile = () => {
       {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
       <div className="cta-box">
         <button className="btn-pengurus">
-          <Link to={`/struktur-anggota`}>Pengurus HISMI </Link>
+          <Link to={`/struktur-anggota`}>Pengurus HIMSI </Link>
         </button>
       </div>
 

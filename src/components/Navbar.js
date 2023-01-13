@@ -14,10 +14,13 @@ export default function Navbar() {
     return (
         <nav>
             <div>
-                <img
-                    alt="logo"
-                    src={Logo}
-                    className="nav-logo " />
+                <Link to="/">
+                    <img
+                        alt="logo"
+                        src={Logo}
+                        className="nav-logo " />
+                </Link>
+
 
                 <span class="d-inline-block">
                     <h1 className='nav-HIMSI'>HIMSI</h1>
@@ -31,7 +34,9 @@ export default function Navbar() {
                 <Link to="/event">Event</Link>
                 <Link to="/article">Article</Link>
                 <Link to="/layanan-mahasiswa">Layanan Mahasiswa</Link>
-                <Button onClick={() => setSubscribeModal(!showSubscribeModal)}>Contact us</Button>
+                <Link to="/layanan-mahasiswa">
+                    <Button type="button" >Contact us</Button>
+                </Link>
             </ul>
 
             <SubscribeModal showSubscribeModal={showSubscribeModal} setSubscribeModal={setSubscribeModal} />

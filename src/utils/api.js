@@ -8,6 +8,16 @@ const api = (() => {
 
         const response = await axios.get(url)
 
+        const template = {
+            total: 0,
+            page: 0,
+            article: []
+        }
+
+        if (response.data.data.length === 0) {
+            return template
+        }
+
         return response.data.data[0]
     }
 
@@ -15,6 +25,16 @@ const api = (() => {
         const url = BaseUrl + '/berita' + params + 'limit=4&skip=4&page=' + page
 
         const response = await axios.get(url)
+
+        const template = {
+            total: 0,
+            page: 0,
+            article: []
+        }
+
+        if (response.data.data.length === 0) {
+            return template
+        }
 
         return response.data.data[0]
     }
@@ -40,6 +60,16 @@ const api = (() => {
 
         const response = await axios.get(url)
 
+        const template = {
+            total: 0,
+            page: 0,
+            event: []
+        }
+
+        if (response.data.data.length === 0) {
+            return template
+        }
+
         return response.data.data[0]
     }
 
@@ -47,6 +77,16 @@ const api = (() => {
         const url = BaseUrl + '/event' + params + 'limit=4&skip=4&page=' + page
 
         const response = await axios.get(url)
+
+        const template = {
+            total: 0,
+            page: 0,
+            event: []
+        }
+
+        if (response.data.data.length === 0) {
+            return template
+        }
 
         return response.data.data[0]
     }
@@ -64,7 +104,6 @@ const api = (() => {
 
         const response = await axios.get(url)
 
-        console.log(response.data.data)
         return response.data.data[0].event
     }
 

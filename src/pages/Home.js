@@ -22,7 +22,7 @@ const Home = () => {
 
       <Container>
         <div className="header">
-          <h3 className="title">Up Coming Events</h3>
+          <h3 className="title">Upcoming Events</h3>
           <Button className='btn-header'>
             <Link to={`/event`}>View More</Link>
           </Button>
@@ -30,7 +30,7 @@ const Home = () => {
         <EventSlider />
 
         <div className="header">
-          <h3 className="title">Lastest Event</h3>
+          <h3 className="title">Latest Event</h3>
           <Button className='btn-header'>
             <Link to={`/event`}>View More</Link>
           </Button>

@@ -217,7 +217,6 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--white);
   height: 50px;
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
@@ -229,10 +228,14 @@ input[type="submit"] {
 
 .category-display {
   display: flex;
+  align-content: stretch;
   overflow: hidden;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .search-bar-input {
+  flex: 1;
   border: none;
   min-height: 50px;
 }
