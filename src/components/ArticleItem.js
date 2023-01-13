@@ -14,19 +14,20 @@ export default function ArticleItem({ article, index }) {
               <span className="tag text-center">{kategori}</span>
             ))}
           </div>
-
-          <h2 className="judul">{article.judul_berita}</h2>
-          <p className="date">{article.tanggal_berita?.toString().substring(0, 10)}</p>
-          <p className="card-deskripsi" dangerouslySetInnerHTML={{ __html: `${article?.isi_berita}` }}></p>
+        <div className="desc-container">
+          <h2 className="judul-artikel">{article.judul_berita}</h2>
+          <p className="date-artikel">{article.tanggal_berita?.toString().substring(0, 10)}</p>
+          <p className="card-deskripsi-artikel" dangerouslySetInnerHTML={{ __html: `${article?.isi_berita}` }}></p>
+        </div>
 
           <Link to={`/article-detail/${article._id}`}>
-            <button>
+            <div className="learn-more-artikel">
               Learn More ➜
-            </button>
+            </div>
           </Link>
 
         </div>
-        <img src={article.header_berita.url} alt="display article" className="imageEvent ms-auto" />
+        <img src={article.header_berita.url} alt="display article" className="imageArtikel ms-auto" />
       </Col>
     </Row>
   );

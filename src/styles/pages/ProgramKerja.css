@@ -343,6 +343,8 @@
 
   .eventItem img {
     max-width: 50%;
+    object-fit: cover;
+    max-height: 100px;
   }
 
   .clear {
@@ -356,6 +358,7 @@
   .eventItem .content {
     max-width: 50%;
     padding: 10px 25px;
+    max-height: 100px;
   }
 
   .eventItem .judul {
@@ -377,7 +380,7 @@
   }
 
   .eventItem button {
-    width: 8.5rem;
+    width: 8.5rem ;
     height: 2rem;
     font-size: 0.8rem;
   }

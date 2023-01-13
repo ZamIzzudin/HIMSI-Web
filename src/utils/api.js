@@ -11,7 +11,7 @@ const api = (() => {
         const template = {
             total: 0,
             page: 0,
-            article: []
+            berita: []
         }
 
         if (response.data.data.length === 0) {
@@ -29,7 +29,7 @@ const api = (() => {
         const template = {
             total: 0,
             page: 0,
-            article: []
+            berita: []
         }
 
         if (response.data.data.length === 0) {

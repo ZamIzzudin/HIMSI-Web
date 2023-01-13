@@ -44,7 +44,7 @@
   color: #f49c45;
 }
 
-.eventItem .judul {
+.judul-artikel {
   font-weight: 700;
   font-size: 32px;
   font-family: "Montserrat", sans-serif;
@@ -53,16 +53,16 @@
   line-height: 35px;
 }
 
-.eventItem button {
+.eventItem .learn-more-artikel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 241px;
   height: 48px;
   border-radius: 8px;
   border: none;
   background-color: #f49c45;
   margin: 10px 0 10px 0;
-}
-
-.eventItem button a {
   text-decoration: none;
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -71,16 +71,98 @@
   line-height: 19.6px;
 }
 
+
 .eventItem img {
   max-width: 100%;
   max-height: 100%;
   width: 525px;
   padding: 0;
   border-radius: 0 24px 24px 0;
+  object-fit: cover;
 }
 
-.card-deskripsi {
+.card-deskripsi-artikel {
   text-align: justify;
   max-height: 100px;
   overflow: hidden;
 }
+
+@media screen and (max-width: 360px) {
+
+  .eventItem{
+    position: relative;
+    
+    
+  }
+
+  .row {
+    max-width: 300px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .judul-artikel {
+    font-size: 6px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 15px;
+  
+  }
+
+  .date-artikel {
+    font-size: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 15px;
+   
+  }
+  .card-deskripsi-artikel{
+    max-height: 20px;
+    font-size: 6px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+    
+  }
+
+  .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 10px;
+    padding: 7px;
+    font-size: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  
+  
+
+  .eventItem .learn-more-artikel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f49c45;
+    margin: 10px 0 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 3px;
+    line-height: 19.6px;
+    margin-top: 7px;
+  }
+
+  .imageEvent{
+    max-height: 100px;
+  }
+}
+
+

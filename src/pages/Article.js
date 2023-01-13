@@ -2,7 +2,7 @@ import { Container, Pagination } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 import { filterData } from '../utils/filterArticle'
-
+import xIcon from '../assets/icons/x-circle.svg'
 import ArticleItem from "../components/ArticleItem"
 import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
@@ -13,7 +13,6 @@ const Article = () => {
   const [articleList, setArticleList] = useState({ berita: [] })
 
   const [showKategoriList, setShowKategoriList] = useState(false)
-
   const [checkboxs, setCheckboxs] = useState(filterData)
   const [page, setPage] = useState(1)
   const [search, setSearch] = useState('')
@@ -36,7 +35,7 @@ const Article = () => {
       if (item.checked) {
         return (
           <span onClick={() => handleChangeCheckBoxs(item.id)} className='selected-category' key={item.id}>
-            {item.namaFilter} X
+            {item.namaFilter} <img className='del-category-icon' src={xIcon} alt="x-circle-filter" />
           </span>
         );
       } else {
@@ -52,13 +51,13 @@ const Article = () => {
 
     if (search !== '') {
       url += `search=${search}&`
-    }
+    } 
 
     if (kategori.length > 0) {
       kategori.forEach(item => {
         url += `kategori=${item.namaFilter}&`
       })
-    }
+    } 
 
     setPage(1)
     setParams(url)
@@ -72,13 +71,14 @@ const Article = () => {
 
   async function getDataArticleByParams(page, params) {
     const data = await api.getArticleByParams(page, params)
+   
     setArticleList(data)
   }
 
   useEffect(() => {
     if (params !== '') {
       getDataArticleByParams(page, params)
-    } else {
+    }  else {
       getDataArticle(page)
     }
   }, [page, params])
@@ -139,15 +139,25 @@ const Article = () => {
           </div>
         </div>
       )}
-
       <div className="article-list">
-        {articleList?.berita.map((article, index) => (
-          <ArticleItem article={article} index={index} />
-        ))}
+        {articleList?.berita.length === 0? 
+        (<div className='not-found-container'>
+            <div className='article-not-found'>
+               <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
+            </div>
+        </div>)
+         :(
+          <>
+            {articleList?.berita.map((article, index) => (
+              <ArticleItem article={article} index={index} />
+            ))}
+          </>)
+          }
+       
       </div>
 
-      <div className="pagination">
-        <Pagination className="pagination-items">{items}</Pagination>
+      <div className="pagination-artikel">
+        <Pagination className="pagination-items-artikel">{items}</Pagination>
       </div>
     </Container>
   )
