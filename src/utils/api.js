@@ -209,7 +209,7 @@ const api = (() => {
     }
 
     async function getUpComing() {
-        const url = BaseUrl + '/event?status=up coming&limit=4'
+        const url = BaseUrl + '/event?status=upcoming&limit=4'
 
         const response = await axios.get(url)
 
