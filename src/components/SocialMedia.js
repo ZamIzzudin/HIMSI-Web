@@ -20,7 +20,7 @@ const SocialMedia = () => {
 
     return (
         <Container>
-            <div className='social-media mt-5'>
+            <div className='social-media'>
                 <Row className='header mb-5'>
                     <Col>
                         <h4 className='judul text-center'>Social Media</h4>
