@@ -2,7 +2,9 @@
     height: 100%;
     display: flex;
     flex-direction: column !important;
+    margin-bottom: 120px !important;
 }
+
 
 .lastestEvents .btn:hover {
     background-color: rgb(214, 130, 45) !important;
@@ -12,6 +14,7 @@
 .lastestEvents .gradient {
     position: relative;
     height: 100% !important;
+    width: 100% !important;
 }
 
 .lastestEvents .gradient-overlay {
@@ -50,8 +53,8 @@
     -o-border-radius: 16px !important;
     align-items: center;
     overflow: hidden;
-    width: 90% !important;
-    height: 280px !important;
+    width: 100% !important;
+    height: 307px !important;
 }
 
 .lastestEvents .img-layout {
@@ -62,15 +65,20 @@
 .lastestEvents .card-img {
     height: 100% !important;
     object-fit: cover !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
 }
 
 .lastestEvents .card-body {
     display: flex;
     flex-direction: column;
-    margin: 0 72px 0px 54px;
+    margin: 0 105px 0px 85px;
     padding: 0 !important;
     width: 100% !important;
-    gap: 10px;
+    gap: 16px;
 }
 
 .lastestEvents .h5 {
@@ -81,10 +89,12 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 0px;
+    max-height: 80px !important;
+    overflow-y: hidden;
 }
 
 .lastestEvents .date {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     color: rgba(244, 156, 69, 1);
     margin-bottom: 0px;
@@ -93,11 +103,12 @@
 .lastestEvents .deskripsi {
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
-    font-size: 14px !important;
+    font-size: 16px !important;
     width: 100%;
-    max-height: 65px !important;
+    max-height: 72px !important;
     overflow: hidden !important;
     margin-bottom: 0px;
+
 }
 
 .lastestEvents .btn-card {
@@ -131,8 +142,23 @@
         width: 100% !important;
     }
 
+    .lastestEvents .card-body {
+        gap: 12px;
+        margin: 0 72px 0px 54px;
+    }
+
     .lastestEvents .card-title {
         font-size: 28px;
+        max-height: 70px !important;
+    }
+
+    .lastestEvents .date {
+        font-size: 18px !important;
+    }
+
+    .lastestEvents .deskripsi {
+        font-size: 14px !important;
+        max-height: 68px !important;
     }
 
     .lastestEvents .btn-card {
@@ -148,6 +174,7 @@
 
     .lastestEvents .card-title {
         font-size: 24px;
+        max-height: 60px !important;
     }
 
     .lastestEvents .date {
@@ -179,6 +206,11 @@
 
     .lastestEvents .card-title {
         font-size: 20px;
+        max-height: 50px !important;
+    }
+
+    .lastestEvents .date {
+        font-size: 14px !important;
     }
 
     .lastestEvents .deskripsi {
@@ -219,10 +251,11 @@
 
     .lastestEvents .card-title {
         font-size: 14px;
+        max-height: 35px !important;
     }
 
     .lastestEvents .date {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     .lastestEvents .deskripsi {
@@ -289,15 +322,17 @@
 
     .lastestEvents .card-title {
         font-size: 20px;
+        max-height: 72px !important;
+
     }
 
     .lastestEvents .date {
-        font-size: 14px;
+        font-size: 16px !important;
     }
 
     .lastestEvents .deskripsi {
         font-size: 12px !important;
-        min-height: 32px !important;
+        min-height: 35px !important;
     }
 
     .lastestEvents .btn-card {
@@ -322,12 +357,23 @@
     }
 
     .lastestEvents .card-title {
-        font-size: 18px;
+        font-size: 16px;
+        max-height: 200px !important;
+    }
+
+    .lastestEvents .date {
+        font-size: 14px !important;
     }
 
     .lastestEvents .btn-card {
         font-size: 10px !important;
         max-height: 30px !important;
         width: 110px !important;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .lastestEvents .card {
+        width: 90% !important;
     }
 }

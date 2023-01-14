@@ -50,7 +50,10 @@ h4 {
 }
 
 @media screen and (max-width: 1200px) {
-    .home .header .title {
+
+    .home .header .title,
+    .home .partner .judul,
+    .home .social-media .judul {
         font-size: 42px !important;
     }
 
