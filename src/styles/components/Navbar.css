@@ -32,14 +32,37 @@ nav {
     margin-left: 15px;
 }
 
+.active-link {
+    color: red;
+}
+.button-contact{
+    display: flex;
+    width: 165px;
+    height: 51px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f49c45;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.button-contact:hover{
+    background-color: #f57f0b;
+}
+
 .nav-univ {
     font-size: 15px;
     font-family: "Montserrat";
     font-weight: 500;
     margin-left: 15px;
+    color: #082240;
 }
 
-.navbar-items {
+.navbar-items .nav-list {
     align-items: center;
     display: flex;
     gap: 30px;
@@ -48,8 +71,108 @@ nav {
     font-weight: 500;
 }
 
-.navbar-items a {
+.navbar-items .nav-list a {
     color: black !important;
 }
 
+.navbar-items a.active {
+    color: #f49c45 !important;
+    transition: all .3s;
+    position: relative;
+}
+
+.navbar-items a.active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f49c45;
+    position: absolute;
+    top: 30px;  
+    animation: bar__animate .5s ease-in;
+        
+}
+
+.nav-toggle, .nav-close{
+    display: none;
+}
+
+@keyframes bar__animate {
+    0% {
+        width: 0;
+       
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+
 /*-------------------------------- RESPONSIVE ------------------------- */
+@media screen and (max-width: 360px) {
+    nav {
+        top: initial;
+        z-index: 0;
+        border-radius: 0 0 1.5rem 1.5rem ;
+      
+    }
+
+    .navbar-items {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 17%;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+        border-radius: 0 0 1.5rem 1.5rem ;
+        transition: .3s;
+        background-color: #fff;
+        
+    }
+
+    .navbar-items .nav-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        font-size: 10px;
+        
+    }
+    .navbar-items a.active::after{
+        display: none;
+    }
+    .show-menu{
+        top: 0;
+    }
+    .button-contact{
+        width: 70px;
+        height: 30px;
+        font-size: 7px;
+        position: absolute;
+        right: 3.2rem;
+        top: 5rem;
+    }
+    .nav-toggle,
+    .nav-close{
+        display: block;
+    }
+
+    .nav-close{
+        position: absolute;
+        right: 1.3rem;
+        top: 6rem;
+    }
+    .nav-HIMSI, 
+    .nav-univ{
+        display: none;
+    }
+    .nav-logo{
+        width: 30px;
+ 
+        padding-bottom: 0;
+    }
+    
+}

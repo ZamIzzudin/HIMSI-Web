@@ -1,15 +1,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
-.program-kerja {
-  position: absolute;
+.wrapper-all {
+  height: auto;
   width: 100%;
-  height: 595px;
-  left: 0px;
-  background: linear-gradient(180deg,
-      #082240 17.63%,
-      rgba(8, 34, 64, 0.31) 83.66%,
-      rgba(8, 34, 64, 0) 98.51%);
-  z-index: 1;    
 }
 
 .search-bar {

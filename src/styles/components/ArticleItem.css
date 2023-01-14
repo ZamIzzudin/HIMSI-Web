@@ -4,7 +4,7 @@
   box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
   position: relative;
   border: none;
-  height: 30%;
+  max-height: 400px;
   max-width: 100%;
 }
 
@@ -34,6 +34,7 @@
 
 .eventItem .content {
   padding: 30px 75px 30px 75px;
+  
 }
 
 .date {
@@ -74,7 +75,8 @@
 
 .eventItem img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 50%;
+
   width: 525px;
   padding: 0;
   border-radius: 0 24px 24px 0;
@@ -83,7 +85,7 @@
 
 .card-deskripsi-artikel {
   text-align: justify;
-  max-height: 100px;
+  max-height: 50px;
   overflow: hidden;
 }
 

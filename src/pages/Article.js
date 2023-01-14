@@ -99,7 +99,7 @@ const Article = () => {
   }
 
   return (
-    <Container>
+    <section className='container'>
       <div className="article-header">
         <div className="filter-category">
           <form onSubmit={(e) => setFilterParams(e)} className="search-bar-viewpoint">
@@ -159,7 +159,7 @@ const Article = () => {
       <div className="pagination-artikel">
         <Pagination className="pagination-items-artikel">{items}</Pagination>
       </div>
-    </Container>
+    </section>
   )
 }
 
