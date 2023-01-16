@@ -41,8 +41,8 @@ const Profile = () => {
       {/* -------------------------- Bagian Visi ------------------------- */}
       <div class='visi'>
         <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-        <p className='visi-p'>
-          {visiMisi?.visi}
+        <p className='visi-p'> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif <br></br> guna meningkatkan potensi, kemampuan, dan wawasan, mahasiswa SI.
+          {/*{visiMisi?.visi}*/}
         </p>
       </div>
 

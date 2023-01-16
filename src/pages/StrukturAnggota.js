@@ -55,27 +55,12 @@ const StrukturAnggota = () => {
               <Row xs={1} md={3} className="gallery g-4">
                 {item.pengurus.map((pengurus, index) => (
                   <Col>
-                    <Card
-                      className="card-pengurus"
-                      style={{ borderRadius: "16px", border: "none" }}>
-                      <Card.Img
-                        variant="top"
-                        src={pengurus.foto_pengurus.url}
-                      />
+                    <Card className="card-pengurus" style={{ borderRadius: '16px', border: 'none' }}>
+                      <Card.Img variant="top" src={pengurus.foto_pengurus.url} />
                       <Card.Body>
-                        <Card.Title
-                          className="name-anggota"
-                          style={{ fontWeight: "700" }}>
-                          {pengurus.nama_pengurus}
-                        </Card.Title>
-                        <Card.Text className="name-bidang">
-                          {pengurus.jabatan}
-                        </Card.Text>
-                        <img
-                          alt="logo"
-                          src={Instagram}
-                          className="icon-instagram "
-                        />
+                        <Card.Title className="name-anggota" style={{ fontWeight: '700' }} >{pengurus.nama_pengurus}</Card.Title>
+                        <Card.Text className="name-bidang" >{pengurus.jabatan}</Card.Text>
+                        <img alt="logo" src={Instagram} className="icon-instagram " />
                       </Card.Body>
                     </Card>
                   </Col>
