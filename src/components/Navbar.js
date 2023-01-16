@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
 import SubscribeModal from './SubsribeModal'
 import Logo from "../assets/img/logohimsi.png";
 
@@ -25,7 +24,7 @@ export default function Navbar() {
                     </span>
                 </NavLink>
             </div>
-            <div className={toggle ? "navbar-items show-menu" : "navbar-items" }>
+            <div className={toggle ? "navbar-items show-menu" : "navbar-items"}>
                 <ul className="nav-list">
                     <NavLink exact to="/" className="links">Home</NavLink>
                     <NavLink exact to="/profile">Profile</NavLink>
@@ -34,12 +33,12 @@ export default function Navbar() {
                     <NavLink exact to="/layanan-mahasiswa">Layanan Mahasiswa</NavLink>
                     <NavLink exact to="/layanan-mahasiswa">
                     </NavLink>
-                        <button className='button-contact' type="button" >Contact us</button>
+                    <button className='button-contact' type="button" >Contact us</button>
                 </ul>
                 <i className="uil uil-times nav-close" onClick={() => showMenu(!toggle)}></i>
             </div>
             <div className="nav-toggle" onClick={() => showMenu(!toggle)}>
-            <i className="uil uil-apps"></i>
+                <i className="uil uil-apps"></i>
             </div>
             <SubscribeModal showSubscribeModal={showSubscribeModal} setSubscribeModal={setSubscribeModal} />
         </nav >

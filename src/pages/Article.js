@@ -1,4 +1,4 @@
-import { Container, Pagination } from 'react-bootstrap'
+import { Pagination } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
 import { filterData } from '../utils/filterArticle'
@@ -51,13 +51,13 @@ const Article = () => {
 
     if (search !== '') {
       url += `search=${search}&`
-    } 
+    }
 
     if (kategori.length > 0) {
       kategori.forEach(item => {
         url += `kategori=${item.namaFilter}&`
       })
-    } 
+    }
 
     setPage(1)
     setParams(url)
@@ -71,14 +71,14 @@ const Article = () => {
 
   async function getDataArticleByParams(page, params) {
     const data = await api.getArticleByParams(page, params)
-   
+
     setArticleList(data)
   }
 
   useEffect(() => {
     if (params !== '') {
       getDataArticleByParams(page, params)
-    }  else {
+    } else {
       getDataArticle(page)
     }
   }, [page, params])
@@ -140,20 +140,20 @@ const Article = () => {
         </div>
       )}
       <div className="article-list">
-        {articleList?.berita.length === 0? 
-        (<div className='not-found-container'>
+        {articleList?.berita.length === 0 ?
+          (<div className='not-found-container'>
             <div className='article-not-found'>
-               <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
+              <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
             </div>
-        </div>)
-         :(
-          <>
-            {articleList?.berita.map((article, index) => (
-              <ArticleItem article={article} index={index} />
-            ))}
-          </>)
-          }
-       
+          </div>)
+          : (
+            <>
+              {articleList?.berita.map((article, index) => (
+                <ArticleItem article={article} index={index} />
+              ))}
+            </>)
+        }
+
       </div>
 
       <div className="pagination-artikel">
