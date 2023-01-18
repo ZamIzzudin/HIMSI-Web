@@ -6,6 +6,7 @@ import xIcon from '../assets/icons/x-circle.svg'
 import ArticleItem from "../components/ArticleItem"
 import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
+import  { Container } from 'react-bootstrap';
 
 import "../styles/pages/Article.css"
 
@@ -99,13 +100,13 @@ const Article = () => {
   }
 
   return (
-    <section className='container'>
+    <Container className='ctn'>
       <div className="article-header">
         <div className="filter-category">
           <form onSubmit={(e) => setFilterParams(e)} className="search-bar-viewpoint">
             <div className="category-display">
               <div className="search-bar-display">
-                <Search />
+                <Search className='image-search' />
                 {renderFilter()}
               </div>
               <input onChange={(e) => setSearch(e.target.value)} value={search} className="search-bar-input" type="search" placeholder='Search' />
@@ -114,7 +115,7 @@ const Article = () => {
           </form>
 
           <button className='filter-button' onClick={() => setShowKategoriList(!showKategoriList)}>
-            <img className='menu-icon' src={icon} alt="filter-icon" />
+            <img className='menu-icon-kategori' src={icon} alt="filter-icon" />
           </button>
 
         </div>
@@ -140,26 +141,26 @@ const Article = () => {
         </div>
       )}
       <div className="article-list">
-        {articleList?.berita.length === 0 ?
-          (<div className='not-found-container'>
+        {articleList?.berita.length === 0? 
+        (<div className='not-found-container'>
             <div className='article-not-found'>
-              <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
+               <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
             </div>
-          </div>)
-          : (
-            <>
-              {articleList?.berita.map((article, index) => (
-                <ArticleItem article={article} index={index} />
+        </div>)
+         :(
+           <>
+            {articleList?.berita.map((article, index) => (
+              <ArticleItem article={article} index={index} />
               ))}
-            </>)
-        }
-
+          </>)
+          }
+       
       </div>
 
       <div className="pagination-artikel">
         <Pagination className="pagination-items-artikel">{items}</Pagination>
       </div>
-    </section>
+      </Container>
   )
 }
 

@@ -13,6 +13,7 @@ nav {
     padding-top: 20px;
     box-sizing: border-box;
     font-size: 15px;
+    transition: .3s;
 }
 
 .nav-logo {
@@ -51,7 +52,9 @@ nav {
 }
 
 .button-contact:hover{
-    background-color: #f57f0b;
+    background-color: #fff;
+    border: 2px solid #f49c45;
+    color: #f49c45;
 }
 
 .nav-univ {
@@ -89,7 +92,7 @@ nav {
     background-color: #f49c45;
     position: absolute;
     top: 30px;  
-    animation: bar__animate .5s ease-in;
+    animation: bar__animate .3s ease-in;
         
 }
 
@@ -112,12 +115,64 @@ nav {
 
 
 /*-------------------------------- RESPONSIVE ------------------------- */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1400px) {
+    .navbar-items .nav-list{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-logo{
+            width: 70px;
+            padding-bottom: 40px;
+    }
+
+    .nav-HIMSI {
+        font-size: 30px;
+        padding-top: 50px;
+
+    }
+
+    .nav-univ {
+        font-size: 14px;
+    }
+
+    .navbar-items .nav-list{
+        gap: 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .nav-logo{
+        width: 60px;
+        padding-bottom: 35px;
+    }
+
+    .nav-HIMSI {
+        font-size: 25px;
+    }
+
+    .navbar-items .nav-list{
+        gap: 13px;
+        font-size: 14px;
+    }
+
+    .nav-univ{
+        font-size: 13px;
+    }
+
+    .button-contact {
+        width: 110px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     nav {
-        top: initial;
-        z-index: 0;
+        top: 0;
         border-radius: 0 0 1.5rem 1.5rem ;
-      
     }
 
     .navbar-items {
@@ -125,54 +180,158 @@ nav {
         top: -100%;
         left: 0;
         width: 100%;
-        height: 17%;
-        padding: 2rem 1.5rem 4rem;
+        background-color: #fff;
+        padding: 3rem 0;
+        padding-left: 5rem;
         box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
         border-radius: 0 0 1.5rem 1.5rem ;
         transition: .3s;
-        background-color: #fff;
         
     }
 
-    .navbar-items .nav-list {
+    .nav-list{
+        padding-left: 0 !important;
+    }
+
+    .show-menu {
+        top: 0;
+    }
+
+    .navbar-items .nav-list{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        font-size: 10px;
-        
+        font-size: 15px;
     }
-    .navbar-items a.active::after{
-        display: none;
-    }
-    .show-menu{
-        top: 0;
-    }
-    .button-contact{
-        width: 70px;
-        height: 30px;
-        font-size: 7px;
-        position: absolute;
-        right: 3.2rem;
-        top: 5rem;
-    }
+
     .nav-toggle,
     .nav-close{
         display: block;
     }
 
-    .nav-close{
-        position: absolute;
-        right: 1.3rem;
-        top: 6rem;
+    .nav-toggle{
+        font-size: 24px;
     }
-    .nav-HIMSI, 
+
+    .navbar-items .nav-list a {
+        max-width: 100px;
+        text-align: center;
+    }
+    .nav-close {
+        position: absolute;
+        right: 3rem;
+        font-size: 24px;
+    }
+
+    .navbar-items a.active::after{
+        display: none;
+    }
+    
+    .nav-HIMSI,
     .nav-univ{
         display: none;
     }
+
     .nav-logo{
-        width: 30px;
- 
+        width: 60px;
         padding-bottom: 0;
+        padding-top: 0px;
     }
-    
+
+    .button-contact {
+        position: absolute;
+        right: 6.5rem;
+        top: 6.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100%;
+    }
+    .navbar-items {
+        width: 100%;
+        padding: 3rem;
+        padding-left: 4rem;
+        
+    }
+
+    .nav-logo{
+        width: 50px;
+    }
+
+    .nav-toggle{
+        font-size: 20px;
+    }
+
+    .navbar-items .nav-list{
+        gap: 2rem;
+        font-size: 14px;
+    }
+
+    .button-contact{
+        width: 90px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 8px;
+        right: 5rem;
+    }
+    .nav-close{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        height: 70px;
+    }
+
+    .navbar-items {
+        padding: 35px 15px ;
+    }
+
+    .nav-logo{
+        width: 40px;
+    }
+
+    .nav-toggle{
+        font-size: 15px;
+    }
+
+    .navbar-items .nav-list{
+        gap: 2rem;
+        font-size: 12px;
+    }
+
+    .button-contact{
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 6px;
+        right: 2.7rem;
+        top: 5.3rem;
+    }
+
+    .nav-close{
+        font-size: 16px;
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 374px) {
+ 
+
+  .navbar-items {
+    padding: 35px 20px ;
+}
+
+
+
+.button-contact {
+    right: 1.5rem;
+    top: 5.5rem;
+}
 }

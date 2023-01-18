@@ -69,7 +69,7 @@ const DetailArtikel = () => {
             </div>
             <div className='background'>
             </div>
-            <Container className='container'>
+            <Container className='container artikel-container'>
                 {/* -------------------------- Content ------------------------- */}
                 <div className='content'>
                     <div className='header'>

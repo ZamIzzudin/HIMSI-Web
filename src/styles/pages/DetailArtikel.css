@@ -3,6 +3,7 @@
     width: 100%;
     height: 630px !important;
     object-fit: cover;
+    object-position: top;
 }
 
 /* ----------------Content------------------- */
@@ -70,6 +71,7 @@
     overflow: hidden;
     box-shadow: 4px 4px 10px rgba(226, 226, 226, 0.8);
     object-fit: cover;
+    border-radius: 5px;
 }
 
 /* ---------------- Header Content ------------------- */
@@ -110,11 +112,11 @@
 .detail-artikel .adkesmagazine {
     background-image: linear-gradient(to top, #082240, #082240) !important;
     color: #fff;
-    width: 160px;
-    height: 62.39px;
+    width: 100%;
+    height: 60px;
     border-radius: 12px;
     display: inline-block;
-    padding: 5px;
+    padding: 5px 20px;
     font-weight: 700;
 
 }
@@ -136,8 +138,7 @@
 
 .detail-artikel .links {
     display: flex !important;
-    max-width: 300px !important;
-    justify-content: space-between !important;
+    width: 100%;
     padding: 20px 0 !important;
 
 }
@@ -148,7 +149,7 @@
     font-size: 17px !important;
     line-height: 22.4px !important;
     font-style: italic !important;
-    ;
+    padding: 0 0 5px 5px !important;
 
 }
 
@@ -156,6 +157,7 @@
     width: 15px !important;
     height: 15px !important;
     color: #f49c45 !important;
+    margin-top: 4.5px;
 
 
 }
@@ -212,7 +214,17 @@
 /* ------------------- Responsive ---------------------- */
 @media screen and (max-width: 1200px) {
     .detail-artikel .deskripsi p {
-        font-size: 22px !important;
+        font-size: 16px !important;
+    }
+
+    .detail-artikel .img-header img{
+        height: 450px !important;
+        object-position: top;
+    }
+
+    .detail-artikel .adkesmagazine{
+        height: 50px;
+        border-radius: 8px;
     }
 
 }
@@ -231,24 +243,36 @@
 }
 
 @media screen and (max-width: 992px) {
+
+    .detail-artikel .sub-judul{
+        padding-bottom: 10px !important;
+    }
     .detail-artikel .content {
         padding: 50px 50px !important;
     }
+    .detail-artikel .deskripsi p{
+        font-size: 15px !important;
+    }
 
     .detail-artikel .judul {
-        font-size: 42px !important;
+        font-size: 38px !important;
     }
 
-    .detail-artikel .deskripsi p {
-        font-size: 20px !important;
+    .detail-artikel .adkesmagazine{
+        height: 40px;
+        padding: 5px 15px;
+        font-size: 14px;
     }
-
     .detail-artikel .sub-judul .penulis {
-        font-size: 22px !important;
+        font-size: 19px !important;
     }
 
     .detail-artikel .sub-judul .tanggal {
-        font-size: 18px !important;
+        font-size: 16px !important;
+    }
+
+    .detail-artikel .image-content {
+        border-radius: 5px;
     }
 }
 
@@ -269,13 +293,22 @@
 }
 
 @media screen and (max-width: 768px) {
-    .detail-artikel .judul {
-        margin-bottom: 25px !important;
+
+    .artikel-container {
+        max-width: 700px !important;
+    }
+    .detail-artikel .img-header img{
+        height: 350px !important;
+        object-position: top;
     }
 
-    .detail-artikel .sub-judul .btn {
+    .detail-artikel .judul {
+        margin-bottom: 15px !important;
+        font-size: 24px !important;
+    }
+
+    .detail-artikel .adkesmagazine {
         height: 35px !important;
-        width: 120px !important;
         margin-bottom: 10px !important;
     }
 
@@ -300,19 +333,91 @@
     }
 
     .detail-artikel .deskripsi p {
-        font-size: 18px !important;
-        line-height: 35px !important;
+        font-size: 15px !important;
+
+    }
+
+    .detail-artikel .bg-1 img {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 500px;
+    }
+
+    .detail-artikel .bg-2 img {
+        position: absolute;
+        top: 100%;
+        left: -20%;
+        width: 500px;
     }
 }
 
+@media screen and (max-width: 576px) {
+    
+    .artikel-container{
+        max-width: 550px !important;
+    }
+    .detail-artikel .adkesmagazine{
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+
+    .detail-artikel .img-header img{
+        height: 300px !important;
+        object-position: top;
+    }
+
+    .detail-artikel .deskripsi p {
+        font-size: 14px !important;
+        line-height: 30px !important;
+    }
+
+    .detail-artikel .sub-judul .penulis {
+        font-size: 14px !important;
+    }
+
+    .detail-artikel .sub-judul .tanggal {
+        font-size: 12px !important;
+    }
+
+    .detail-artikel .image-content{
+        height: 300px !important;
+    }
+
+    .detail-artikel .links .menu-icon{
+        width: 13px !important;
+        height: 13px !important;
+    }
+    .detail-artikel .links a {
+        font-size: 14px !important;
+    }
+
+}
+
 @media screen and (max-width: 480px) {
+
+    .artikel-container{
+        max-width: 450px !important;
+    }
+
+    .detail-artikel .img-header img{
+        height: 200px !important;
+        object-position: top;
+    }
 
     .detail-artikel .content {
         padding: 0;
         
     }
     .detail-artikel .judul {
-        font-size: 32px !important;
+        font-size: 20px !important;
+    }
+
+    .detail-artikel .adkesmagazine {
+        font-size: 10px !important; 
+        padding: 3px 20px;
+        height: 25px !important;
+
     }
 
     .detail-artikel .sub-judul .btn {
@@ -337,23 +442,13 @@
 
     .detail-artikel .content .deskripsi p,
     .detail-artikel .link a {
-        font-size: 12px !important;
+        font-size: 10px !important;
         line-height: 20px !important;
-    }
-   
-    .detail-artikel .adkesmagazine {
-        font-size: 13px;
-        width: 7rem;
-        height: 3rem;
-        padding: 2px;
-        margin-bottom: 7px;
     }
 
     .detail-artikel .attached-file {
         width: 70px;
-        height: 30px;
-       
-        
+        height: 30px;  
     }
 
     .detail-artikel .attached-file img {
@@ -365,19 +460,6 @@
         font-size: 12px;
         padding-bottom: 2px;
         padding-left: 3px;
-    }
-
-    .menu-icon {
-        width: 10px !important;
-        height: 10px !important;
-        color: #f49c45 !important;
-    
-    
-    }
-
-    .detail-artikel .links {
-        padding: 0 0 10px 0 !important;
-        display: inline;
     }
 
     .detail-artikel .header-event {
@@ -392,4 +474,48 @@
         color: black !important;
         margin: 0px !important;
     }
+
+    .detail-artikel .links {
+        display: inline-flex !important;
+    }
+    .detail-artikel .links .menu-icon{
+        width: 11px !important;
+        height: 11px !important;
+    }
+    .detail-artikel .links a {
+        font-size: 11px !important;
+    }
+
+    .detail-artikel .bg-1 img {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 200px;
+    }
+
+    .detail-artikel .bg-2 img {
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .detail-artikel .img-header img{
+        height: 150px !important;
+        object-position: top;
+    }
+
+    .detail-artikel .links{
+        padding: 5px 0 !important;
+    }
+
+    .detail-artikel .adkesmagazine {
+        font-size: 8px !important;
+        padding: 5px 5px;
+        border-radius: 4px;
+    }
+    
 }
