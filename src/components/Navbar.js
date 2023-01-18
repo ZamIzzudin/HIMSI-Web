@@ -10,6 +10,9 @@ export default function Navbar() {
     const [toggle, showMenu] = useState(false);
     const [showSubscribeModal, setSubscribeModal] = useState(false)
     // const [active, setActive] = useState('');
+    function scrollWin() {
+        window.scrollTo(0, document.body.scrollHeight)
+    }
     return (
         <nav>
             <div>
@@ -33,7 +36,7 @@ export default function Navbar() {
                     <NavLink exact to="/layanan-mahasiswa">Layanan Mahasiswa</NavLink>
                     <NavLink exact to="/layanan-mahasiswa">
                     </NavLink>
-                    <button className='button-contact' type="button" >Contact us</button>
+                    <button onClick={() => scrollWin()} className='button-contact' type="button">Contact us</button>
                 </ul>
                 <i className="uil uil-times nav-close" onClick={() => showMenu(!toggle)}></i>
             </div>

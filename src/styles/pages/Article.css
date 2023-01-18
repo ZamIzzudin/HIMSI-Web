@@ -325,6 +325,47 @@ input[type="submit"] {
   padding-top: 7px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255) !important;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0.2rem !important;
+  border-radius: 100% !important;
+  margin: 0.2rem;
+}
+
+.active .page-link {
+  background-color: #f49c45 !important;
+  color: white !important;
+  border-width: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.page-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  background-color: none !important;
+  border: rgba(189, 189, 189, 1) 1px solid !important;
+  border-radius: 100% !important;
+  color: rgba(189, 189, 189, 1) !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+
 /* Responshitt */
 @media screen and (max-width: 1200px) {
 
