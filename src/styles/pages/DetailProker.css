@@ -138,36 +138,39 @@
 
 /* ---------------- Header Button ------------------- */
 .detail-proker .content .btn {
-    color: black;
+    color: white;
 }
 
 .detail-proker .PSDM {
-    background-image: linear-gradient(to top, rgb(245, 178, 178), rgba(203, 63, 74, 1)) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .DIKTI {
-    background-image: linear-gradient(to top, rgb(198, 255, 229), rgba(61, 137, 104, 1)) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .MEDKOM {
-    background-image: linear-gradient(to top, rgb(220, 231, 251), rgba(67, 99, 146, 1)) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .PERHUB {
-    background-image: linear-gradient(to top, rgb(249, 204, 227), rgba(176, 58, 119, 1)) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .ADKESMA {
-    background-image: linear-gradient(to top, rgb(244, 238, 193), rgba(2235, 214, 61, 1)) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .BPH {
-    background-image: linear-gradient(to top, rgb(83, 160, 248), rgba(8, 34, 64, 1)) !important;
-    color: rgb(255, 255, 255) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .detail-proker .URT {
-    background-image: linear-gradient(to top, rgb(252, 198, 195), rgba(167, 22, 15, 1)) !important;
+    background-color: var(--primaryColor) !important;
+}
+
+.detail-proker .other {
+    background-color: var(--primaryColor) !important;
 }
 
 /* ---------------- Deskripsi ------------------- */

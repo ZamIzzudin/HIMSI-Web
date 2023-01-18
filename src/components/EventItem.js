@@ -1,36 +1,39 @@
-import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "../styles/components/EventItem.css";
+import { Link } from 'react-router-dom';
+import { Container, Button, Card } from 'react-bootstrap'
+import "../styles/components/ArticleItem.css"
 
-export default function EventItem({ event, index }) {
+const EventItem = ({ event, index }) => {
   return (
-    <Row key={index} border="light">
-      <Col className="eventItem d-flex flex-row mb-3 p-0">
-        <div className="content me-auto d-flex \ flex-column">
-          <div className="d-flex gap-1">
-            <span className="tags text-center">{event?.bidang}</span>
-            <span className="tags text-center">{event?.status_event}</span>
-          </div>
-
-          <h2 className="judul">{event?.judul_event}</h2>
-          <p className="date">
-            {event?.tanggal_mulai_event?.toString().substring(0, 10)}
-          </p>
-          <p
-            className="deskripsi"
-            dangerouslySetInnerHTML={{ __html: `${event?.isi_event}` }}></p>
-
-          <Link to={`/event-detail/${event._id}`}>
-            <button>Learn More ➜</button>
-          </Link>
+    <Container className='ctn'>
+      <div className="artikelitem">
+        <div className="list-artikel">
+          <Card key={index}>
+            <div className="card-image">
+              <div className="card-gradient">
+                <div className="overlay-gradient">
+                  <Card.Img src={event?.header_event.url} />
+                </div>
+              </div>
+            </div>
+            <Card.Body>
+              <div className=" kategori-ctn d-flex gap-2">
+                <span className="kategori-tag text-center">{event?.bidang}</span>
+                <span className="kategori-tag text-center">{event?.status_event}</span>
+              </div>
+              <Card.Title>{event?.judul_event}</Card.Title>
+              <Card.Text className='content-date'>{event?.tanggal_mulai?.toString().substring(0, 10)}</Card.Text>
+              <Card.Text className='content-description' dangerouslySetInnerHTML={{ __html: `${event?.isi_event}` }}></Card.Text>
+              <Link to={`/event-detail/${event._id}`}>
+                <Button className='btn-card flex-fill'>
+                  Learn More
+                </Button>
+              </Link>
+            </Card.Body>
+          </Card>
         </div>
-        <img
-          src={event?.header_event.url}
-          alt=""
-          className="imageEvent ms-auto"
-        />
-        <div className="clear"></div>
-      </Col>
-    </Row>
-  );
+      </div>
+    </Container>
+  )
 }
+
+export default EventItem

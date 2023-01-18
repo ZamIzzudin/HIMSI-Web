@@ -6,7 +6,7 @@ import xIcon from '../assets/icons/x-circle.svg'
 import ArticleItem from "../components/ArticleItem"
 import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
-import  { Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 import "../styles/pages/Article.css"
 
@@ -141,26 +141,26 @@ const Article = () => {
         </div>
       )}
       <div className="article-list">
-        {articleList?.berita.length === 0? 
-        (<div className='not-found-container'>
+        {articleList?.berita.length === 0 ?
+          (<div className='not-found-container'>
             <div className='article-not-found'>
-               <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
+              <p>Maaf Artikel yang anda cari tidak tersedia :(</p>
             </div>
-        </div>)
-         :(
-           <>
-            {articleList?.berita.map((article, index) => (
-              <ArticleItem article={article} index={index} />
+          </div>)
+          : (
+            <>
+              {articleList?.berita.map((article, index) => (
+                <ArticleItem article={article} index={index} />
               ))}
-          </>)
-          }
-       
+            </>)
+        }
+
       </div>
 
       <div className="pagination-artikel">
-        <Pagination className="pagination-items-artikel">{items}</Pagination>
+        <Pagination className="pagination-items">{items}</Pagination>
       </div>
-      </Container>
+    </Container>
   )
 }
 

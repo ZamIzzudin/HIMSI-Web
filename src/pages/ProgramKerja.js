@@ -10,7 +10,7 @@ import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
 
 import "../styles/pages/Article.css"
-import "../styles/pages/ProgramKerja.css";
+// import "../styles/pages/ProgramKerja.css";
 
 const ProgramKerja = () => {
   const [eventList, setEventList] = useState({ event: [] })
@@ -110,13 +110,13 @@ const ProgramKerja = () => {
   }
 
   return (
-    <Container>
+    <Container className='ctn'>
       <div className="article-header">
         <div className="filter-category">
           <form onSubmit={(e) => setFilterParams(e)} className="search-bar-viewpoint">
             <div className="category-display">
               <div className="search-bar-display">
-                <Search />
+                <Search className='image-search' />
                 {renderFilter()}
               </div>
               <input onChange={(e) => setSearch(e.target.value)} value={search} className="search-bar-input" type="search" placeholder='Search' />
@@ -181,15 +181,24 @@ const ProgramKerja = () => {
       )}
 
       <div className="article-list">
-        {eventList.event.map((event, index) => (
-          <EventItem event={event} index={index} />
-        ))}
+        {eventList?.event.length === 0 ?
+          (<div className='not-found-container'>
+            <div className='article-not-found'>
+              <p>Maaf Event yang anda cari tidak tersedia :(</p>
+            </div>
+          </div>)
+          : (
+            <>
+              {eventList?.event.map((event, index) => (
+                <EventItem event={event} index={index} />
+              ))}
+            </>)
+        }
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="pagination-artikel">
         <Pagination className="pagination-items">{items}</Pagination>
-        <br />
       </div>
     </Container>
   );
