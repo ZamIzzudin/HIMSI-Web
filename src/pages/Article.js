@@ -19,7 +19,6 @@ const Article = () => {
   const [params, setParams] = useState('')
 
   function handleChangeCheckBoxs (namaFilter) {
-    console.info(namaFilter);
     setCheckboxs(prev => {
 
       return prev.map((item) => {
@@ -50,6 +49,7 @@ const Article = () => {
   function setFilterParams(e) {
     e.preventDefault();
     const kategori = checkboxs.filter(item => item.checked)
+    
     let url = '?'
 
     if (search !== '') {
@@ -70,6 +70,7 @@ const Article = () => {
   async function getDataArticle(page) {
     const data = await api.getArticle(page)
     setArticleList(data)
+
   }
 
   async function getDataArticleByParams(page, params) {
