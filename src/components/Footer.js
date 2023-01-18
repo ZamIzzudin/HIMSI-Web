@@ -78,10 +78,10 @@ const Footer = () => {
                     <h2 className="footer-judul">Informasi</h2>
                     <ul className="pages">
                         <li><Link to="/profile">Profile HIMSI</Link></li>
-                        <li><Link to="/event">Berita terbaru</Link></li>
+                        <li><Link to="/event">Artikel terbaru</Link></li>
                         <li><Link to="/event">Upcoming Events</Link></li>
                         <li><Link to="/layanan-mahasiswa">FAQ</Link></li>
-                        <li><Link to="/layanan-mahasiswa">Hubungi Kami</Link></li>
+                        <li><Link to="/layanan-mahasiswa">Struktur Organisasi</Link></li>
                     </ul>
                 </div>
 
@@ -98,6 +98,7 @@ const Footer = () => {
             </div>
 
             <div>
+                <h1 className='name-socialmedia'>Social Media</h1>
                 <Row className='mb-2'>
                     <Col className='logo-sosmed d-flex justify-content-center flex-wrap'>
                         <a target="_blank" rel="noreferrer" href={socmed?.Instagram}>
