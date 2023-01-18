@@ -228,6 +228,23 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getTautan() {
+        const url = BaseUrl + '/link?kategori=tautan'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+    async function getListKategori() {
+        const url = BaseUrl + '/kategori_berita'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
+
+
     return {
         getArticle,
         getArticleByParams,
@@ -250,7 +267,9 @@ const api = (() => {
         getSlider,
         getLatestEvent,
         getUpComing,
-        subscribe
+        subscribe,
+        getTautan,
+        getListKategori
     }
 })()
 

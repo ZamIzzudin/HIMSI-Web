@@ -14,15 +14,17 @@ const Footer = () => {
     const [dataFooter, setDataFooter] = useState()
     const [email, setEmail] = useState()
     const [socmed, setSocmed] = useState()
-
+    const [tautan, setTautan] = useState()
     const [showModal, setShowModal] = useState(false)
 
     async function getDataFooter() {
         const data = await api.getFooter()
         const data2 = await api.getSocmed()
+        const data3 = await api.getTautan()
 
         setDataFooter(data)
         setSocmed(data2)
+        setTautan(data3)
     }
 
     async function handleSubscribe() {
@@ -88,11 +90,9 @@ const Footer = () => {
                 <div class="col-sm-3 footer-social ">
                     <h2 className="footer-judul">Tautan Penting </h2>
                     <ul className="pages">
-                        <li><Link to="/layanan-mahasiswa">Layanan Mahsiswa</Link></li>
-                        <li><Link to="/layanan-mahasiswa">Database Materi</Link></li>
-                        <li><Link to="/layanan-mahasiswa">Laporan PKL & KKN</Link></li>
-                        <li><Link to="/layanan-mahasiswa">Skripsi</Link></li>
-                        <li><Link to="/layanan-mahasiswa">E-letter FST</Link></li>
+                        {tautan?.map((item) => (
+                            <li><Link to={item?.url}>{item?.nama_link}</Link></li>
+                        ))}
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import { Pagination } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import api from '../utils/api'
-import { filterData } from '../utils/filterArticle'
 import xIcon from '../assets/icons/x-circle.svg'
 import ArticleItem from "../components/ArticleItem"
 import icon from "../assets/img/ArticlePage/menu.png"
@@ -14,16 +13,19 @@ const Article = () => {
   const [articleList, setArticleList] = useState({ berita: [] })
 
   const [showKategoriList, setShowKategoriList] = useState(false)
-  const [checkboxs, setCheckboxs] = useState(filterData)
+  const [checkboxs, setCheckboxs] = useState()
   const [page, setPage] = useState(1)
   const [search, setSearch] = useState('')
   const [params, setParams] = useState('')
 
-  const handleChangeCheckBoxs = id => {
+  function handleChangeCheckBoxs (namaFilter) {
+    console.info(namaFilter);
     setCheckboxs(prev => {
+
       return prev.map((item) => {
-        if (item.id === id) {
+        if (item.namaFilter === namaFilter) {
           return { ...item, checked: !item.checked };
+          
         } else {
           return { ...item };
         }
@@ -32,10 +34,10 @@ const Article = () => {
   }
 
   const renderFilter = () => {
-    return checkboxs.map((item) => {
+    return checkboxs?.map((item) => {
       if (item.checked) {
         return (
-          <span onClick={() => handleChangeCheckBoxs(item.id)} className='selected-category' key={item.id}>
+          <span onClick={() => handleChangeCheckBoxs(item.namaFilter)} className='selected-category' key={item.namaFilter}>
             {item.namaFilter} <img className='del-category-icon' src={xIcon} alt="x-circle-filter" />
           </span>
         );
@@ -63,7 +65,7 @@ const Article = () => {
     setPage(1)
     setParams(url)
   }
-
+  
   // Get data from API
   async function getDataArticle(page) {
     const data = await api.getArticle(page)
@@ -74,6 +76,17 @@ const Article = () => {
     const data = await api.getArticleByParams(page, params)
 
     setArticleList(data)
+  }
+
+  async function getDataKategori(){
+    const data = await api.getListKategori()
+    
+    const kategori = data.map((item) => ({
+      namaFilter: item,
+      checked: false
+    }))
+
+    setCheckboxs(kategori)
   }
 
   useEffect(() => {
@@ -89,6 +102,9 @@ const Article = () => {
     window.scrollTo(0, 0);
   }, [page]);
 
+  useEffect(() => {
+    getDataKategori();
+  },[])
   // Pagination
   let items = [];
   for (let number = 1; number <= Math.round(articleList?.total / 4); number++) {
@@ -127,11 +143,11 @@ const Article = () => {
         <div className='category-container'>
           <h5>Kategori</h5>
           <div>
-            {checkboxs.map((category) => {
+            {checkboxs?.map((category) => {
               return (
-                <div className='wrapper-list' key={category.id}>
+                <div className='wrapper-list' key={category.namaFilter}>
                   <form>
-                    <input type="checkbox" checked={category.checked} id={category.id} onClick={() => handleChangeCheckBoxs(category.id)} />
+                    <input type="checkbox" checked={category.checked} id={category.namaFilter} onClick={() => handleChangeCheckBoxs(category.namaFilter)} />
                     <label htmlFor="">{category.namaFilter}</label>
                   </form>
                 </div>

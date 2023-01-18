@@ -137,6 +137,8 @@ input[type="submit"] {
   margin: 15px 0;
 }
 
+
+
 .wrapper-list input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
@@ -149,6 +151,7 @@ input[type="submit"] {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .wrapper-list input[type="checkbox"]:after {
@@ -367,6 +370,13 @@ input[type="submit"] {
 
 
 /* Responshitt */
+
+@media screen and (max-width: 1400px) {
+  .category-container{
+    top: 40%
+  }
+  
+}
 @media screen and (max-width: 1200px) {
 
   .filter-category {
@@ -380,8 +390,8 @@ input[type="submit"] {
   }
 
   .category-container {
-    top: 33%;
-    right: 9%;
+    top: 43.5%;
+    right: 7.5%;
   }
 
   .article-list {
@@ -399,7 +409,7 @@ input[type="submit"] {
   }
 
   .category-container {
-    top: 31%;
+    top: 43%;
     width: 250px;
   }
 
@@ -472,10 +482,9 @@ input[type="submit"] {
   }
 
   .category-container {
-    height: 500px;
     width: 250px;
     overflow: scroll;
-    top: 33%;
+    top: 40%;
   }
 
   .wrapper-list form input[type="checkbox"] {
@@ -506,22 +515,6 @@ input[type="submit"] {
   }
 }
 
-@media screen and (max-height: 768px) {
-  .category-container {
-    position: absolute;
-    top: 43%;
-    width: 270px;
-    right: 7.5%;
-  }
-
-  .article-header-title {
-    padding-top: 50px;
-    font-size: 45px;
-  }
-
-
-}
-
 @media screen and (max-width: 576px) {
   .search-bar-viewpoint {
     margin-left: 80px;
@@ -533,10 +526,9 @@ input[type="submit"] {
   }
 
   .category-container {
-    height: 300px;
     width: 200px;
-    top: 31.5%;
-    right: 10%;
+    top: 38%;
+    right: 8%;
   }
 
   .wrapper-list form input[type="checkbox"] {
@@ -588,8 +580,9 @@ input[type="submit"] {
 @media screen and (max-width: 480px) {
 
   .category-container {
-    top: 30%;
-    right: 9%;
+    top: 35%;
+    right: 6%;
+    width: 150px;
   }
 
   .menu-icon-kategori {
