@@ -1,5 +1,6 @@
 import api from "../utils/api";
 import { useState, useEffect } from "react";
+import Link from 'next/link'
 
 import "../styles/components/StrukturAnggota.css";
 import Instagram from "../assets/img/instagram.png";
@@ -60,7 +61,9 @@ const StrukturAnggota = () => {
                       <Card.Body>
                         <Card.Title className="name-anggota" style={{ fontWeight: '700' }} >{pengurus.nama_pengurus}</Card.Title>
                         <Card.Text className="name-bidang" >{pengurus.jabatan}</Card.Text>
-                        <img alt="logo" src={Instagram} className="icon-instagram " />
+                        <Link to={pengurus.media_social}>
+                          <img alt="logo" src={Instagram} className="icon-instagram " />
+                        </Link>
                       </Card.Body>
                     </Card>
                   </Col>
