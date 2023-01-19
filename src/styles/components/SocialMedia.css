@@ -2,34 +2,56 @@
     margin-bottom: 135px !important;
 }
 
-.social-media .logo-sosmed i {
+.social-media .header {
+    margin-bottom: 65px !important;
+}
+
+.social-media .logo-sosmed {
+    gap: 60px !important;
+}
+
+.social-media .logo-sosmed img {
     padding-top: 0 !important;
-    font-size: 60px;
-    color: rgba(8, 34, 64, 1);
-    margin-bottom: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
 }
 
 @media screen and (max-width: 1400px) {
-    .social-media .logo-sosmed i {
-        font-size: 50px;
+    .social-media .logo-sosmed img {
+        width: 50px !important;
+        height: 50px !important;
     }
 }
 
+
 @media screen and (max-width: 1200px) {
-    .social-media .logo-sosmed i {
-        font-size: 40px;
+    .social-media .logo-sosmed {
+        gap: 50px !important;
+    }
+
+    .social-media .logo-sosmed img {
+        width: 40px !important;
+        height: 40px !important;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .social-media .logo-sosmed i {
-        font-size: 36px;
+    .social-media .logo-sosmed {
+        gap: 40px !important;
+    }
+
+    .social-media .logo-sosmed img {
+        width: 36px !important;
+        height: 36px !important;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .social-media .logo-sosmed i {
-        font-size: 32px;
+    .social-media .logo-sosmed img {
+        width: 32px !important;
+        height: 32px !important;
     }
 }
 

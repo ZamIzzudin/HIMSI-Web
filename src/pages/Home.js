@@ -21,7 +21,7 @@ const Home = () => {
       <Hero />
 
       <Container>
-        <div className="header">
+        <div className="header upcoming">
           <h3 className="title">Upcoming Events</h3>
           <Button className='btn-header'>
             <Link to={`/event`}>View More</Link>
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
         <EventSlider />
 
-        <div className="header">
+        <div className="header latest">
           <h3 className="title">Latest Event</h3>
           <Button className='btn-header'>
             <Link to={`/event`}>View More</Link>

@@ -30,7 +30,7 @@
 
 .hero .judul {
     font-size: 80px !important;
-    margin-bottom: 38px !important;
+    margin-bottom: 80px !important;
     color: white !important;
     font-weight: 700 !important;
 }
@@ -44,14 +44,21 @@
 }
 
 /* Indicator  */
+.hero .carousel {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
 
 .hero .carousel-indicators {
     margin-bottom: 39px !important;
+    position: relative !important;
+    top: -80px !important;
+    margin-bottom: -30px !important;
 }
 
 .hero .carousel-indicators button {
-    width: 8px !important;
-    height: 8px !important;
+    width: 10px !important;
+    height: 10px !important;
     border-radius: 50% !important;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
@@ -62,15 +69,33 @@
 }
 
 .hero button.active {
+    top: 2px !important;
+    position: relative !important;
     width: 60px !important;
-    height: 8px !important;
+    height: 5px !important;
+    justify-items: auto !important;
     border-radius: 30px !important;
     -webkit-border-radius: 30px !important;
     -moz-border-radius: 30px !important;
     -ms-border-radius: 30px !important;
     -o-border-radius: 30px !important;
+}
+
+.hero button.active::after {
+    content: "";
+    position: absolute !important;
+    top: -2px !important;
+    left: 0px !important;
+    display: inline-flex !important;
+    width: 60px !important;
+    height: 10px !important;
     background-color: rgba(244, 156, 69, 1) !important;
     box-sizing: content-box !important;
+    border-radius: 30px !important;
+    -webkit-border-radius: 30px !important;
+    -moz-border-radius: 30px !important;
+    -ms-border-radius: 30px !important;
+    -o-border-radius: 30px !important;
 }
 
 /* Carousel Control */
