@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Pagination } from "react-bootstrap";
-
+import xIcon from '../assets/icons/x-circle.svg'
 import { filterData } from '../utils/filterEvent'
 import api from '../utils/api';
 
@@ -38,7 +38,7 @@ const ProgramKerja = () => {
       if (item.checked) {
         return (
           <span onClick={() => handleChangeCheckBoxs(item.id)} className='selected-category' key={item.id}>
-            {item.namaFilter} X
+            {item.namaFilter} <img className='del-category-icon' src={xIcon} alt="x-circle-filter" />
           </span>
         );
       } else {
@@ -108,7 +108,7 @@ const ProgramKerja = () => {
       </Pagination.Item>
     );
   }
-
+console.info(checkboxs);
   return (
     <Container className='ctn'>
       <div className="article-header">
@@ -125,11 +125,13 @@ const ProgramKerja = () => {
           </form>
 
           <button className='filter-button' onClick={() => setFilterList(!showFilterList)}>
-            <img className='menu-icon' src={icon} alt="filter-icon" />
+            <img className='menu-icon-kategori' src={icon} alt="filter-icon" />
           </button>
 
         </div>
+
         <h1 className="article-header-title">Event</h1>
+          
       </div>
 
       {/* Karegori Filter Hide */}

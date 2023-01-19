@@ -15,7 +15,7 @@ import { FreeMode, Navigation, Pagination } from "swiper";
 const RecommendSlider = ({ data, article, event }) => {
     return (
         <div className='event-slider'>
-            <Container>
+            <Container className='ctn'>
                 <Swiper
                     slidesPerView='auto'
                     spaceBetween={30}
@@ -42,7 +42,7 @@ const RecommendSlider = ({ data, article, event }) => {
                                 </div>
                                 <div className="event-body">
                                     <h5 className='title'>{item?.judul_event || item?.judul_berita}</h5>
-                                    <p className='deskripsi' dangerouslySetInnerHTML={{ __html: `${item?.isi_event || item?.isi_berita}` }}></p>
+                                    <p className='deskripsi-slider' dangerouslySetInnerHTML={{ __html: `${item?.isi_event || item?.isi_berita}` }}></p>
                                     {event && (
                                         <Link to={`/event-detail/${item?._id}`}>
                                             <Button className='btn-card'>Read More</Button>

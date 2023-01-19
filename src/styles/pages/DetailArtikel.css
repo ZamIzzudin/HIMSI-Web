@@ -132,7 +132,7 @@
     font-family: 'Mulish', sans-serif !important;
     line-height: 35px !important;
     font-weight: 500 !important;
-    font-size: 15px !important;
+    font-size: 15px;
     text-align: justify;
 }
 
@@ -214,9 +214,11 @@
 /* ------------------- Responsive ---------------------- */
 @media screen and (max-width: 1200px) {
     .detail-artikel .deskripsi p {
-        font-size: 16px !important;
+        font-size: 16px;
     }
-
+    .detail-artikel .header-event .title{
+        font-size: 34px !important;
+    }
     .detail-artikel .img-header img{
         height: 450px !important;
         object-position: top;
@@ -251,7 +253,7 @@
         padding: 50px 50px !important;
     }
     .detail-artikel .deskripsi p{
-        font-size: 15px !important;
+        font-size: 15px;
     }
 
     .detail-artikel .judul {
@@ -273,6 +275,10 @@
 
     .detail-artikel .image-content {
         border-radius: 5px;
+    }
+
+    .detail-artikel .header-event .title{
+        font-size: 28px !important;
     }
 }
 
@@ -300,6 +306,10 @@
     .detail-artikel .img-header img{
         height: 350px !important;
         object-position: top;
+    }
+
+    .detail-artikel .links {
+        padding: 10px 0 !important;
     }
 
     .detail-artikel .judul {
@@ -333,7 +343,7 @@
     }
 
     .detail-artikel .deskripsi p {
-        font-size: 15px !important;
+        font-size: 15px;
 
     }
 
@@ -350,10 +360,17 @@
         left: -20%;
         width: 500px;
     }
+
+    .detail-artikel .header-event .title{
+        font-size: 24px !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    
+
+       .detail-artikel .links {
+        padding: 5px 0 !important;
+    }
     .artikel-container{
         max-width: 550px !important;
     }
@@ -368,7 +385,7 @@
     }
 
     .detail-artikel .deskripsi p {
-        font-size: 14px !important;
+        font-size: 14px;
         line-height: 30px !important;
     }
 
@@ -392,6 +409,9 @@
         font-size: 14px !important;
     }
 
+    .detail-artikel .header-event .title{
+        font-size: 18px !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -400,13 +420,16 @@
         max-width: 450px !important;
     }
 
+    .detail-artikel .links {
+        padding: 0px 0 !important;
+    }
     .detail-artikel .img-header img{
         height: 200px !important;
         object-position: top;
     }
 
     .detail-artikel .content {
-        padding: 0;
+        padding-bottom: 0px !important;
         
     }
     .detail-artikel .judul {
@@ -442,7 +465,7 @@
 
     .detail-artikel .content .deskripsi p,
     .detail-artikel .link a {
-        font-size: 10px !important;
+        font-size: 10px;
         line-height: 20px !important;
     }
 
@@ -499,6 +522,10 @@
         left: -20%;
         width: 200px;
     }
+
+    .detail-artikel .header-event .title{
+        font-size: 16px !important;
+    }
 }
 
 @media screen and (max-width: 374px) {
@@ -516,6 +543,10 @@
         font-size: 8px !important;
         padding: 5px 5px;
         border-radius: 4px;
+    }
+
+    .detail-artikel .header-event .title{
+        font-size: 14px !important;
     }
     
 }
