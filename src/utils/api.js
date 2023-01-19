@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = (() => {
-    const BaseUrl = "https://himsi-website-be.vercel.app"
+    const BaseUrl = process.env.REACT_APP_API_ENDPOINT
 
     async function getArticle(page) {
         const url = BaseUrl + '/berita?limit=4&skip=4&page=' + page
