@@ -1,6 +1,6 @@
 import api from "../utils/api";
 import { useState, useEffect } from "react";
-import Link from 'next/link'
+import { Link } from 'react-router-dom';
 
 import "../styles/components/StrukturAnggota.css";
 import Instagram from "../assets/img/instagram.png";
