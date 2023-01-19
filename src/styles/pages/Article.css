@@ -222,6 +222,7 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .search-bar-display {
@@ -235,6 +236,8 @@ input[type="submit"] {
   border-right: none;
   width: fit-content;
   gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .category-display {
@@ -243,12 +246,14 @@ input[type="submit"] {
   overflow: hidden;
   width: 100%;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .search-bar-input {
   flex: 1;
   border: none;
   min-height: 50px;
+   overflow: scroll;
 }
 
 .search-bar-input:focus {
@@ -292,6 +297,8 @@ input[type="submit"] {
   color: var(--white);
   padding: 5px 10px;
   border-radius: 4px;
+  overflow: o;
+  
 }
 
 .article-list {
@@ -628,8 +635,8 @@ input[type="submit"] {
   }
 
   .search-bar-button {
-    width: 30px;
-    min-height: 26px;
+    width: 31px;
+    min-height: 27px;
 
   }
 
@@ -701,6 +708,6 @@ input[type="submit"] {
   }
 
   .search-bar-viewpoint{
-    margin-left: 5px;
+    margin-left: 0px;
   }
 }

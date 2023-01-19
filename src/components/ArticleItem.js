@@ -19,7 +19,7 @@ const ItemArtikel = ({ article, index }) => {
                     <Card.Body>
                         <div className=" kategori-ctn d-flex gap-2">
                             {article.kategori_berita.map(kategori => (
-                                <span className="kategori-tag text-center">{kategori}</span>
+                                <span className="kategori-berita-tag text-center">{kategori}</span>
                             ))}
                         </div>
                         <Card.Title>{article?.judul_berita}</Card.Title>

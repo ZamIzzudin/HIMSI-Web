@@ -103,7 +103,7 @@ const api = (() => {
         const url = BaseUrl + '/event' + params + 'limit=6&skip=6'
 
         const response = await axios.get(url)
-
+        console.info(response);
         return response.data.data[0].event
     }
 

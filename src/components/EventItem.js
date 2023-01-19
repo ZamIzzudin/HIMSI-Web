@@ -14,28 +14,28 @@ const EventItem = ({ event, index }) => {
 
       switch (event?.bidang) {
         case "BPH":
-          return "kategori-tag BPH-TAG"
+          return "BPH-TAG basic"
   
         case "PSDM":
-          return "kategori-tag PSDM-TAG"
+          return "PSDM-TAG basic"
   
         case "DIKTI":
-          return"kategori-tag DIKTI-TAG"
+          return"DIKTI-TAG basic"
   
         case "MEDKOM":
-          return"kategori-tag MEDKOM-TAG"
+          return"MEDKOM-TAG basic"
   
         case "PERHUB":
-          return"kategori-tag PERHUB-TAG"
+          return"PERHUB-TAG basic"
   
         case "ADKESMA":
-          return "kategori-tag ADKESMA-TAG"
+          return "ADKESMA-TAG basic"
   
         case "URT":
-          return "kategori-tag URT-TAG"
+          return "URT-TAG basic"
   
         default:
-          return "kategori-tag"
+          return "basic"
       }
   
     }

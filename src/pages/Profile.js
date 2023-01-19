@@ -41,21 +41,21 @@ const Profile = () => {
       </div>
 
       <div class='logo'>
-        <img src={himpunan?.logo_himpunan.url} className="profile-logo" alt="Logo" />
+        <img src={himpunan?.logo_himpunan.url} className="profile-logo" alt="Logo" id="visi" />
       </div>
 
 
       {/* -------------------------- Bagian Visi ------------------------- */}
-      <div class='visi'>
+      <div class='visi' >
         <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-        <p className='visi-p'> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif <br></br> guna meningkatkan potensi, kemampuan, dan wawasan, mahasiswa SI.
+        <p className='visi-p ' id="misi"> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif <br></br> guna meningkatkan potensi, kemampuan, dan wawasan, mahasiswa SI.
           {/*{visiMisi?.visi}*/}
         </p>
       </div>
 
 
       {/*---------------------------- Bagian Misi-------------------- */}
-      <div class='misi'>
+      <div class='misi' >
         <h1 className="misi-judul"> <span class="dot"></span> Misi <span class="dot"></span> </h1>
         <br></br>
 
@@ -68,22 +68,23 @@ const Profile = () => {
       </div>
 
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
-
-      <DivisiSlider />
+        <div id="bidangdivisi">
+          <DivisiSlider />
+        </div>
 
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 
-      <div class='struktur'>
+      <div class='struktur' id="strukturorganisasi">
         <h1 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h1>
       </div>
 
       <div class="logo">
-        <img src={himpunan?.gambar_struktur.url} className="struktur-logo" alt="Logo" />
+        <img src={himpunan?.gambar_struktur.url} className="struktur-logo" alt="Logo" id="pengurushimsi" />
       </div>
 
 
       {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
-      <div className="cta-box">
+      <div className="cta-box" >
         <button className="btn-pengurus">
           <Link to={`/struktur-anggota`}>Pengurus HIMSI </Link>
         </button>

@@ -12,6 +12,7 @@ import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
 import '../styles/pages/DetailArtikel.css'
 
 const DetailProker = () => {
+    const [tags, setTags] = useState('')
     const { id } = useParams()
     const [detail, setDetail] = useState(null)
     const [recommend, setRecommend] = useState([])
@@ -48,6 +49,41 @@ const DetailProker = () => {
         window.scrollTo(0, 0);
     }, [detail]);
 
+    useEffect(() => {
+    
+        function handleTags () {
+    
+          switch (detail?.bidang) {
+            case "BPH":
+              return "kategori-tag BPH-TAG"
+      
+            case "PSDM":
+              return "kategori-tag PSDM-TAG"
+      
+            case "DIKTI":
+              return"kategori-tag DIKTI-TAG"
+      
+            case "MEDKOM":
+              return"kategori-tag MEDKOM-TAG"
+      
+            case "PERHUB":
+              return"kategori-tag PERHUB-TAG"
+      
+            case "ADKESMA":
+              return "kategori-tag ADKESMA-TAG"
+      
+            case "URT":
+              return "kategori-tag URT-TAG"
+      
+            default:
+              return "kategori-tag"
+          }
+      
+        }
+      
+        setTags(handleTags())  
+      }, [detail])
+
     return (
 
         <div className='detail-artikel'>
@@ -75,7 +111,7 @@ const DetailProker = () => {
                                 <p className='tanggal'>{detail?.tanggal_mulai_event.toString().substring(0, 10)}</p>
                             </div>
                             <div className="d-flex gap-2">
-                                    <button className='adkesmagazine'>{detail?.bidang}</button>
+                                    <button className={`${tags} text-center basic-des`}>{detail?.bidang}</button>
                             </div>
                         </div>
                     </div>

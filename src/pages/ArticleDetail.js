@@ -81,7 +81,7 @@ console.info(recommend);
                             </div>
                             <div className="d-flex gap-2">
                                 {detail?.kategori_berita.map(item => (
-                                    <button className='adkesmagazine'>{item}</button>
+                                    <button className='kategori-detailberita-tag'>{item}</button>
                                 ))}
                             </div>
                         </div>

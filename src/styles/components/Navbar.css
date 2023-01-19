@@ -111,14 +111,74 @@ nav {
     }
 }
 
+.expanded-arrow {
+    width: 17px;
+    transition: .3s;
+}
+.expanded-arrow-active{
+    width: 17px;
+    transition: .3s;
+    transform: rotate(180deg);
+    filter: invert(74%) sepia(26%) saturate(1390%) hue-rotate(330deg) brightness(98%) contrast(95%);
+}
 
+.profile-section-container {
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    right: 29%;
+    animation : profile .3s ease-in-out
+}
 
+@keyframes profile {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 100%;
+    }
+}
+
+.profile-section-wrapper {
+    padding: 10px 20px;
+}
+.list-profile {
+    padding-left: 0 !important;
+}
+.list-profile li {
+    list-style: none;
+    padding: 5px 0;
+}
+.list-profile li a {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
 /*-------------------------------- RESPONSIVE ------------------------- */
 @media screen and (max-width: 1400px) {
     .navbar-items .nav-list{
         gap: 20px;
     }
+
+    .expanded-arrow {
+        width: 15px;
+    }
+
+    .expanded-arrow-active {
+        width: 15px;
+    }
+
+    .profile-section-container {
+        right: 35%;
+    }
+
+
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -167,6 +227,23 @@ nav {
         height: 40px;
         font-size: 13px;
     }
+
+    .expanded-arrow {
+        width: 14px;
+    }
+
+    .expanded-arrow-active {
+        width: 14px;
+    }
+
+    .profile-section-container {
+        right: 35.5%;
+    }
+
+    .list-profile li a {
+        font-size: 13px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -243,9 +320,32 @@ nav {
         right: 6.5rem;
         top: 6.5rem;
     }
+
+    .profile-section-container {
+        top: 34%;
+        right: 24%;
+        z-index: 2;
+    }
+
+    .expanded-arrow-active{
+        transform: rotate(-45deg);
+       
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .list-profile li {
+   
+        padding: 3px 0;
+    }
+    .profile-section-container {
+        top: 34%;
+        right: 20%;
+    }
+
+    .list-profile li a {
+        font-size: 10px;
+    }
     html, body{
         overflow-x: hidden;
     }
@@ -282,9 +382,16 @@ nav {
     .nav-close{
         font-size: 20px;
     }
+
+
 }
 
 @media screen and (max-width: 480px) {
+
+    .profile-section-container {
+        top: 34%;
+        right: 17%;
+    }
     nav {
         height: 70px;
     }
@@ -322,7 +429,19 @@ nav {
 }
 
 @media screen and (max-width: 374px) {
- 
+
+    .list-profile li {
+   
+        padding: 1px 0;
+    }
+    .profile-section-container {
+        top: 34%;
+        right: 10%;
+    }
+
+    .list-profile li a {
+        font-size: 8px;
+    }
 
   .navbar-items {
     padding: 35px 20px ;
