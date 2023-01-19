@@ -16,15 +16,24 @@ h4 {
     color: rgba(8, 34, 64, 1) !important;
     font-weight: 700 !important;
     font-size: 49px !important;
+    margin: 0 !important;
 }
 
 /* -----------header--------------- */
 .home .header {
-    margin-top: 69px !important;
-    margin-bottom: 40px !important;
     display: flex !important;
     justify-content: space-between;
     align-items: center !important;
+}
+
+.home .upcoming {
+    margin-top: 120px !important;
+    margin-bottom: 40px !important;
+}
+
+.home .latest {
+    margin-top: 71px !important;
+    margin-bottom: 40px !important;
 }
 
 .home .header .title {
