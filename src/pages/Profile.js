@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import api from '../utils/api';
 
+import DivisiSlider from "../components/DivisiSlider";
+
 import "../styles/pages/Profile.css";
 
 const Profile = () => {
@@ -62,9 +64,7 @@ const Profile = () => {
 
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
 
-      <div class='bidang'>
-        <h1 className="bidang-judul"> Bidang & Divisi </h1>
-      </div>
+      <DivisiSlider />
 
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 

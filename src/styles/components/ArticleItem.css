@@ -34,7 +34,7 @@
 
 .eventItem .content {
   padding: 30px 75px 30px 75px;
-  
+
 }
 
 .date {
@@ -91,10 +91,10 @@
 
 @media screen and (max-width: 360px) {
 
-  .eventItem{
+  .eventItem {
     position: relative;
-    
-    
+
+
   }
 
   .row {
@@ -102,14 +102,14 @@
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  
+
   .judul-artikel {
     font-size: 6px;
     padding: 0;
     margin: 0;
     position: absolute;
     top: 15px;
-  
+
   }
 
   .date-artikel {
@@ -117,15 +117,16 @@
     padding-bottom: 0;
     margin-bottom: 0;
     margin-top: 15px;
-   
+
   }
-  .card-deskripsi-artikel{
+
+  .card-deskripsi-artikel {
     max-height: 20px;
     font-size: 6px;
     margin-top: 5px;
     margin-bottom: 0px;
-    
-    
+
+
   }
 
   .tag {
@@ -140,8 +141,8 @@
     overflow: hidden;
     margin-top: 0;
   }
-  
-  
+
+
 
   .eventItem .learn-more-artikel {
     display: flex;
@@ -162,9 +163,7 @@
     margin-top: 7px;
   }
 
-  .imageEvent{
+  .imageEvent {
     max-height: 100px;
   }
 }
-
-
