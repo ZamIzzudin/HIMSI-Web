@@ -80,10 +80,10 @@ const Footer = () => {
                     <h2 className="footer-judul">Informasi</h2>
                     <ul className="pages">
                         <li><Link to="/profile">Profile HIMSI</Link></li>
-                        <li><Link to="/event">Artikel terbaru</Link></li>
+                        <li><Link to="/article">Artikel terbaru</Link></li>
                         <li><Link to="/event">Upcoming Events</Link></li>
                         <li><Link to="/layanan-mahasiswa">FAQ</Link></li>
-                        <li><Link to="/layanan-mahasiswa">Struktur Organisasi</Link></li>
+                        <li><Link to="/struktur-anggota">Struktur Organisasi</Link></li>
                     </ul>
                 </div>
 

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import api from '../utils/api';
+import Loading from '../pages/Loading'
+
+import DivisiSlider from "../components/DivisiSlider";
 
 import "../styles/pages/Profile.css";
 
@@ -28,6 +31,10 @@ const Profile = () => {
 
   return (
     <div class='container'>
+      {himpunan?.nama_himpunan === undefined && (
+        <Loading />
+      )}
+
       <div class='heading'>
         <h1 className='himsi'>{himpunan?.nama_himpunan}</h1>
         <h2 className='namauniv'>{himpunan?.nama_universitas}</h2>
@@ -62,9 +69,7 @@ const Profile = () => {
 
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
 
-      <div class='bidang'>
-        <h1 className="bidang-judul"> Bidang & Divisi </h1>
-      </div>
+      <DivisiSlider />
 
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 

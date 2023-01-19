@@ -244,6 +244,13 @@ const api = (() => {
         return response.data.data
     }
 
+    async function getBidang() {
+        const url = BaseUrl + '/bidang_dashboard'
+
+        const response = await axios.get(url)
+
+        return response.data.data
+    }
 
     return {
         getArticle,
@@ -269,7 +276,8 @@ const api = (() => {
         getUpComing,
         subscribe,
         getTautan,
-        getListKategori
+        getListKategori,
+        getBidang
     }
 })()
 

@@ -1,0 +1,452 @@
+.divisi-slider {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #082240 !important;
+}
+
+.divisi-slider .divisi-title-header {
+    font-size: 40px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    margin-bottom: 50px !important;
+}
+
+.divisi-slider .swiper {
+    width: 100% !important;
+    padding-top: 30px !important;
+    padding-bottom: 70px !important;
+    overflow: visible !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+
+.divisi-slider .swiper-slide {
+    background-position: center !important;
+    background-size: cover !important;
+    height: auto !important;
+}
+
+.divisi-slider .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(8, 34, 64, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
+}
+
+.divisi-slider .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(8, 34, 64, 0.8) -22.83%, rgba(0, 2, 103, 0)63.06%) !important;
+}
+
+.divisi-slider .swiper-slide-shadow-right,
+.divisi-slider .swiper-slide-shadow-left {
+    border-radius: 24px !important;
+    -webkit-border-radius: 24px !important;
+    -moz-border-radius: 24px !important;
+    -ms-border-radius: 24px !important;
+    -o-border-radius: 24px !important;
+}
+
+.divisi-slider .divisi-card {
+    position: relative !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgb(255, 255, 255);
+    display: flex !important;
+    justify-content: flex-start !important;
+    border: none !important;
+    border-radius: 24px !important;
+    -webkit-border-radius: 24px !important;
+    -moz-border-radius: 24px !important;
+    -ms-border-radius: 24px !important;
+    -o-border-radius: 24px !important;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+    gap: 20px !important;
+    padding-bottom: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.divisi-slider .xxx,
+.divisi-slider .divisi-deskripsi {
+    width: 100% !important;
+}
+
+.divisi-slider .xxx {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    background-color: #082240 !important;
+    color: white !important;
+    padding: 20px 30px;
+    border-radius: 24px 24px 0 0 !important;
+    -webkit-border-radius: 24px 24px 0 0 !important;
+    -moz-border-radius: 24px 24px 0 0 !important;
+    -ms-border-radius: 24px 24px 0 0 !important;
+    -o-border-radius: 24px 24px 0 0 !important;
+}
+
+.divisi-slider .divisi-logo {
+    height: 55px !important;
+    width: 55px !important;
+}
+
+.divisi-slider .divisi-logo img {
+    object-fit: contain !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.divisi-slider .divisi-judul h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 40px !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+}
+
+.divisi-slider .divisi-judul p {
+    margin: 0 !important;
+    font-size: 12px !important;
+}
+
+.divisi-slider .divisi-deskripsi {
+    overflow: hidden !important;
+}
+
+.divisi-slider .divisi-deskripsi p {
+    font-size: 18px !important;
+    font-family: 'Mulish', sans-serif !important;
+    font-weight: 500 !important;
+    margin: 0px 60px 0 60px !important;
+    line-height: 1.5em !important;
+    text-align: justify !important;
+    max-height: 110px;
+}
+
+.divisi-slider .divisi-bagian {
+    width: 85% !important;
+    border-top: 1.6px solid #082240 !important;
+    padding: 20px 0 !important;
+    margin: auto !important;
+}
+
+.divisi-slider .divisi-bagian h3 {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+    font-weight: 600 !important;
+    color: #082240 !important;
+
+}
+
+.divisi-slider .divisi-bagian .divisi-tags {
+    display: flex;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    max-height: 100px !important;
+    overflow: hidden !important;
+}
+
+.divisi-slider .divisi-bagian .divisi-tag {
+    background-color: rgb(8, 34, 64);
+    padding: 10px !important;
+    max-width: 200px !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+}
+
+.divisi-slider .divisi-bagian .divisi-tags .divisi-tag p {
+    margin: 0 !important;
+    color: white !important;
+    font-size: 16px !important;
+    height: 24px !important;
+    overflow: hidden !important;
+}
+
+.divisi-slider .line-end {
+    position: absolute !important;
+    top: 96% !important;
+    height: 4px !important;
+    width: 30% !important;
+    border-radius: 50px !important;
+    background-color: #082240 !important;
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -ms-border-radius: 50px !important;
+    -o-border-radius: 50px !important;
+    right: 35% !important;
+    margin: auto !important;
+}
+
+/* ---Pagination--- */
+.divisi-slider .swiper-pagination-bullet {
+    height: 12px !important;
+    width: 12px !important;
+}
+
+.divisi-slider .swiper-pagination-bullet-active {
+    width: 5em !important;
+    height: 12px !important;
+    border-radius: 15px !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    -ms-border-radius: 15px !important;
+    -o-border-radius: 15px !important;
+    background-color: #F49C45;
+}
+
+/* ---Button Swiper--- */
+.divisi-slider .swiper-button-next:after,
+.divisi-slider .swiper-button-prev:after {
+    font-size: 28px !important;
+}
+
+.divisi-slider .swiper-button-prev {
+    left: 30% !important;
+}
+
+.divisi-slider .swiper-button-next {
+    right: 30% !important
+}
+
+.divisi-slider .swiper-button-prev,
+.divisi-slider .swiper-button-next {
+    width: 50px !important;
+    height: 50px !important;
+    box-shadow: 0px 4px 30px rgba(0, 2, 103, 0.15);
+    background-color: white !important;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: var(--primaryColor2);
+    text-align: center;
+    top: 50px !important;
+}
+
+/* ---Responsive--- */
+@media screen and (max-width: 1400px) {
+    .divisi-slider .divisi-title-header {
+        font-size: 38px !important;
+    }
+
+    .divisi-slider .divisi-logo {
+        height: 55px !important;
+        width: 55px !important;
+    }
+
+    .divisi-slider .divisi-judul h2 {
+        font-size: 40px !important;
+    }
+
+    .divisi-slider .divisi-judul p {
+        font-size: 11px !important;
+    }
+
+    .divisi-slider .divisi-deskripsi p {
+        font-size: 16px !important;
+        max-height: 100px;
+    }
+
+    .divisi-slider .divisi-bagian h3 {
+        font-size: 18px !important;
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tags {
+        max-height: 90px !important;
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tag {
+        padding: 8px !important;
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tags .divisi-tag p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .divisi-slider .divisi-title-header {
+        font-size: 30px !important;
+    }
+
+    .divisi-slider .swiper-button-next:after,
+    .divisi-slider .swiper-button-prev:after {
+        font-size: 24px !important;
+    }
+
+    .divisi-slider .swiper-button-prev,
+    .divisi-slider .swiper-button-next {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .divisi-slider .divisi-logo {
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    .divisi-slider .xxx {
+        padding: 20px 20px;
+    }
+
+    .divisi-slider .divisi-judul h2 {
+        font-size: 32px !important;
+    }
+
+    .divisi-slider .divisi-judul p {
+        font-size: 9px !important;
+    }
+
+    .divisi-slider .divisi-deskripsi p {
+        font-size: 14px !important;
+        max-height: 85px;
+        margin: 0 40px !important;
+    }
+
+    .divisi-slider .divisi-bagian {
+        padding: 10px 0 !important;
+    }
+
+    .divisi-slider .divisi-bagian h3 {
+        font-size: 18px !important;
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tags {
+        max-height: 85px !important;
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tags .divisi-tag p {
+        font-size: 14px !important;
+        height: 18px !important;
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .divisi-slider .swiper-button-prev {
+        left: 20% !important;
+    }
+
+    .divisi-slider .swiper-button-next {
+        right: 20% !important
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* ---Pagination--- */
+    .divisi-slider .swiper-pagination-bullet {
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .divisi-slider .swiper-pagination-bullet-active {
+        width: 4em !important;
+        height: 10px !important;
+    }
+
+    .divisi-slider .swiper-button-prev {
+        left: 10% !important;
+    }
+
+    .divisi-slider .swiper-button-next {
+        right: 10% !important
+    }
+
+    .divisi-slider .swiper-slide {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .divisi-slider .swiper-slide-shadow-right,
+    .divisi-slider .swiper-slide-shadow-left {
+        display: none !important;
+    }
+
+    .divisi-slider .xxx {
+        padding: 20px 30px;
+    }
+
+    .divisi-slider .divisi-judul h2 {
+        font-size: 32px !important;
+    }
+
+    .divisi-slider .divisi-judul p {
+        font-size: 12px !important;
+    }
+
+    .divisi-slider .divisi-card {
+        width: 90% !important;
+    }
+
+    .divisi-slider .divisi-bagian {
+        padding: 20px 0 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .divisi-slider .swiper-button-prev {
+        left: 5% !important;
+    }
+
+    .divisi-slider .swiper-button-next {
+        right: 5% !important
+    }
+
+    .divisi-slider .divisi-bagian .divisi-tags .divisi-tag p {
+        font-size: 12px !important;
+    }
+
+    .divisi-slider .divisi-judul h2 {
+        font-size: 28px !important;
+    }
+
+    .divisi-slider .divisi-judul p {
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .divisi-slider .divisi-title-header {
+        font-size: 24px !important;
+    }
+
+    .divisi-slider .swiper-button-next:after,
+    .divisi-slider .swiper-button-prev:after {
+        font-size: 20px !important;
+    }
+
+    .divisi-slider .swiper-button-prev,
+    .divisi-slider .swiper-button-next {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .divisi-slider .xxx {
+        padding: 20px 20px;
+    }
+
+    .divisi-slider .divisi-logo {
+        height: 35px !important;
+        width: 35px !important;
+    }
+
+    .divisi-slider .divisi-deskripsi p {
+        margin: 0 30px !important;
+    }
+
+    .divisi-slider .divisi-judul h2 {
+        font-size: 24px !important;
+    }
+
+    .divisi-slider .divisi-judul p {
+        font-size: 9px !important;
+    }
+
+    .divisi-slider .divisi-bagian h3 {
+        font-size: 16px !important;
+    }
+
+}

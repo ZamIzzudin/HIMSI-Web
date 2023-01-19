@@ -3,7 +3,7 @@
 
 
 .container {
-    padding-top:80px;
+    padding-top: 80px;
 }
 
 .dot {
@@ -247,9 +247,10 @@
     }
 
 }
+
 @media screen and (max-width: 360px) {
     .container {
         padding-top: 5px;
-        
+
     }
 }
