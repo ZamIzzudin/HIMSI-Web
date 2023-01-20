@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import api from '../utils/api';
 import Loading from '../pages/Loading'
+import Struktur from '../assets/img/struktur-organisasi.png'
 
 import DivisiSlider from "../components/DivisiSlider";
 
@@ -78,7 +79,7 @@ const Profile = () => {
       </div>
 
       <div class="logo">
-        <img src={himpunan?.gambar_struktur.url} className="struktur-logo" alt="Logo" />
+        <img src={Struktur} className="struktur-logo" alt="Logo" />
       </div>
 
 
