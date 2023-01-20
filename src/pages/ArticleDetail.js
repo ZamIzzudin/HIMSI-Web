@@ -91,11 +91,13 @@ const DetailArtikel = () => {
                     </div>
                     <div className='links'>
                         <img className='menu-icon' src={GambarLink} alt="gambar" />
-                        <a href={detail?.link_pdf}>{detail?.link_pdf}</a>
+                        <a href={detail?.link_berita}>{detail?.link_berita}</a>
                     </div>
                     <button className='attached-file'>
                         <img src={AttachFile} alt="PDF" />
-                        <p>PDF</p>
+                        <a href={detail?.link_pdf} target="_blank" rel="noreferrer">
+                            <p>PDF</p>
+                        </a>
                     </button>
                 </div>
                 {/*--------------------- header-event -----------------------*/}
