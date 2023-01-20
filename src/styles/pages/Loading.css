@@ -13,7 +13,7 @@
     gap: 20px;
 }
 
-.loading-heading {
+.loading-page h3 {
     font-family: var(--textHeader);
     font-size: 2em;
     color: var(--primaryColor2) !important;

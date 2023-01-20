@@ -30,14 +30,14 @@ const Profile = () => {
   }, []);
 
   return (
-    <div class='container'>
+    <div class='container profile-page'>
       {himpunan?.nama_himpunan === undefined && (
         <Loading />
       )}
 
       <div class='heading'>
         <h1 className='himsi'>{himpunan?.nama_himpunan}</h1>
-        <h2 className='namauniv'>{himpunan?.nama_universitas}</h2>
+        <h3 className='namauniv'>{himpunan?.nama_universitas}</h3>
       </div>
 
       <div class='logo'>
@@ -47,16 +47,16 @@ const Profile = () => {
 
       {/* -------------------------- Bagian Visi ------------------------- */}
       <div class='visi' >
-        <h1 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h1>
-        <p className='visi-p ' id="misi"> Mewujudkan HIMSI sebagai wadah pemersatu yang kolaboratif dan adaptif <br></br> guna meningkatkan potensi, kemampuan, dan wawasan, mahasiswa SI.
-          {/*{visiMisi?.visi}*/}
+        <h2 className="visi-judul"> <span class="dot"></span> Visi <span class="dot"></span> </h2>
+        <p className='visi-p ' id="misi">
+          {visiMisi?.visi}
         </p>
       </div>
 
 
       {/*---------------------------- Bagian Misi-------------------- */}
       <div class='misi' >
-        <h1 className="misi-judul"> <span class="dot"></span> Misi <span class="dot"></span> </h1>
+        <h2 className="misi-judul"> <span class="dot"></span> Misi <span class="dot"></span> </h2>
         <br></br>
 
         {visiMisi?.misi.map((item, index) => (
@@ -75,7 +75,7 @@ const Profile = () => {
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 
       <div class='struktur' id="strukturorganisasi">
-        <h1 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h1>
+        <h2 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h2>
       </div>
 
       <div class="logo">
@@ -85,7 +85,7 @@ const Profile = () => {
 
       {/*-------------------------- Bagian Struktur Anggota ----------------------------*/}
       <div className="cta-box" >
-        <button className="btn-pengurus">
+        <button className="btn-pengurus mb-5">
           <Link to={`/struktur-anggota`}>Pengurus HIMSI </Link>
         </button>
       </div>

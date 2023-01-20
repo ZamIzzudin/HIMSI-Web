@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Mulish:wght@500&family=Poppins:wght@600&family=Roboto:wght@500&display=swap');
 
 
+.profile-page h1 {
+    font-size: 50px;
+}
+
+.profile-page h2 {
+    font-size: 38px;
+}
+
+.profile-page p {
+    font-size: 22px;
+    color: black !important;
+}
+
 .container {
     padding-top: 80px;
 }
@@ -37,7 +50,9 @@
     padding-top: 20px;
     font-family: "Montserrat";
     font-weight: 500;
-    font-size: 40px;
+    font-size: 35px;
+    color: black !important;
+    font-weight: 500 !important;
 }
 
 .profile-logo {
@@ -71,7 +86,7 @@
     font-weight: 400;
     text-align: center;
     padding-bottom: 0;
-    line-height: 40px;
+    line-height: 40px !important;
 }
 
 /* ------------------- MISI ----------------------------- */
@@ -117,10 +132,10 @@
     color: #FFFFFF;
     padding: 35px;
     display: flex;
-    font-size: 31px;
+    font-size: 31px !important;
     font-weight: 700;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
@@ -176,7 +191,7 @@
 
 .btn-pengurus {
     background: #F49C45;
-    padding: 20px 80px;
+    padding: 20px 80px !important;
     border: none;
     border-radius: 12px;
     font-size: 20px;
@@ -187,7 +202,25 @@
 
 
 /*-------------------------------- RESPONSIVE ------------------------- */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 700px) {
+    .profile-page h1 {
+        font-size: 30px;
+    }
+
+    .profile-page h2 {
+        font-size: 25px;
+    }
+
+    .profile-page h3 {
+        font-size: 20px;
+        color: black !important;
+    }
+
+    .profile-page p {
+        font-size: 14px;
+        color: black;
+    }
+
     .himsi {
         font-size: 27px;
     }
@@ -207,7 +240,7 @@
 
     .visi-p {
         font-size: 15px;
-        line-height: normal;
+        line-height: 30px !important;
     }
 
     .misi-judul {

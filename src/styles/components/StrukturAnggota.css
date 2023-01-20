@@ -6,33 +6,35 @@
 }
 
 .heading-1 {
-  font-size: 56px;
+  font-size: 56px !important;
   font-weight: 700;
 }
 
+.head-container {
+  display: flex;
+  align-items: center;
+}
+
 .icon-pengurus {
-  width: 50px;
+  width: 100px !important;
   height: auto;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin: 0 !important;
   display: inline;
 }
 
 .heading-2 {
-  font-size: 48px;
+  font-size: 48px !important;
   color: #082240;
   font-family: "Montserrat";
-  font-weight: 700;
+  font-weight: 700 !important;
   display: inline;
-  line-height: 2px;
 }
-
 
 .description-1 {
   border-top: 2px solid #f49c45;
   color: #1d1d1d;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 24px !important;
+  font-weight: 600;
   margin-bottom: 10px;
   margin-top: 0;
   font-family: "Mulish";
@@ -40,7 +42,7 @@
 
 .description-2 {
   color: #1d1d1d;
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: 500;
   font-family: "Mulish";
   margin-bottom: 8px;
@@ -69,7 +71,7 @@
   color: #f49c45;
   font-family: 'Montserrat';
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px !important;
   margin-bottom: 8px;
 }
 
@@ -148,8 +150,13 @@
 }
 
 @media screen and (max-width: 1400px) {
+
+  .content {
+    padding: 0 25px;
+  }
+
   .heading-1 {
-    font-size: 20px;
+    font-size: 35px !important;
   }
 
   .icon-pengurus {
@@ -160,15 +167,15 @@
   }
 
   .heading-2 {
-    font-size: 30px;
+    font-size: 35px !important;
   }
 
   .description-1 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .description-2 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .name-anggota {
@@ -186,7 +193,7 @@
   .container .box-1,
   .box-2,
   .box-3 {
-  font-size: 18px;
-  } 
-  
+    font-size: 18px;
+  }
+
 }
