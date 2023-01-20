@@ -7,7 +7,6 @@ import ImageSlider from '../components/ProgramKerja/ImageSlider'
 import RecommendSlider from '../components/RecommendSlider'
 import bgProker from '../assets/img/bg-proker.png'
 import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
-// import AttachFile from "../assets/img/ArticlePage/attach.png"
 
 import '../styles/pages/DetailArtikel.css'
 
@@ -50,39 +49,39 @@ const DetailProker = () => {
     }, [detail]);
 
     useEffect(() => {
-    
-        function handleTags () {
-    
-          switch (detail?.bidang) {
-            case "BPH":
-              return "kategori-tag BPH-TAG"
-      
-            case "PSDM":
-              return "kategori-tag PSDM-TAG"
-      
-            case "DIKTI":
-              return"kategori-tag DIKTI-TAG"
-      
-            case "MEDKOM":
-              return"kategori-tag MEDKOM-TAG"
-      
-            case "PERHUB":
-              return"kategori-tag PERHUB-TAG"
-      
-            case "ADKESMA":
-              return "kategori-tag ADKESMA-TAG"
-      
-            case "URT":
-              return "kategori-tag URT-TAG"
-      
-            default:
-              return "kategori-tag"
-          }
-      
+
+        function handleTags() {
+
+            switch (detail?.bidang) {
+                case "BPH":
+                    return "kategori-tag BPH-TAG"
+
+                case "PSDM":
+                    return "kategori-tag PSDM-TAG"
+
+                case "DIKTI":
+                    return "kategori-tag DIKTI-TAG"
+
+                case "MEDKOM":
+                    return "kategori-tag MEDKOM-TAG"
+
+                case "PERHUB":
+                    return "kategori-tag PERHUB-TAG"
+
+                case "ADKESMA":
+                    return "kategori-tag ADKESMA-TAG"
+
+                case "URT":
+                    return "kategori-tag URT-TAG"
+
+                default:
+                    return "kategori-tag"
+            }
+
         }
-      
-        setTags(handleTags())  
-      }, [detail])
+
+        setTags(handleTags())
+    }, [detail])
 
     return (
 
@@ -111,7 +110,7 @@ const DetailProker = () => {
                                 <p className='tanggal'>{detail?.tanggal_mulai_event.toString().substring(0, 10)}</p>
                             </div>
                             <div className="d-flex gap-2">
-                                    <button className={`${tags} text-center basic-des`}>{detail?.bidang}</button>
+                                <button className={`${tags} text-center basic-des`}>{detail?.bidang}</button>
                             </div>
                         </div>
                     </div>

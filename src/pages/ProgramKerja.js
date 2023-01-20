@@ -10,7 +10,6 @@ import icon from "../assets/img/ArticlePage/menu.png"
 import { ReactComponent as Search } from "../assets/icons/search.svg"
 
 import "../styles/pages/Article.css"
-// import "../styles/pages/ProgramKerja.css";
 
 const ProgramKerja = () => {
   const [eventList, setEventList] = useState({ event: [] })
@@ -108,7 +107,6 @@ const ProgramKerja = () => {
       </Pagination.Item>
     );
   }
-console.info(checkboxs);
   return (
     <Container className='ctn'>
       <div className="article-header">
@@ -131,7 +129,7 @@ console.info(checkboxs);
         </div>
 
         <h1 className="article-header-title">Event</h1>
-          
+
       </div>
 
       {/* Karegori Filter Hide */}

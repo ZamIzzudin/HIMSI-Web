@@ -38,67 +38,59 @@ const Footer = () => {
 
     return (
         <footer class="footer-himsi">
-        
-                    <div class="grid-container">
-                    
-                    <div class="footer-subscribe">
+            <div class="grid-container">
+
+                <div class="footer-subscribe">
                     <h1 class="item">Dapatkan Informasi Terbaru</h1>
-                                        <p>Subscribe untuk mendapatkan info terbaru terkait HIMSI</p>
-                                        <div class="input-subscribe">
-                                            <input
-                                                type="email"
-                                                placeholder="Masukan Email anda "
-                                                class="footer-input" />
-                                            <button class= "footer-btn">Submit</button>
-                                        </div>
+                    <p>Subscribe untuk mendapatkan info terbaru terkait HIMSI</p>
+                    <div class="input-subscribe">
+                        <input
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            type="email"
+                            placeholder="Masukan Email anda "
+                            className="footer-input" />
+                        <button onClick={() => handleSubscribe()} type="button" class="footer-btn btn-primary">Submit</button>
                     </div>
-                    
-                    
-                    <div class="footer-contact">
-                        <h1 class="item">Contact us</h1>
-                            <Row>
-                                <Col class='contact-logo '>
-                                    <a href={socmed?.Whatsapp}>
-                                    <img src={Whatsapp} class="contact-logo" alt="Logo" />
-                                    </a>
-                                    <a href={`mailto:${socmed?.Gmail}`}>
-                                    <img src={Gmail} class="contact-logo mx-5  " alt="Logo" />
-                                    </a>
-                                </Col>
-                            </Row>
+                </div>
+
+                <div class="footer-contact">
+                    <h1 class="item">Contact us</h1>
+                    <div className="contact-logo">
+                        <a href={socmed?.Whatsapp}>
+                            <img src={Whatsapp} class="contact-logo" alt="Logo" width="100" />
+                        </a>
+                        <a href={`mailto:${socmed?.Gmail}`}>
+                            <img src={Gmail} class="contact-logo mx-5" alt="Logo" width="100" />
+                        </a>
                     </div>
-                    
-                    
-                    <div class="footer-alamat">
-                    <h1 class="item">HIMSI</h1>
-                                <p>Jakarta pusat</p>
-                                <p>Email : iaian@gmail.com </p>
-                                <p>Website : uinjkt.ac.id</p>
-                    </div>  
-                    
-                    
-                    <div class="footer-informasi">
+                </div>
+
+                <div class="footer-alamat">
+                    <h2 class="item">HIMSI</h2>
+                    <p>{dataFooter?.alamat}</p>
+                    <p>Email : {dataFooter?.email} </p>
+                    <p>Website : {dataFooter?.website}</p>
+                </div>
+
+                <div class="footer-informasi">
                     <h1 class="item">Informasi</h1>
-                                <ul class="pages">
-                                    <li><Link to="/profile">Profile HIMSI</Link></li>
-                                    <li><Link to="/article">Artikel terbaru</Link></li>
-                                    <li><Link to="/event">Upcoming Events</Link></li>
-                                    <li><Link to="/layanan-mahasiswa">FAQ</Link></li>
-                                    <li><Link to="/struktur-anggota">Struktur Organisasi</Link></li>
-                                </ul>
-                    </div>
-                    
-                    
-                    <div class="footer-tautan">
+                    <ul class="pages">
+                        <li><Link to="/profile">Profile HIMSI</Link></li>
+                        <li><Link to="/article">Artikel terbaru</Link></li>
+                        <li><Link to="/event">Upcoming Events</Link></li>
+                        <li><Link to="/layanan-mahasiswa">FAQ</Link></li>
+                        <li><Link to="/struktur-anggota">Struktur Organisasi</Link></li>
+                    </ul>
+                </div>
+
+                <div class="footer-tautan">
                     <h1 class="item">Tautan Penting</h1>
-                            <ul class="pages">
-                                    <li><Link to="/layanan-mahasiswa">Layanan Mahasiswa</Link></li>
-                                    <li><Link to="/layanan-mahasiswa">Database Materi</Link></li>
-                                    <li><Link to="/layanan-mahasiswa">Laporan PKL & KKN</Link></li>
-                                    <li><Link to="/layanan-mahasiswa">Skripsi</Link></li>
-                                    <li><Link to="/layanan-mahasiswa">E-Letter FST</Link></li>
-                                </ul>
-                    </div>
+                    <ul class="pages">
+                        {tautan?.map((item) => (
+                            <li><Link to={item?.url}>{item?.nama_link}</Link></li>
+                        ))}
+                    </ul>
                 </div>
 
                 <div className='icon-socialmedia'>
@@ -128,9 +120,11 @@ const Footer = () => {
                             </a>
                         </Col>
                     </Row>
-                <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkan oleh MCD Internship</p>
+                    <p className="footer-copyright">Hak cipta © 2022-2023 HIMSI UIN Syarif Hidayatulah jakarta <br></br> Dibuat dan dikembangkan oleh MCD Internship</p>
+                </div>
             </div>
-        </footer> 
+            <SubscribeModal showSubscribeModal={showModal} setSubscribeModal={setShowModal} />
+        </footer>
 
     )
 }

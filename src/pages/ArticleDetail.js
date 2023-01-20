@@ -52,7 +52,6 @@ const DetailArtikel = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [detail]);
-console.info(recommend);
     return (
 
         <div className='detail-artikel'>
@@ -103,7 +102,7 @@ console.info(recommend);
                 <div className="header-event">
                     <h3 className='title' >Artikel Lainnya</h3>
                 </div>
-             
+
                 {recommend.length > 0 && (
                     <RecommendSlider data={recommend} article />
                 )}
