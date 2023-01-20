@@ -28,7 +28,7 @@ const Partner = () => {
     return (
         <Container>
             <div className='partner'>
-                <Row className='header mb-5'>
+                <Row className='header'>
                     <Col>
                         <h4 className='judul text-center'>Our Partner</h4>
                     </Col>

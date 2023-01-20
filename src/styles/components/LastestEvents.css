@@ -35,7 +35,7 @@
 .lastestEvents .list-event {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
     align-items: center !important;
 }
 
