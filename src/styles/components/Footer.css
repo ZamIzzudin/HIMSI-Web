@@ -1,108 +1,74 @@
-.footer-bs {
-    padding-top: 80px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin-top: 80px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Mulish:wght@500&family=Poppins:wght@600&family=Roboto:wght@500&display=swap');
+
+.footer-himsi {
     background-color: #082240;
-    color: #fff;
-}
-
-.footer-bs .footer-brand {
-    margin-left: 260px;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+    margin: 0;
 }
 
-.footer-bs .footer-social {
-    margin-left: 150px;
+.grid-container {
+    color: #fff;
+    background-color: #082240;
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr ;
+    grid-template-areas: 
+        "subscribe subscribe contact" 
+        "alamat informasi tautan";
+    grid-gap: 20px;
+    padding: 50px 180px;
+    margin-top: 100px;
+}
+
+.grid-container > div {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.footer-subscribe {
+    grid-area: subscribe ;
 }
 
 .footer-contact {
-    margin-left: 140px;
+    grid-area: contact ;
 }
 
-.footer-bs .footer-brand h2 {
-    margin: 0px 0px 10px;
+.footer-alamat {
+    grid-area: alamat;
 }
 
+.footer-informasi {
+    grid-area: informasi;
+}
 
-.footer-bs .footer-brand p {
-    font-size: 13px;
+.footer-tautan {
+    grid-area: tautan;
+}
+
+.item {
     color: #fff;
-    font-family: "Mulish";
-    font-weight: 400;
-    letter-spacing: 0.05em;
-}
-
-.footer-bs .footer-social ul {
-    list-style: none;
-    padding: 0px;
-}
-
-.footer-bs .footer-social li {
-    font-size: 15px;
-    padding: 8px 0px;
-    font-family: "Mulish";
-    font-weight: 400;
-}
-
-.footer-bs .footer-social a {
-    color: rgba(255, 255, 255, 1.00);
-}
-
-.footer-bs .footer-social a:hover {
-    color: rgba(255, 255, 255, 0.80);
-}
-
-.footer-bs .footer-ns p {
-    padding-top: 5px;
-    font-size: 14px;
-    color: #fff;
-    font-family: "Mulish";
-    font-weight: 400;
-}
-
-
-.footer-judul {
-    padding-bottom: 15px;
     font-size: 25px;
     font-family: "Montserrat";
     font-weight: 700;
 }
 
-.footer-copyright {
+.footer-subscribe p {
     padding-top: 15px;
-    text-align: center;
-    justify-content: center;
-    font-family: "Montserrat";
+    font-size: 15px;
+    font-family: "Mulish";
     font-weight: 400;
-    letter-spacing: 0.05em;
+    line-height: 20px;
 }
 
 .footer-input {
-    padding: 15px 95px;
+    width: 40%;
+    padding: 15px 7px ;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 15px;
-}
-
-.contact-logo {
-    width: 20%;
-}
-
-.name-socialmedia {
-    text-align: center;
-    justify-content: center;
-    padding-top: 100px;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 25px;
-}
-
-.logo-sosmed i {
-    padding-top: 25px;
-    font-size: 40px;
+    font-family: "Mulish";
 }
 
 .footer-btn {
@@ -113,167 +79,188 @@
     font-size: 15px;
 }
 
+.contact-logo {
+    padding-top: 15px;
+    width: 25%;
+    height: auto;
+}
 
-/*-------------------------------- RESPONSIVE ------------------------- 
+.footer-alamat p {
+    padding-top: 10px;
+    font-size: 15px;
+    font-family: "Mulish";
+    font-weight: 400;
+}
+.pages {
+    list-style: none;
+    padding: 8px 0px;
+}
 
-@media screen and (max-height: 448px) {
+.pages li {
+    padding-top: 10px;
+    font-size: 15px;
+    font-family: "Mulish";
+    font-weight: 400;
+}
 
 
-    .footer-bs .footer-brand {
-        margin-left: 130px;
-        margin-right: 0;
+.name-socialmedia {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.icon-sosmed {
+    color: #fff;
+    font-size: 50px;
+    padding-top: 25px;
+}
+
+.footer-copyright {
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    font-size: 15px;
+    justify-content: center;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+
+/*------------ responsive ------------- */
+
+@media (max-width: 1200px) {
+
+    .footer-himsi {
+        justify-content: left;
+        margin: 0;
     }
 
-    .footer-bs .footer-social {
-        margin-left: 10px;
+    .grid-container  {
+    padding: 10px;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+    "subscribe subscribe"
+    "contact contact"
+    "alamat alamat"
+    "tautan tautan"
+    "informasi informasi";
+    }
+
+    .grid-container > div {
+    padding-left: 10px;
+    justify-content: left;
+    text-align: left;
+    }
+
+    .footer-subscribe {
+    grid-area: subscribe ;
     }
 
     .footer-contact {
-        margin-left: 300px;
-        position: absolute;
-        right: 55px;
+    grid-area: contact ;
     }
 
-
-    .footer-judul {
-        padding-top: 20px;
-        font-size: 20px;
-        margin-left: 10px;
+    .footer-alamat {
+    grid-area: alamat;
     }
 
-    .footer-bs .footer-brand p {
-        font-size: 13px;
+    .footer-informasi {
+    grid-area: informasi;
     }
 
+    .footer-tautan {
+    grid-area: tautan;
+    }
+    
+    .item {
+    font-size: 20px;
+    }
 
-    .footer-input {
-        padding: 10px 70px;
-        border-radius: 10px;
-        margin-right: 15px;
-        outline: none;
-        border: none;
-        font-size: 15px;
+    .contact-logo {
+        width: 15%;
+        height: auto;
     }
 
     .footer-btn {
         padding: 10px 20px;
-        border-radius: 10px;
-        background-color: #F49C45;
-        color: #fff;
-        font-size: 15px;
     }
-
-    .contact-logo {
-        width: 10%;
-
-    }
-
-    .logo-sosmed i {
-        padding-top: 50px;
-        font-size: 10px;
-    }
-
-    .footer-copyright {
-        font-size: 10px;
-        justify-content: center;
-        text-align: center;
-    }
-} */
-
-/*----Buat Hape--- */
-@media screen and (max-width: 1400px) {
-
-    .footer-bs .footer-judul {
-        font-size: 18px;
-        padding-left: 15px;
-    }
-
-    .footer-bs .footer-brand p {
-        font-size: 13px;
-        padding-left: 10px;
-    }
-
-    .footer-bs .footer-brand {
-        margin-bottom: 0;
-        margin-left: 10px;
-    }
-
-
-    .footer-brand .footer-judul {
-        padding-left: 10px;
-    }
-
+    
     .footer-input {
-        padding: 10px 30px;
-        margin-left: 10px;
-    }
-
-    .footer-btn {
-        padding: 10px 20px;
-    }
-
-    .footer-contact {
-        margin-left: 10px;
-        margin-bottom: 30px;
-    }
-
-    .footer-contact .footer-judul {
-        padding-left: 10px;
-    }
-
-    .contact-logo {
-        width: 10%;
-        margin-left: 10px;
-    }
-
-    .logo-sosmed i {
-        margin-top: 25px;
-        padding-top: 25px;
-        font-size: 30px;
-    }
-
-    .footer-social .footer-judul {
-        padding-left: 10px;
-    }
-
-    .footer-social {
-        padding-left: 10px;
-    }
-
-    .footer-bs .description {
-        margin-top: 30px;
-        padding-left: 10px;
-    }
-
-    .description .footer-brand {
-        padding-left: 10px;
-        margin-left: 10px;
-    }
-
-    .description p {
-        padding-left: 10px;
-    }
-
-    .description .footer-social {
-        margin-top: 25px;
-        margin-left: 10px;
-    }
-
-    .description .footer-judul {
-        padding-left: 10px;
-    }
-
-    .footer-bs .footer-social ul {
-        padding-left: 10px
+    width: 50%;
+    padding: 10px 7px ;
     }
 
     .name-socialmedia {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .icon-sosmed {
+        font-size: 25px;
     }
 
     .footer-copyright {
-        font-size: 10px;
-        justify-content: center;
-        text-align: center;
+        font-size: 13px;
     }
-} 
+}
+
+/*----------buat hape ---------- */
+
+@media (max-width: 458px) {
+
+    .footer-himsi {
+        justify-content: left;
+    }
+
+    .grid-container  {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "subscribe "
+        "contact "
+        "alamat"
+        "informasi  "
+        "tautan" ;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .grid-container > div {
+        text-align: left;
+        padding-top: 15px;
+        }
+    
+        .footer-subscribe {
+            grid-area: subscribe ;
+            }
+        
+        .footer-contact {
+            grid-area: contact ;
+        }
+        
+            .footer-alamat {
+            grid-area: alamat;
+            }
+        
+            .footer-informasi {
+            grid-area: informasi;
+            }
+        
+            .footer-tautan {
+            grid-area: tautan;
+            }
+
+            .icon-sosmed {
+                font-size: 25px;
+            }
+        
+            .footer-copyright {
+                font-size: 10px;
+            }
+}

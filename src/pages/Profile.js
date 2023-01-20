@@ -68,9 +68,9 @@ const Profile = () => {
       </div>
 
       {/*------------------------- Bagian Bidang dan Divisi------------------------- */}
-        <div id="bidangdivisi">
-          <DivisiSlider />
-        </div>
+      <div id="bidangdivisi">
+        <DivisiSlider />
+      </div>
 
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 
