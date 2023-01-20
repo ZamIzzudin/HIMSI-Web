@@ -428,6 +428,44 @@ nav {
     }
 }
 
+@media screen and (max-width: 414px) {
+    .profile-section-container {
+        top: 34%;
+        right: 9%;
+    }
+
+    .button-contact{
+        right: 1.7rem;
+        top: 5.3rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .profile-section-container {
+        top: 34%;
+        right: 8%;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .profile-section-container {
+        top: 34%;
+        right: 8%;
+    }
+
+    .button-contact{
+        right: 1.3rem;
+        top: 5.3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .profile-section-container {
+        top: 34%;
+        right: 6%;
+    }
+
+}
 @media screen and (max-width: 374px) {
 
     .list-profile li {
