@@ -17,7 +17,7 @@ const ContactUs = ({ data }) => {
                                     return (
                                         <tr key={index}>
                                             <td><span className='dot'></span></td>
-                                            <td><a href={item.url}>{item.nama_link}</a></td>
+                                            <td><a target="_blank" rel="noreferrer" href={item.url}>{item.nama_link}</a></td>
                                         </tr>
                                     )
                                 })}

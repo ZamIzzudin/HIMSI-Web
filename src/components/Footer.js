@@ -57,10 +57,10 @@ const Footer = () => {
                 <div class="footer-contact">
                     <h1 class="item">Contact us</h1>
                     <div className="contact-logo">
-                        <a href={socmed?.Whatsapp}>
+                        <a target="_blank" rel="noreferrer" href={socmed?.Whatsapp}>
                             <img src={Whatsapp} class="contact-logo" alt="Logo" width="100" />
                         </a>
-                        <a href={`mailto:${socmed?.Gmail}`}>
+                        <a target="_blank" rel="noreferrer" href={`mailto:${socmed?.Gmail}`}>
                             <img src={Gmail} class="contact-logo mx-5" alt="Logo" width="100" />
                         </a>
                     </div>
@@ -88,7 +88,7 @@ const Footer = () => {
                     <h1 class="item">Tautan Penting</h1>
                     <ul class="pages">
                         {tautan?.map((item) => (
-                            <li><Link to={item?.url}>{item?.nama_link}</Link></li>
+                            <li><a target="_blank" rel="noreferrer" href={item?.url}>{item?.nama_link}</a></li>
                         ))}
                     </ul>
                 </div>
