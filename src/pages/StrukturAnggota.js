@@ -52,7 +52,7 @@ const StrukturAnggota = () => {
               <p className="divisi mt-3">Divisi</p>
               <div className="container">
                 {item.divisi.map((divisi, index) => (
-                  <div className={`box-${index + 1}`}>{divisi}</div>
+                  <div className={`box-${index + 1} lll`}>{divisi}</div>
                 ))}
               </div>
               <Row xs={1} md={3} className="gallery g-4">

@@ -152,11 +152,11 @@
 @media screen and (max-width: 1400px) {
 
   .content {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   .heading-1 {
-    font-size: 35px !important;
+    font-size: 25px !important;
   }
 
   .icon-pengurus {
@@ -179,11 +179,11 @@
   }
 
   .name-anggota {
-    font-size: 20px;
+    font-size: 13px !important;
   }
 
   .name-bidang {
-    font-size: 15px;
+    font-size: 12px !important;
   }
 
   .divisi {
@@ -196,4 +196,11 @@
     font-size: 18px;
   }
 
+  .icon-instagram {
+    width: 15px;
+  }
+
+  .lll {
+    font-size: 15px !important;
+  }
 }

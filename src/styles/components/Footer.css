@@ -206,12 +206,13 @@
     }
 
     .footer-input {
-        width: 50%;
+        width: 80%;
         padding: 10px 7px;
     }
 
     .name-socialmedia {
         font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .icon-sosmed {
@@ -240,7 +241,25 @@
             "informasi"
             "tautan"
             "socmed";
-        padding: 20px;
+        padding: 50px 0 0 0 !important;
+    }
+
+    .input-subscribe {
+        width: 100% !important;
+    }
+
+    .name-socialmedia {
+        margin-bottom: 20px;
+    }
+
+    .footer-input {
+        margin-bottom: 10px;
+        width: 60% !important;
+        padding: 10px 7px;
+    }
+
+    .logo {
+        max-width: 80px !important;
     }
 
     .grid-container>div {
@@ -249,7 +268,8 @@
     }
 
     .icon-sosmed {
-        font-size: 25px;
+        padding: 0;
+        font-size: 23px !important;
     }
 
     .footer-copyright {

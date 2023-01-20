@@ -58,10 +58,10 @@ const Footer = () => {
                     <h1 class="item">Contact us</h1>
                     <div className="contact-logo">
                         <a target="_blank" rel="noreferrer" href={socmed?.Whatsapp}>
-                            <img src={Whatsapp} class="contact-logo" alt="Logo" width="100" />
+                            <img src={Whatsapp} class="logo" alt="Logo" width="100" />
                         </a>
                         <a target="_blank" rel="noreferrer" href={`mailto:${socmed?.Gmail}`}>
-                            <img src={Gmail} class="contact-logo mx-5" alt="Logo" width="100" />
+                            <img src={Gmail} class="logo mx-5" alt="Logo" width="100" />
                         </a>
                     </div>
                 </div>
