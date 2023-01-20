@@ -7,7 +7,7 @@ import ImageSlider from '../components/ProgramKerja/ImageSlider'
 import RecommendSlider from '../components/RecommendSlider'
 import bgProker from '../assets/img/bg-proker.png'
 import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
-
+import AttachFile from "../assets/img/ArticlePage/attach.png"
 import '../styles/pages/DetailArtikel.css'
 
 const DetailProker = () => {
@@ -120,13 +120,15 @@ const DetailProker = () => {
                     </div>
                     <div className='links'>
                         <img className='menu-icon' src={GambarLink} alt="gambar-pendaftaran" />
-                        <a href={detail?.link_pendaftaran}>{detail?.link_pendaftaran} (Link Pendaftaran)</a>
+                        <a href={detail?.link_pendaftaran}>{detail?.link_pendaftaran}</a>
                     </div>
-                    <div className='links'>
-                        <img className='menu-icon' src={GambarLink} alt="gambar-booklet" />
-                        <a href={detail?.link_pdf}>{detail?.link_pdf} (Link Booklet)</a>
-                    </div>
-
+                    <button className='attached-file'>
+                        <img src={AttachFile} alt="PDF" />
+                        <a href={detail?.link_pdf} target="_blank" rel="noreferrer">
+                            <p>PDF</p>
+                        </a>
+                    </button>
+                    
                     {detail?.dokumentasi_event.length > 0 && (
                         <ImageSlider data={detail?.dokumentasi_event} />
                     )}

@@ -105,11 +105,14 @@ const DetailArtikel = () => {
                     <h3 className='title' >Artikel Lainnya</h3>
                 </div>
 
-                {recommend.length > 0 && (
-                    <RecommendSlider data={recommend} article />
-                )}
+                <div className='artikel-lainnya'>
+                    {recommend.length > 0 && (
+                        <RecommendSlider data={recommend} article />
+                    )}
+                </div>
             </Container>
             {/* -------------------------- Artikel Lainnya ------------------------- */}
+
         </div >
     )
 }

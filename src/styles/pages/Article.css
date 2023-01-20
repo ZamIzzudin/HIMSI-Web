@@ -128,7 +128,17 @@ input[type="submit"] {
   z-index: 3;
   right: 7.5%;
   top: 33%;
+  animation: ilang_muncul .3s ease-in-out;
+}
 
+@keyframes ilang_muncul {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 100%;
+  }
 }
 
 .wrapper-list {
@@ -536,6 +546,7 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 576px) {
+  
   .search-bar-viewpoint {
     margin-left: 45px;
   }
@@ -612,7 +623,7 @@ input[type="submit"] {
   .category-container {
     top: 35%;
     right: 6%;
-    width: 150px;
+    width: 170px;
   }
 
   .menu-icon-kategori {
@@ -682,7 +693,29 @@ input[type="submit"] {
   }
 }
 
+@media screen and (max-width: 414px) {
+  .category-container {
+    top: 30%;
+  }
+}
 
+@media screen and (max-width: 393px) {
+  .category-container {
+    top: 32%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .category-container {
+    top: 31%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .category-container {
+    top: 40%;
+  }
+}
 @media screen and (max-width: 374px) {
   .article-list {
     padding-top: 350px;
