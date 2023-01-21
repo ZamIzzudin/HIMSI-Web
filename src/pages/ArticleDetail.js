@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom'
 import api from '../utils/api'
 
 import RecommendSlider from '../components/RecommendSlider'
+import Loading from '../pages/Loading'
+
 import bgProker from '../assets/img/bg-proker.png'
 import GambarLink from "../assets/img/ArticlePage/ref-icon.png"
 import AttachFile from "../assets/img/ArticlePage/attach.png"
@@ -55,6 +57,10 @@ const DetailArtikel = () => {
     return (
 
         <div className='detail-artikel'>
+            {detail?.judul_berita === undefined && (
+                <Loading />
+            )}
+
             <div className='blank-space'></div>
             {/* -------------------------- Bagian Img Header ------------------------- */}
             <div className='img-header'>

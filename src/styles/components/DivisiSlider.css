@@ -101,8 +101,9 @@
 }
 
 .divisi-slider .divisi-judul p {
+    color: white !important;
     margin: 0 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
 }
 
 .divisi-slider .divisi-deskripsi {

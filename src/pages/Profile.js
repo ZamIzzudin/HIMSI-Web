@@ -40,7 +40,7 @@ const Profile = () => {
         <h3 className='namauniv'>{himpunan?.nama_universitas}</h3>
       </div>
 
-      <div class='logo'>
+      <div class='himsi-logo'>
         <img src={himpunan?.logo_himpunan.url} className="profile-logo" alt="Logo" id="visi" />
       </div>
 
@@ -75,7 +75,7 @@ const Profile = () => {
       {/*------------------------ Bagian Struktur Organisasi---------------------------- */}
 
       <div class='struktur' id="strukturorganisasi">
-        <h2 className='struktur-judul'> <span class="dot"></span> Struktur Organisasi <span class="dot"></span> </h2>
+        <h2 className='struktur-judul'><span class="dot"></span>Struktur Organisasi<span class="dot"></span></h2>
       </div>
 
       <div class="logo">
