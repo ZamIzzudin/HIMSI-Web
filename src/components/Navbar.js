@@ -46,7 +46,7 @@ export default function Navbar() {
                         <div className='profile-section-container'>
                             <div className='profile-section-wrapper'>
                                 <ul className='list-profile'>
-                                    <li></li>
+                                    <li><a href="#visi">Visi</a></li>
                                     <li><a href="#misi">Misi</a></li>
                                     <li><a href="#bidangdivisi">Bidang & Divisi</a></li>
                                     <li><a href="#strukturorganisasi">Struktur Organisasi</a></li>
