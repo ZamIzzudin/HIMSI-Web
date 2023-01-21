@@ -78,7 +78,7 @@ const Profile = () => {
         <h2 className='struktur-judul'><span class="dot"></span>Struktur Organisasi<span class="dot"></span></h2>
       </div>
 
-      <div class="logo">
+      <div class="himsi-logo">
         <img src={himpunan?.gambar_struktur.url} className="struktur-logo" alt="Logo" id="pengurushimsi" />
       </div>
 
